@@ -1,0 +1,138 @@
+:root {
+  --dark-txt: #b3b4b9;
+  --theme-green: #24695c;
+}
+
+body.dark-only .custom-navlink {
+  color: var(--dark-txt);
+}
+
+body {
+  padding-top: 4rem;
+}
+
+/* OFFCANAVS меню */
+body.dark-only .sidenav * {
+    background-color: #111727 !important;
+    color: var(--dark-txt);
+}
+
+.sidenav {
+ height: 100%;
+ width: 0;
+ position: fixed;
+ z-index: 15;
+ top: 0;
+ left: 0;
+ overflow-x: hidden;
+ transition: 0.5s;
+}
+
+.logo_cubica_sidenav {
+  width: 200px;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+ position: absolute;
+ top: 0;
+ right: 25px;
+ font-size: 36px;
+ margin-left: 50px;
+}
+
+.btn-sidenav {
+  padding: 0.75em;
+}
+
+/* end of OFFCANVAS */
+
+
+.nav-toggle {
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-align: right;
+  padding: 1em 1em;
+
+}
+
+@media (min-width: 998px){
+  .toggle-sidebar {
+    display: none;
+  }
+}
+
+
+.main-nav {
+  padding-top: 1.25rem;
+}
+
+.main-header-left {
+  border-right: none !important;
+}
+
+.customizer-links {
+  display: none;
+}
+
+.custom-navlink {
+  display: inline-block;
+}
+
+.custom-navlink:hover {
+  cursor: pointer;
+}
+
+
+
+.intro {
+  text-align: center;
+}
+
+.login-icon {
+  width: 20px;
+  height: 20px;
+  background-color: pink !important;
+}
+
+
+
+/*@media (min-width: 325px) and (max-width: 1000px) {
+  .main-nav {
+    display: none;
+  }
+
+} */
+
+
+
+@media (min-width: 300px) and (max-width: 350px){
+
+  body {
+    padding-top: 2rem;
+  }
+
+  .logo_cubica {
+    width: 150px;
+  }
+}
+
+@media (min-width: 351px) and (max-width: 600px){
+
+  body {
+    padding-top: 2rem;
+  }
+
+  .logo_cubica {
+    width: 200px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+.page-main-header .main-header-right .nav-right > ul {
+  padding: 15px 15px;
+}
+}
