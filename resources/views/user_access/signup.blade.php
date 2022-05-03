@@ -1,4 +1,4 @@
-@include ('layouts/head')
+@include ('layout/head')
   <body class="dark-only">
     <!-- Loader starts-->
     <div class="loader-wrapper">

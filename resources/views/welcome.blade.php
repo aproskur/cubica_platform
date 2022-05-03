@@ -43,8 +43,11 @@
                   </div>
                   <div class="card-body">
                     <p>Сюда видео</p>
-                    <div class="embed-responsive embed-responsive-1by1">
-                      <iframe width="853" height="480" src="https://www.youtube.com/embed/6cHoZ7DQCMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <div class="col-12">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item youtube" src="https://www.youtube.com/embed/6cHoZ7DQCMU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
                     </div>
 
                     <div class="code-box-copy">
@@ -59,11 +62,10 @@
                     <h5>Заголовок</h5>
                   </div>
                   <div class="card-body">
-                    <h5>Content title</h5>
-                    <p>Add a heading to card with <code>.card-header</code> class</p>
-                    <p>You may also include any &lt;h1&gt;-&lt;h6&gt; with a <code>.card-header </code> & <code>.card-title</code> class to add heading.</p>
-                    <p>Jelly beans sugar plum cheesecake cookie oat cake soufflé. Tart lollipop carrot cake sugar plum. Marshmallow wafer tiramisu jelly beans.</p>
-                  </div>
+
+                    <div class="embed-responsive embed-responsive-1by1">
+                      <iframe class="embed-responsive-item youtube" src="https://www.youtube.com/embed/6cHoZ7DQCMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>                  </div>
                 </div>
               </div>
               <div class="col-md-6">
@@ -81,7 +83,6 @@
               </div>
             </div>
           </div>
-
 
           <!-- Container-fluid Ends-->
         </div>

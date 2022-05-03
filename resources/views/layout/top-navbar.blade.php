@@ -20,7 +20,7 @@
             </ul>
           </div>
         </li>
-        <li class="nav-item"><div class="bookmark-box"><a class="custom-navlink" href="shop">Магазин</a></div></li>
+        <li class="nav-item"><div class="bookmark-box"><a class="custom-navlink" href="shop">Магазин игр</a></div></li>
         <li class="nav-item"><a class="custom-navlink" href="#">Конструктор</a></li>
         <li>
           <div class="mode"><i class="fa fa-moon-o"></i></div>
