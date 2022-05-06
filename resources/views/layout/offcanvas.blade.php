@@ -19,7 +19,7 @@
                 <ul class="collapse show" id="collapseicon" aria-labelledby="collapseicon" data-parent="#accordionoc">
                   <li><a href="javascript:void()"><span>Мои игры</span></a></li>
                   <li><a href="javascript:void()"><span>Мои подписки</span></a></li>
-                  <li><a href="javascript:void()"><span>Магазин игр</span></a></li>
+                  <li><a href="shop"><span>Магазин игр</span></a></li>
                   <li><a href="javascript:void()"><span>Конструктор</span></a></li>
                   <li><a href="javascript:void()"><span>О платформе</span></a></li>
               </ul>
