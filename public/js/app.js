@@ -2062,10 +2062,33 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-var reg = document.getElementById('reg-button');
-reg.addEventListener('click', function () {
-  console.log('button pressed');
+var menuBtnDiv = document.getElementById('menu-btn-div');
+var showDiv = document.getElementById('menu-show-div');
+var mediaQuery = window.matchMedia('(max-width: 750px)');
+window.addEventListener('resize', function () {
+  mediaChecker(mediaQuery);
 });
+window.onload = mediaChecker(mediaQuery);
+
+function menuButtonListener() {
+  openNav();
+}
+
+function mediaChecker(screenSize) {
+  if (screenSize.matches) {
+    if (!menuBtnDiv.classList.contains('sidebar-toggler')) {
+      menuBtnDiv.classList.add('sidebar-toggler');
+      menuBtnDiv.addEventListener('click', menuButtonListener);
+      showDiv.style.display = 'none';
+    }
+  } else {
+    if (menuBtnDiv.classList.contains('sidebar-toggler')) {
+      menuBtnDiv.removeEventListener('click', menuButtonListener);
+      showDiv.style.display = 'flex';
+      menuBtnDiv.classList.remove('sidebar-toggler');
+    }
+  }
+}
 
 /***/ }),
 

@@ -201,6 +201,7 @@
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/theme-customizer/customizer.js"></script>
     <script src="../assets/js/offcanvas.js"></script>
+    <script src="./js/app.js"></script>
 
 
     </script>

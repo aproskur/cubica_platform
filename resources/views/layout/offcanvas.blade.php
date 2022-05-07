@@ -6,7 +6,7 @@
             <div class="dark-logo-wrapper"><a href="/"><img class="img-fluid logo_cubica_sidenav" src="../assets/images/logo_cubica-svg.svg" alt="лого"></a></div>
           </div>
           <div class="col-2">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
           </div>
         </div>
       </div>
