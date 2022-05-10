@@ -33,58 +33,147 @@
             </div>
           </div>
           <!-- Container-fluid starts-->
-          <div class="container-fluid">
-            <div class="row starter-main">
-              <div class="col-sm-12">
-                <div class="card">
-                  <div class="card-header d-flex align-items-center justify-content-between">
-                    <h5>Какой-нибудь заголовок!</h5>
-
-                  </div>
+          <div class="container-fluid m-t-0">
+            <div class="row starter-main m-t-0">
+              <div class="col-sm-12 m-t-0">
+                <div class="card m-t-0" id="video-intro">
                   <div class="card-body">
-                    <p>Сюда видео</p>
-
                     <div class="col-12">
                       <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item youtube" src="https://www.youtube.com/embed/6cHoZ7DQCMU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
 
-                    <div class="code-box-copy">
-                      <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
+            </div>
+          </div>
+
+          <!-- Container-fluid Ends-->
+
+          <!-- Container-fluid CATALOGUE starts-->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card" id="catalogue">
+                  <div class="card-header pb-0">
+                    <h5>Каталог игр</h5>
+                  </div>
+                  <div class="my-gallery card-body row gallery-with-description" itemscope="">
+                    <figure class="reveal col-xl-3 col-sm-6 xl-33" itemprop="associatedMedia" itemscope=""><a href="../assets/images/pinguin.jpg" itemprop="contentUrl" data-size="1600x950"><img src="../assets/images/pinguin.jpg" itemprop="thumbnail" alt="Image description">
+                        <div class="caption">
+                          <h4>Игра 1</h4>
+                          <p>Описание игры</p>
+                        </div></a>
+                      <figcaption itemprop="caption description">
+                        <h4>Portfolio Title</h4>
+                        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                      </figcaption>
+                    </figure>
+                    <figure class="reveal col-xl-3 col-sm-6 xl-33" itemprop="associatedMedia" itemscope=""><a href="../assets/images/pinguin.jpg" itemprop="contentUrl" data-size="1600x950"><img src="../assets/images/pinguin.jpg" itemprop="thumbnail" alt="Image description">
+                        <div class="caption">
+                          <h4>Игра 2</h4>
+                          <p>Описание игры</p>
+                        </div></a>
+                      <figcaption itemprop="caption description">
+                        <h4>Portfolio Title</h4>
+                        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                      </figcaption>
+                    </figure>
+                    <figure class="reveal col-xl-3 col-sm-6 xl-33" itemprop="associatedMedia" itemscope=""><a href="../assets/images/big-lightgallry/03.jpg" itemprop="contentUrl" data-size="1600x950"><img src="../assets/images/pinguin_portrait.png" itemprop="thumbnail" alt="Image description">
+                        <div class="caption">
+                          <h4>Игра 3</h4>
+                          <p>Описание игры</p>
+                        </div></a>
+                      <figcaption itemprop="caption description">
+                        <h4>Portfolio Title</h4>
+                        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                      </figcaption>
+                    </figure>
+                    <figure class="reveal col-xl-3 col-sm-6 xl-33" itemprop="associatedMedia" itemscope=""><a href="../assets/images/big-lightgallry/04.jpg" itemprop="contentUrl" data-size="1600x950"><img src="../assets/images/lightgallry/04.jpg" itemprop="thumbnail" alt="Image description">
+                        <div class="caption">
+                          <h4>Portfolio Title</h4>
+                          <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                        </div></a>
+                      <figcaption itemprop="caption description">
+                        <h4>Portfolio Title</h4>
+                        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                      </figcaption>
+                    </figure>
+                    <figure class="reveal col-xl-3 col-sm-6 xl-33" itemprop="associatedMedia" itemscope=""><a href="../assets/images/big-lightgallry/01.jpg" itemprop="contentUrl" data-size="1600x950"><img src="../assets/images/lightgallry/01.jpg" itemprop="thumbnail" alt="Image description">
+                        <div class="caption">
+                          <h4>Portfolio Title</h4>
+                          <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                        </div></a>
+                      <figcaption itemprop="caption description">
+                        <h4>Portfolio Title</h4>
+                        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                      </figcaption>
+                    </figure>
+                    <figure class="reveal col-xl-3 col-sm-6 xl-33" itemprop="associatedMedia" itemscope=""><a href="../assets/images/big-lightgallry/02.jpg" itemprop="contentUrl" data-size="1600x950"><img src="../assets/images/lightgallry/02.jpg" itemprop="thumbnail" alt="Image description">
+                        <div class="caption">
+                          <h4>Portfolio Title</h4>
+                          <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                        </div></a>
+                      <figcaption itemprop="caption description">
+                        <h4>Portfolio Title</h4>
+                        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                    <!--
+                    Background of PhotoSwipe.
+                    It's a separate element, as animating opacity is faster than rgba().
+                    -->
+                    <div class="pswp__bg"></div>
+                    <!-- Slides wrapper with overflow:hidden.-->
+                    <div class="pswp__scroll-wrap">
+                      <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory.-->
+                      <!-- don't modify these 3 pswp__item elements, data is added later on.-->
+                      <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                      </div>
+                      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed.-->
+                      <div class="pswp__ui pswp__ui--hidden">
+                        <div class="pswp__top-bar">
+                          <!-- Controls are self-explanatory. Order can be changed.-->
+                          <div class="pswp__counter"></div>
+                          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                          <button class="pswp__button pswp__button--share" title="Share"></button>
+                          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                          <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR-->
+                          <!-- element will get class pswp__preloader--active when preloader is running-->
+                          <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                              <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                          <div class="pswp__share-tooltip"></div>
+                        </div>
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                        <div class="pswp__caption">
+                          <div class="pswp__caption__center"></div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-header">
-                    <h5>Заголовок</h5>
-                  </div>
-                  <div class="card-body">
-
-                    <div class="embed-responsive embed-responsive-1by1">
-                      <iframe class="embed-responsive-item youtube" src="https://www.youtube.com/embed/6cHoZ7DQCMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-header card-no-border">
-                    <h5>Заголовок</h5>
-                  </div>
-                  <div class="card-body">
-                    <h5>Content title</h5>
-                    <p>Add a heading to card with <code>.card-header </code> class & without header border<code>.border-bottom-0</code> class.</p>
-                    <p>You may also include any &lt;h1&gt;-&lt;h6&gt; with a <code>.card-header </code> & <code>.card-title</code> class to add heading.</p>
-                    <p>Gingerbread brownie sweet roll cheesecake chocolate cake jelly beans marzipan gummies dessert. Jelly beans sugar plum cheesecake cookie oat cake soufflé.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Container-fluid CATALOGUE Ends-->
 
-          <!-- Container-fluid Ends-->
+
         </div>
 
         <!-- footer start-->
@@ -108,6 +197,10 @@
     <script src="../assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
     <script src="../assets/js/photoswipe/photoswipe.js"></script>
     <!-- Plugins JS Ends-->
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" integrity="sha512-lOtDAY9KMT1WH9Fx6JSuZLHxjC8wmIBxsNFL6gJPaG7sLIVoSO9yCraWOwqLLX+txsOw0h2cHvcUJlJPvMlotw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/animation/scroll-reveal/reveal-custom.js"></script>
+    <script src="../assets/js/animation/scroll-reveal/scrollreveal.min.js"></script> -->
     <!-- Theme js-->
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/theme-customizer/customizer.js"></script>

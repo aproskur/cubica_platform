@@ -1,3 +1,8 @@
+.page-body {
+  margin-top: 30px !important;
+}
+
+
 .custom-navlink {
   color: black;
 }
@@ -70,15 +75,24 @@ body.dark-only .page-wrapper.compact-wrapper .page-main-header {
   border-bottom: none;
 }
 
+body.dark-only .page-wrapper.horizontal-wrapper .page-main-header ,
+body.dark-only .compact-wrapper .page-main-header  {
+box-shadow: 0 15px 10px -18px #2a323d;
+}
+/*
 body.dark-only .page-main-header {
   box-shadow: 0 15px 10px -15px #2a323d;
   -webkit-box-shadow: 0 15px 10px -15px #2a323d;
-}
+} */
 
-body.dark-only .page-wrapper.horizontal-wrapper .page-main-header .main-header-right, body.dark-only .compact-wrapper .page-main-header .main-header-right {
+/*
+body.dark-only .page-wrapper.horizontal-wrapper .page-main-header,
+body.dark-only .compact-wrapper .page-main-header {
   background-color: var(--bgr-dark);
-  box-shadow: 0 15px 10px -15px #2a323d;
+  -webkit-box-shadow: 0 15px 10px -15px #2a323d;
+  box-shadow: 0px 15px 10px -15px #2a323d;
 }
+*/
 
 body.dark-only .page-body {
   background-color: var(--bgr-dark) !important;
@@ -157,10 +171,12 @@ body.dark-only .onhover-show-div {
   background-color: var(--bgr-dark) !important;
 }
 
+/*
 body.dark-only .page-wrapper.horizontal-wrapper .page-main-header .main-header-right .nav-right > ul > li .onhover-show-div, body.dark-only .compact-wrapper .page-main-header .main-header-right .nav-right > ul > li .onhover-show-div {
   background-color: #1a1d1e;
+  -webkit-box-shadow: 0 0 2px 2px #1a1d1e;
   box-shadow: 0 0 2px 2px #1a1d1e;
-}
+} */
 
 body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li span {
     color: var(--dark-txt);
@@ -202,6 +218,13 @@ body.dark-only .border {
  left: 0;
  overflow-x: hidden;
  transition: 0.5s;
+ background-color: rgba(0, 0, 0, 0.9) !important;
+ /*background-color: rgba(25, 28, 30, 0.9) !important;*/
+ /*background-color: var(--theme-yellow-01) !important;*/
+}
+
+.sidenav-menuholder {
+  width:60%;
 }
 
 .logo_cubica_sidenav {
@@ -211,21 +234,25 @@ body.dark-only .border {
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
  position: absolute;
- top: 0;
+ top: -20px;
  right: 25px;
- font-size: 36px;
+ font-size: 70px;
  margin-left: 50px;
 }
 
+.sidenav .sidemenu-open .menu-btn {
+  display: none;
+}
+
+
+.menu-btn {
+
+}
 .btn-sidenav {
   padding: 0.75em;
 }
 
-.sidenav .menu-btn-burger::before,
-.sidenav .menu-btn-burger::after {}
-.sidenav .menu-btn-burger {
-  display: none;
-}
+
 
 /* end of OFFCANVAS */
 
@@ -273,7 +300,13 @@ body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:
   width: 20px;
   height: 20px;
 }
-
+.sidenav .closebtn {
+ position: absolute;
+ top: -20px;
+ right: 25px;
+ font-size: 70px;
+ margin-left: 50px;
+}
 .onhover-show-div {
   border-color: var(--theme-yellow-08);
 }
@@ -295,7 +328,13 @@ body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:
 
 }
 
-
+.sidenav .closebtn {
+ position: absolute;
+ top: -20px;
+ right: 25px;
+ font-size: 70px;
+ margin-left: 50px;
+}
 /*DROPDOWN FOR BURGER_MENU */
 
 .page-main-header .navmenu-dropdown {
@@ -366,7 +405,13 @@ body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:
 }
 
 @media (min-width: 351px) and (max-width: 600px){
-
+.sidenav .closebtn {
+ position: absolute;
+ top: -20px;
+ right: 25px;
+ font-size: 70px;
+ margin-left: 50px;
+}
   body {
     padding-top: 2rem;
   }
@@ -377,7 +422,9 @@ body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:
 
 }
 
-@media (min-width: 1200px) {navmenu-dropdown
+@media ()
+
+@media (min-width: 1200px) {
 .page-main-header .main-header-right .nav-right > ul {
   padding: 15px 15px;
 }

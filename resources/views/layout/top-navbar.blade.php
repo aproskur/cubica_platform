@@ -17,7 +17,6 @@
           <li class="p-0">
             <button class="btn btn-info header-button" type="button"><a href='signup' class="header-button-link"><i data-feather="user-plus"></i>Регистрация</a></button>
           </li>
-
         </ul>
       </div>
   </div>
@@ -28,7 +27,7 @@
     </div>
     <div class="navmenu-dropdown onhover-show-div menu-btn-onhover-show-div" id="menu-show-div">
       <ul class="m-t-5">
-        <li> Мои игры <span class="pull-right"></span></li>
+        <li> Мои игры </li>
         <li> Мои подписки <span class="pull-right"></span></li>
         <li> Магазин игр <span class="pull-right"></span></li>
         <li> Конструктор <span class="pull-right"></span></li>
@@ -36,9 +35,6 @@
       </ul>
     </div>
   </div>
-
-
-
 </div>
 
 

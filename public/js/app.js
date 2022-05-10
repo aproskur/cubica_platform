@@ -2065,10 +2065,20 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var menuBtnDiv = document.getElementById('menu-btn-div');
 var showDiv = document.getElementById('menu-show-div');
 var mediaQuery = window.matchMedia('(max-width: 750px)');
+var video = document.getElementById('video-intro');
+var catalogue = document.getElementById('catalogue');
+var scrolling = false;
 window.addEventListener('resize', function () {
   mediaChecker(mediaQuery);
 });
 window.onload = mediaChecker(mediaQuery);
+window.addEventListener('scroll', function () {
+  console.log(document.documentElement.scrollTop);
+
+  if (document.documentElement.scrollTop > 600) {
+    video.style.display = "none";
+  }
+});
 
 function menuButtonListener() {
   openNav();

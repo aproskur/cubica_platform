@@ -1,4 +1,6 @@
-<div id="offcanvas" class="sidenav nav">
+<div id="offcanvas" class="sidenav">
+  <div class="sidenav-menuholder">
+
     <div class="card">
       <div class="card-header">
         <div class="row">
@@ -55,4 +57,5 @@
         </div>
       </div>
     </div>
+  </div>
 </div>
