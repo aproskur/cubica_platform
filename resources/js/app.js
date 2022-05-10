@@ -5,6 +5,8 @@ const showDiv = document.getElementById('menu-show-div');
 const mediaQuery = window.matchMedia('(max-width: 750px)');
 const video = document.getElementById('video-intro');
 const catalogue = document.getElementById('catalogue');
+const tmp = document.getElementById('tmp');
+const constructorMenu = document.getElementById('constructor-menu');
 let scrolling = false;
 
 window.addEventListener('resize', () => {mediaChecker(mediaQuery)});
@@ -17,6 +19,15 @@ window.addEventListener('scroll', function() {
   }
 });
 
+tmp.addEventListener('click', openConstructorMenu);
+
+function openConstructorMenu() {
+  if(!constructorMenu.classList.contains('open')){
+  constructorMenu.classList.add('open');
+  } else {
+    document.getElementById('constructor-menu').classList.remove('open');
+  }
+}
 
 
 function menuButtonListener () {

@@ -2067,6 +2067,8 @@ var showDiv = document.getElementById('menu-show-div');
 var mediaQuery = window.matchMedia('(max-width: 750px)');
 var video = document.getElementById('video-intro');
 var catalogue = document.getElementById('catalogue');
+var tmp = document.getElementById('tmp');
+var constructorMenu = document.getElementById('constructor-menu');
 var scrolling = false;
 window.addEventListener('resize', function () {
   mediaChecker(mediaQuery);
@@ -2079,6 +2081,15 @@ window.addEventListener('scroll', function () {
     video.style.display = "none";
   }
 });
+tmp.addEventListener('click', openConstructorMenu);
+
+function openConstructorMenu() {
+  if (!constructorMenu.classList.contains('open')) {
+    constructorMenu.classList.add('open');
+  } else {
+    document.getElementById('constructor-menu').classList.remove('open');
+  }
+}
 
 function menuButtonListener() {
   openNav();

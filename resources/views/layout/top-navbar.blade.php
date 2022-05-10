@@ -23,6 +23,9 @@
       <div class="nav-right col right-menu m-r-20">
         <ul class="nav-menu top-navmenu navigation">
           <li>
+            <div class="tmp" id="tmp"><i data-feather="arrow-down"></i></div>
+          </li>
+          <li>
             <div class="mode"><i data-feather="sun"></i></div>
           </li>
           <li class="round-btn-link p-0">
@@ -46,15 +49,21 @@
             </div>
           </li>
         </ul>
-
-
-
       </div>
   </div>
-
-
 </div>
 
+<div class="constructor-nav-menu">
+  <div class="container-fluid">
+    <ul class="constructor-menu" id="constructor-menu">
+      <li>Тип игры</li>
+      <li>Настройки игры</li>
+      <li>Редактор</li>
+      <li>Режим отладки</li>
+      <li>Публикация</li>
+   </ul>
+    </div>
+  </div>
 
 
 @include('layout.offcanvas')
