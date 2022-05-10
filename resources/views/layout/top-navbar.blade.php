@@ -5,36 +5,54 @@
       <div class="dark-logo-wrapper"><a href="/"><img class="img-fluid logo_cubica" src="../assets/images/logo_cubica-svg.svg" alt="лого"></a></div>
     </div>
 
+    <div class="onhover-dropdown">
+      <div class="menu-btn" id="menu-btn-div">
+          <div class="menu-btn-burger"></div>
+      </div>
+      <div class="navmenu-dropdown onhover-show-div" id="menu-show-div">
+        <ul class="m-t-5">
+            <li>Магазин игр</li>
+            <li>О платформе</li>
+            <li>Поддержка</li>
+            <li>Личный кабинет</li>
+            <li>Мои подписки</li>
+        </ul>
+      </div>
+    </div>
 
-      <div class="nav-right col right-menu">
+      <div class="nav-right col right-menu m-r-20">
         <ul class="nav-menu top-navmenu navigation">
           <li>
-            <div class="mode"><i class="fa fa-moon-o"></i></div>
+            <div class="mode"><i data-feather="sun"></i></div>
           </li>
-          <li class="onhover-dropdown p-0">
-            <button class="btn btn-info header-button" type="button"><a href="#" class="header-button-link"><i data-feather="log-in"></i>Вход</a></button>
+          <li class="round-btn-link p-0">
+            <button class="btn-info round-button" type="button"><a href="#" class=""><i data-feather="help-circle"></i></a></button>
           </li>
-          <li class="p-0">
-            <button class="btn btn-info header-button" type="button"><a href='signup' class="header-button-link"><i data-feather="user-plus"></i>Регистрация</a></button>
+          <li class="round-btn-link p-0">
+            <button class="btn-info round-button" type="button"><a href="#" class=""><i data-feather="search"></i></a></button>
+          </li>
+          <li class="round-btn-link p-0">
+            <button class="btn-info round-button" type="button"><a href="#" class=""><i data-feather="log-in"></i></a></button>
+          </li>
+          <li class="round-btn-link p-0 onhover-dropdown">
+            <button class="btn-info round-button" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><a href='signup' class="header-button-link"><i data-feather="user-plus"></i></a></button>
+            <div class="navmenu-dropdown onhover-show-div" id="">
+              <ul class="m-t-5">
+                  <li>Личный кабинет</li>
+                  <li>Мои подписки</li>
+                  <li>Мои игры</li>
+                  <li>Выйти</li>
+              </ul>
+            </div>
           </li>
         </ul>
+
+
+
       </div>
   </div>
 
-  <div class="onhover-dropdown">
-    <div class="menu-btn" id="menu-btn-div">
-        <div class="menu-btn-burger"></div>
-    </div>
-    <div class="navmenu-dropdown onhover-show-div menu-btn-onhover-show-div" id="menu-show-div">
-      <ul class="m-t-5">
-        <li> Мои игры </li>
-        <li> Мои подписки <span class="pull-right"></span></li>
-        <li> Магазин игр <span class="pull-right"></span></li>
-        <li> Конструктор <span class="pull-right"></span></li>
-        <li> О платформе <span class="pull-right"></span></li>
-      </ul>
-    </div>
-  </div>
+
 </div>
 
 

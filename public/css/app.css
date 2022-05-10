@@ -60,6 +60,10 @@
 }
 
 
+.menu-btn-onhover-show-div {
+  display: flex;
+  flex-direction: column;
+}
 
 .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li {
   padding: 5px 20px;
@@ -193,11 +197,35 @@ body.dark-only .page-main-header .main-header-right .nav-right .navmenu-dropdown
   justify-content: flex-end;
 }
 
+/*header round buttons*/
+
+.round-button {
+  border-radius: 100%;
+  padding: 10px;
+  border: none;
+  width: 41px;
+  height: 41px;
+}
+
+li.round-btn-link {
+  border:none !important;
+}
+
 body.dark-only .header-button .btn-link a {
   color: #fff !important;
   text-decoration: none;
 }
 
+.page-main-header .main-header-right .nav-right.right-menu ul li.round-btn-link:hover {
+  background-color: inherit;
+}
+
+body.dark-only .page-wrapper.horizontal-wrapper .page-main-header .main-header-right .nav-right > ul > li svg,
+body.dark-only .compact-wrapper .page-main-header .main-header-right .nav-right > ul > li svg:hover {
+  stroke: var(--theme-yellow) !important;
+}
+
+/*end of header round buttons*/
 
 /* OFFCANVAS */
 body.dark-only .sidenav {
@@ -231,7 +259,7 @@ body.dark-only .border {
   width: 200px;
 }
 
-/* Position and style the close button (top right corner) */
+
 .sidenav .closebtn {
  position: absolute;
  top: -20px;
@@ -252,9 +280,40 @@ body.dark-only .border {
   padding: 0.75em;
 }
 
-
-
 /* end of OFFCANVAS */
+
+/*Search bar*/
+
+
+
+
+
+/*Filter*/
+.filter .filter-label {
+  padding: 8px 25px;
+  padding-left: 25px;
+  font-size: 13px;
+  color: var(--dark-txt);
+  display: block;
+  position: relative;
+  letter-spacing: 0.07em;
+  font-weight: normal;
+}
+
+.filter .filter-checkbox {
+  margin-left: -0.5em;
+  margin-top: 0.75em;
+}
+
+.filter .filter-label:hover {
+  font-weight: bold;
+}
+
+
+
+
+
+
 
 .nav-toggle {
   cursor: pointer;
@@ -281,11 +340,12 @@ body.dark-only .border {
   cursor: pointer;
 }
 
-
+/*
 body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:nth-child(2) {
   border-left: 1px solid var(--theme-yellow-01);
   border-right: 1px solid var(--theme-yellow-01);
 }
+*/
 
 .page-main-header .main-header-right .nav-right.right-menu ul li:hover {
   background-color: var(--theme-yellow-08);
@@ -336,7 +396,6 @@ body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:
  margin-left: 50px;
 }
 /*DROPDOWN FOR BURGER_MENU */
-
 .page-main-header .navmenu-dropdown {
   width: 300px;
   top: 65px;
@@ -363,7 +422,8 @@ body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:
       color: #cccccc;
       font-size: 13px; }
   .page-main-header .navmenu-dropdown ul li {
-    padding: 10px; }
+    padding: 10px;
+    width: 100%;}
     .page-main-header .navmenu-dropdown ul li:hover {
       background-color: var(--theme-yellow);
      font-weight: bold; }
@@ -429,4 +489,3 @@ body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:
   padding: 15px 15px;
 }
 }
-

@@ -14,15 +14,6 @@
               </div>
             </form>
       </div>
-        <div class="col-12">
-          <div class="dropdown-basic p-b-10 p-t-10">
-            <div class="dropdown">
-              <button class="dropbtn btn-primary" type="button">Тип сортировки<span><i class="icofont icofont-arrow-down"></i></span></button>
-              <div class="dropdown-content"><a href="#">Способ 1</a><a href="#">Способ 2</a><a href="#">Способ 3</a></div>
-            </div>
-          </div>
-        </div>
-
     </div>
   </div>
   <div class="main-navbar">
@@ -34,22 +25,46 @@
         </li>
         <li class="sidebar-main-title">
           <div>
+            <h6>Сортировка           </h6>
+          </div>
+        </li>
+        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Тип сортировки</span></a>
+          <ul class="nav-submenu menu-content nav-submenu-shop">
+            <li><a href="#">По алфавиту</a></li>
+            <li><a href="#">По популярности</a></li>
+            <li><a href="#">По рейтингу</a></li>
+            <li><a href="#">По длительности</a></li>
+            <li><a href="#">По стоимости</a></li>
+          </ul>
+        </li>
+        <li class="sidebar-main-title">
+          <div>
             <h6>Фильтры           </h6>
           </div>
         </li>
         <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Фильтр "Компетенции"</span></a>
           <ul class="nav-submenu menu-content nav-submenu-shop">
-            <li><a href="#">Умение работать в команде</a></li>
-            <li><a href="#">Критическое мышление</a></li>
-            <li><a href="#">Ответственность за результат</a></li>
-            <li><a href="#">Hard skills</a></li>
-            <li><a href="#">Soft skills</a></li>
+            <div class="filter form-check m-t-10">
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence1"></input>
+              <label class="filter-label form-check-label" for="competence1">Стратегическое мышление</label>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence2"></input>
+              <label class="filter-label form-check-label" for="competence2">Лидерство</label>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence3"></input>
+              <label class="filter-label form-check-label" for="competence3">Работа в команде</label>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence4"></input>
+              <label class="filter-label form-check-label" for="competence4">Компетенция</label>
+          </div>
+            <li><a href="#">Компетенция</a></li>
+            <li><a href="#">Компетенция</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">...</a></li>
           </ul>
         </li>
         <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Фильтр "Жанр игры"</span></a>
           <ul class="nav-submenu menu-content">
-            <li><a href="">Стратегия</a></li>
+            <li><a href="">Настольная ира</a></li>
             <li><a href="">Квест</a></li>
+            <li><a href="">Чат бот</a></li>
           </ul>
         </li>
         <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Фильтр "Разработчик"</span></a>
@@ -58,7 +73,15 @@
             <li><a href="">Критерий</a></li>
           </ul>
         </li>
+        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Фильтр "Мои игры"</span></a>
+          <ul class="nav-submenu menu-content">
+            <li><a href="">Мои игры</a></li>
+            <li><a href="">Купленные игры</a></li>
+            <li><a href="">Избранное</a></li>
+          </ul>
+        </li>
     </div>
     <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
   </div>
+  <button class="m-t-50 m-l-20 btn btn-warning reset-button" type="button" name="button">Cбросить все фильтры</button>
 </nav>

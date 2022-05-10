@@ -19,7 +19,7 @@
       <div class="page-body-wrapper horizontal-menu">
         <!-- Page Sidebar Start-->
         <header class="main-nav">
-          @include('layout.sidebar-welcome')
+          @include('layout.sidebar-shop')
         </header>
         <!-- Page Sidebar Ends-->
         <div class="page-body">

@@ -16840,8 +16840,8 @@ footer {
     left: 0;
     height: 100%;
     border-radius: 20px;
-    border-color: var(--theme-yellow);
-    background-color: var(--theme-yellow);
+    border-color: var(--theme-yellow-03);
+    background-color: var(--theme-yellow-03);
     padding: 0 20px; }
     .search-page .search-form .form-group .input-group-text i {
       color: #fff;
