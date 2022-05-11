@@ -115,6 +115,7 @@
   --theme-yellow-09: rgba(251, 188, 5, 0.9);
   --olddark-bgr: var(--bgr-dark);
   --bgr-dark: #191c1e;
+  --theme-grey: #808080;
 
 }
 

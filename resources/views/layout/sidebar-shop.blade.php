@@ -9,7 +9,7 @@
               </div>
               <div class="form-group mb-0">
                 <div class="input-group"><span class="input-group-text"><i class="icon-search"></i></span>
-                  <input class="form-control-plaintext" type="search" placeholder="Поиск..">
+                  <input class="form-control-plaintext" type="search" placeholder="Поиск по играм">
                 </div>
               </div>
             </form>
@@ -29,21 +29,38 @@
           </div>
         </li>
         <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Тип сортировки</span></a>
-          <ul class="nav-submenu menu-content nav-submenu-shop">
-            <li><a href="#">По алфавиту</a></li>
-            <li><a href="#">По популярности</a></li>
-            <li><a href="#">По рейтингу</a></li>
-            <li><a href="#">По длительности</a></li>
-            <li><a href="#">По стоимости</a></li>
-          </ul>
+          <div class="nav-submenu menu-content nav-submenu-shop">
+            <div class="form-check m-t-20">
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort1">
+              <label class="custom-radio-label form-check-label" for="sort1">
+                По алфавиту
+              </label>
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort2">
+              <label class="custom-radio-label form-check-label" for="sort2">
+                По популярности
+              </label>
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort3">
+              <label class="custom-radio-label form-check-label" for="sort3">
+                По рейтингу
+              </label>
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort4">
+              <label class="custom-radio-label form-check-label" for="sort4">
+                По длительности
+              </label>
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort">
+              <label class="custom-radio-label form-check-label" for="sort5">
+                По стоимости
+              </label>
+            </div>
+          <div>
         </li>
         <li class="sidebar-main-title">
           <div>
-            <h6>Фильтры           </h6>
+            <h6>Фильтры</h6>
           </div>
         </li>
-        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Фильтр "Компетенции"</span></a>
-          <ul class="nav-submenu menu-content nav-submenu-shop">
+        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Компетенции</span></a>
+          <div class="nav-submenu menu-content nav-submenu-shop">
             <div class="filter form-check m-t-10">
               <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence1"></input>
               <label class="filter-label form-check-label" for="competence1">Стратегическое мышление</label>
@@ -53,27 +70,25 @@
               <label class="filter-label form-check-label" for="competence3">Работа в команде</label>
               <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence4"></input>
               <label class="filter-label form-check-label" for="competence4">Компетенция</label>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence5"></input>
+              <label class="filter-label form-check-label" for="competence5">Компетенция</label>
           </div>
-            <li><a href="#">Компетенция</a></li>
-            <li><a href="#">Компетенция</a></li>
-            <li><a href="#">...</a></li>
-            <li><a href="#">...</a></li>
-          </ul>
+        </div>
         </li>
-        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Фильтр "Жанр игры"</span></a>
+        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Жанр игры</span></a>
           <ul class="nav-submenu menu-content">
-            <li><a href="">Настольная ира</a></li>
+            <li><a href="">Настольная игра</a></li>
             <li><a href="">Квест</a></li>
             <li><a href="">Чат бот</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Фильтр "Разработчик"</span></a>
+        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Разработчик</span></a>
           <ul class="nav-submenu menu-content">
             <li><a href="">Критерий</a></li>
             <li><a href="">Критерий</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Фильтр "Мои игры"</span></a>
+        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Мои игры</span></a>
           <ul class="nav-submenu menu-content">
             <li><a href="">Мои игры</a></li>
             <li><a href="">Купленные игры</a></li>
