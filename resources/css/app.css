@@ -1,3 +1,11 @@
+
+.page-body {
+  margin-top: 30px !important;
+}
+
+
+
+
 .main-header-left,
 .main-header-right,
 .main-header {
@@ -54,6 +62,17 @@
 .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li {
   padding: 5px 20px;
 }
+
+.my-gallery.gallery-with-description img {
+  border: 1px solid var(--theme-yellow) !important;
+    border-bottom-color: var(--theme-yellow);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  border-bottom: none !important;
+  border-radius: 0;
+}
+
+
 
 body.dark-only {
   padding-top: 4rem;
@@ -176,8 +195,12 @@ body.dark-only .page-main-header .main-header-right .nav-right .navmenu-dropdown
 
 
 /*header*/
-.page-main-header .main-header-right .nav-right.right-menu ul li:hover {
+body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:hover {
   background-color: var(--bgr-dark) !important;
+}
+
+body.light-only .page-main-header .main-header-right .nav-right.right-menu ul li:hover {
+  background-color: #fff !important;
 }
 
 .page-main-header .navmenu-dropdown ul li:hover {
@@ -202,12 +225,29 @@ li.round-btn-link {
   border:none !important;
 }
 
+body.light-only svg.feather {
+  stroke: #fff;
+}
+
+body.light-only svg.feather:hover {
+  stroke: var(--theme-yellow);
+}
+
+body.light-only .round-btn-link:hover {
+  background-color: #fff;
+}
+
+body.light-only .header-button .btn-link a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
 body.dark-only .header-button .btn-link a {
   color: #fff !important;
   text-decoration: none;
 }
 
-.page-main-header .main-header-right .nav-right.right-menu ul li.round-btn-link:hover {
+body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li.round-btn-link:hover {
   background-color: inherit;
 }
 
@@ -293,18 +333,23 @@ body.dark-only .border {
   }
 }
 
+body.dark-only .constructor-menu.open {
+  margin-top: 0.25em;
+}
 
 .constructor-menu.open  {
   padding: 2em;
-  margin-top: 2em;
+  margin-top: 5em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-left: 300px;
   animation-name: opening;
   animation-duration: 0.51s;
-  animation-timing-function: linear;;
+  animation-timing-function: linear;
 }
+
+
 
 .constructor-menu li {
   padding: .5em;
@@ -511,23 +556,19 @@ body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:
           }
 
 
-@media (min-width: 300px) and (max-width: 750px){
-  /*menu-btn*/
-}
-
-
-@media (min-width: 300px) and (max-width: 350px){
+@media screen and (max-width: 350px){
   body {
     padding-top: 2rem;
   }
+}
 
-  .logo_cubica {
-    width: 150px;
-    height: 75px;
+@media screen and (max-width: 480px) {
+.page-wrapper .page-main-header .main-header-left .logo-wrapper img {
+height: auto;
   }
 }
 
-@media (min-width: 351px) and (max-width: 600px){
+@media screen and (max-width: 600px){
 .sidenav .closebtn {
  position: absolute;
  top: -20px;
@@ -542,7 +583,45 @@ body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:
   .logo_cubica {
     width: 200px;
   }
+
+  .page-wrapper .page-main-header .main-header-right .nav-right > ul {
+    top: 58px;
+    position: fixed;
+    z-index: -1;
+    background-color: #fff;
+    -webkit-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+    border-top: 1px solid #e6edef;
+    -webkit-box-shadow: 0 2px 2px 2px rgba(113, 113, 113, 0.08);
+            box-shadow: 0 2px 2px 2px rgba(113, 113, 113, 0.08);
+    width: 100%;
+    left: 0;
+    padding: 0 20px;
+
+    -webkit-transform: translateY(-35px) scaleY(0);
+            transform: translateY(-35px) scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+    height: 70px; }
+    .page-wrapper .page-main-header .main-header-right .nav-right > ul.open {
+      z-index: 1;
+      opacity: 1;
+      -webkit-transform: translateY(0px) scaleY(1);
+              transform: translateY(0px) scaleY(1);
+      visibility: visible; }
 }
+
+@media screen and (max-width: 960px){
+  .constructor-menu.open  {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 750px){
+  /*menu-btn*/
+}
+
+
 
 
 @media (min-width: 1200px) {

@@ -26,7 +26,7 @@
             <div class="tmp" id="tmp"><i data-feather="arrow-down"></i></div>
           </li>
           <li>
-            <div class="mode"><i data-feather="sun"></i></div>
+            <div class="mode"><i class="fa fa-lightbulb-o"></i></div>
           </li>
           <li class="round-btn-link p-0">
             <button class="btn-info round-button" type="button"><a href="#" class=""><i data-feather="help-circle"></i></a></button>
