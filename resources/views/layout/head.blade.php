@@ -37,5 +37,6 @@
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  
     <link rel="stylesheet" type="text/css" href="../assets/css/photoswipe.css">
+    <link href="{{ asset('css/style_main.css') }}" rel="stylesheet">
