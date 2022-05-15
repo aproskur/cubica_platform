@@ -31,6 +31,11 @@ Route::get('/test', function() {
   return view('test');
 });
 
+Route::get('/game-page', function() {
+  return view('game-page');
+});
+
+
 //Route::get('/', function () {
 //    return redirect()->route('index');
 //})->name('/');

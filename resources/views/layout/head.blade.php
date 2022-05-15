@@ -31,12 +31,12 @@
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <!-- App css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <!-- App css-->
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
-  
+
     <link rel="stylesheet" type="text/css" href="../assets/css/photoswipe.css">
+    <!-- Cubica custom styles -->
     <link href="{{ asset('css/style_main.css') }}" rel="stylesheet">

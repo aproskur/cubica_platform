@@ -59,8 +59,8 @@
                   </li>
                   <li class="round-btn-link p-0 onhover-dropdown">
                   <button class="btn-info round-button" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><a href='#' class="header-button-link"><i data-feather="log-in"></i></a></button>
-                  <div class="navmenu-dropdown onhover-show-div" id="login-div">
-                      <form class="login-form" method="POST" action="{{ route('login') }}">
+                  <div class="navmenu-dropdown onhover-show-div">
+                      <form method="POST" action="{{ route('login') }}">
                         @csrf
                           <div>
                               <x-jet-label for="email" value="{{ __('Логин') }}" />

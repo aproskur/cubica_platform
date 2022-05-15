@@ -6651,7 +6651,7 @@ box-shadow: 0 0 20px rgba(25, 124, 207, 0.08); */}
   margin-bottom: 0; }
 
 .success-color ul li:nth-child(10) {
-  background-color: #them-ellow;
+  background-color: var(--theme-yellow);
   padding: 10px 15px;
   margin-bottom: 10px; }
   .success-color ul li:nth-child(10) span:before {
@@ -21095,6 +21095,7 @@ body.dark-sidebar .main-navbar ul.nav-pills {
 /**=====================
     56.  Ribbon CSS Start
 ==========================**/
+
 .ribbon-wrapper, .ribbon-wrapper-right, .ribbon-wrapper-bottom, .ribbon-wrapper-right-bottom {
   position: relative;
   padding-top: 40px; }
@@ -21240,34 +21241,34 @@ body.dark-sidebar .main-navbar ul.nav-pills {
   border-bottom: 10px solid transparent; }
 
 .ribbon-primary {
-  background: var(--theme-yellow); }
+  background: #24695c; }
 
 .ribbon-primary {
-  background: var(--theme-yellow); }
+  background: #24695c; }
 
 .ribbon-bookmark.ribbon-primary:before {
-  border-color: var(--theme-yellow);
+  border-color: #24695c;
   border-right-color: transparent; }
 
 .ribbon-bookmark.ribbon-right.ribbon-primary:before {
-  border-right-color: var(--theme-yellow);
+  border-right-color: #24695c;
   border-left-color: transparent; }
 
 .ribbon-bookmark.ribbon-vertical-left.ribbon-primary:before, .ribbon-bookmark.ribbon-vertical-right.ribbon-primary:before {
-  border-right-color: var(--theme-yellow);
+  border-right-color: #24695c;
   border-bottom-color: transparent; }
 
 .ribbon-primary.ribbon-corner:before {
-  border-top-color: var(--theme-yellow);
-  border-left-color: var(--theme-yellow); }
+  border-top-color: #24695c;
+  border-left-color: #24695c; }
 
 .ribbon-primary.ribbon-corner.ribbon-right:before {
-  border-right-color: var(--theme-yellow);
+  border-right-color: #24695c;
   border-left-color: transparent; }
 
 .ribbon-primary.ribbon-corner.ribbon-bottom:before {
   border-top-color: transparent;
-  border-bottom-color: var(--theme-yellow); }
+  border-bottom-color: #24695c; }
 
 .ribbon-primary.ribbon-clip:before {
   border-color: transparent;
@@ -21646,6 +21647,7 @@ body.dark-sidebar .main-navbar ul.nav-pills {
   border-bottom-color: #c8ac1d;
   border-right-color: transparent;
   border-left-color: #c8ac1d; }
+
 
 /**=====================
      56. Ribbon CSS Ends
