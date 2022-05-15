@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,14 +28,11 @@ Route::get('/shop', function() {
   return view('shop');
 });
 
+Route::get('/game-page', [PagesController::class, 'gamePage'])->name('game-page');
+
 Route::get('/test', function() {
   return view('test');
 });
-
-Route::get('/game-page', function() {
-  return view('game-page');
-});
-
 
 //Route::get('/', function () {
 //    return redirect()->route('index');
