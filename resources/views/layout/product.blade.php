@@ -19,41 +19,36 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <div class="product-box row">
-                        <div class="product-img col-lg-6"><img class="img-fluid" src="../assets/images/pinguin_portrait.png" alt=""></div>
+                        <div class="product-img col-lg-6"><img class="img-fluid" src="../assets/images/antarctica.png" alt=""></div>
                         <div class="product-details col-lg-6 text-start"><a href="{{ route('game-page') }}" >
-                            <h4>Игра 1                                       </h4></a>
-                          <div class="product-price">$26.00
-                            <del>$35.00</del>
+                            <h4>Игра 1</h4></a>
+                          <div class="product-price-modal">
+                             <div class="price-1">450 RUB/1 игра(запуск)</div>
+                            <div class="price-2">1900RUB/1 месяц</div>
                           </div>
                           <div class="product-view">
-                            <h6 class="f-w-600">Описание игры</h6>
                             <p class="mb-0">форма деятельности в условных ситуациях, направленная на воссоздание и усвоение общественного опыта, фиксированного в социально закрепленных способах осуществления предметных действий, в предметах науки и культуры</p>
                           </div>
-                          <div class="product-size">
-                            <ul>
-                              <li>
-                                <button class="btn btn-outline-light" type="button">M</button>
-                              </li>
-                              <li>
-                                <button class="btn btn-outline-light" type="button">L</button>
-                              </li>
-                              <li>
-                                <button class="btn btn-outline-light" type="button">Xl</button>
-                              </li>
-                            </ul>
+                          <div class="">
+                            <p><span style="color:var(--theme-yellow)">Учебная цель:<span>
+                            Текст про цель игры</p>
                           </div>
+                          <div class="">
+                            <p><span style="color:var(--theme-yellow)">Аудитория игры:<span>
+                            Текст про то, для кого рассчитана игра</p>
+                          </div>
+
                           <div class="product-qnty">
-                            <h6 class="f-w-600">Quantity</h6>
-                            <fieldset>
-                              <div class="input-group">
-                                <input class="touchspin text-center" type="text" value="5">
-                              </div>
-                            </fieldset>
-                            <div class="addcart-btn"><a class="btn btn-primary me-3" href="cart.html">Add to Cart                                                     </a><a class="btn btn-primary" href="{{ route('game-page') }}" >View Details</a></div>
+                            <h6 class="f-w-600"></h6>
+
+                            <div class="modal-buttons"><a class="" href="cart.html"><i class="btn-cart" data-feather="shopping-cart"></i>  </a>
+                              <i  class= "" data-feather="heart"></i>
+                              <a class="btn btn-primary" href="{{ route('game-page') }}" >Смотреть подробности</a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <button style="color:var(--theme-yellow);" class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                   </div>
                 </div>
