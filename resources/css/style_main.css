@@ -14,6 +14,10 @@
 
 .menu-btn {
   position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,6 +55,10 @@
 }
 
 .menu-btn-onhover-show-div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
 }
@@ -254,6 +262,18 @@ body.dark-only .compact-wrapper .page-main-header .main-header-right .nav-right 
 }
 /*end of header round buttons*/
 
+/*Sidebar search*/
+body.light-only .search-page .search-form .form-group .input-group-text {
+  border-color: #e6edef;
+  background-color: #fff;
+  padding: 0 20px;
+}
+
+body.light-only .search-page .search-form .form-group .input-group-text i {
+  color: var(--theme-grey);
+  font-weight: 800;
+}
+
 /*modal game"*/
 
 body.dark-only .product-box .modal .modal-header {
@@ -287,6 +307,10 @@ body.dark-only .product-box .modal .modal-header {
 }
 
 .product-price-modal {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   padding-right: 1em;
@@ -307,6 +331,10 @@ body.dark-only .product-box .modal .modal-header {
 
 .modal-buttons {
   width: 90%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-around;
 }
@@ -395,6 +423,10 @@ body.dark-only .constructor-menu.open {
 .constructor-menu.open  {
   padding: 2em;
   margin-top: 5em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -550,11 +582,11 @@ body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:
 }
 
 /*Catalogue*/
-body.dark-only .product-box .product-img .product-hover ul li {
+body.dark-only .product-box .product-img .game-hover ul li {
   background-color: var(--theme-grey);
 }
 
-body.dark-only .product-box .product-img .product-hover ul li:hover {
+body.dark-only .product-box .product-img .game-hover ul li:hover {
   background-color: var(--theme-yellow);
 }
 
@@ -873,35 +905,33 @@ body.dark-only .product-box .product-img .product-hover ul li:hover {
   border-right-color: transparent;
   border-left-color: #a07044; }
 
-.ribbon-success {
-  background: #808080; }
 
 .ribbon-success {
-  background: #808080; }
+  background: var(--theme-grey-08); }
 
 .ribbon-bookmark.ribbon-success:before {
-  border-color: #808080;
+  border-color: var(--theme-grey);
   border-right-color: transparent; }
 
 .ribbon-bookmark.ribbon-right.ribbon-success:before {
-  border-right-color: #808080;
+  border-right-color: var(--theme-grey);
   border-left-color: transparent; }
 
 .ribbon-bookmark.ribbon-vertical-left.ribbon-success:before, .ribbon-bookmark.ribbon-vertical-right.ribbon-success:before {
-  border-right-color: #808080;
+  border-right-color: var(--theme-grey);
   border-bottom-color: transparent; }
 
 .ribbon-success.ribbon-corner:before {
-  border-top-color: #808080;
-  border-left-color: #808080; }
+  border-top-color: var(--theme-grey);
+  border-left-color: var(--theme-grey); }
 
 .ribbon-success.ribbon-corner.ribbon-right:before {
-  border-right-color: #808080;
+  border-right-color: var(--theme-grey);
   border-left-color: transparent; }
 
 .ribbon-success.ribbon-corner.ribbon-bottom:before {
   border-top-color: transparent;
-  border-bottom-color: #808080; }
+  border-bottom-color: var(--theme-grey); }
 
 .ribbon-success.ribbon-clip:before {
   border-color: transparent;
@@ -923,6 +953,33 @@ body.dark-only .product-box .product-img .product-hover ul li:hover {
   border-bottom-color: #0e2622;
   border-right-color: transparent;
   border-left-color: #0e2622; }
+
+  .ribbon-game-rating {
+      display: flex;
+      justify-content: space-around;
+      width: 30%;
+  }
+
+  .ribbon-downloads {
+    width: 30%;
+  }
+
+
+  .ribbon-game-rating a svg {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    stroke: #fff;
+  }
+
+  .ribbon-game-rating a div {
+    font-size: 1.1em;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+
+
+  }
 
 .ribbon-danger {
   background: var(--theme-yellow-09); }
@@ -1183,6 +1240,102 @@ body.dark-only .product-box .product-img .product-hover ul li:hover {
      56. Ribbon CSS Ends
 ==========================**/
 
+/*Game Hover*/
+.product-box .product-img .game-hover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+
+  .game-hover-bar-center {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    margin: 0 auto;
+
+  }
+
+
+.game-hover-bar-bottom {
+  grid-column: span 3;
+  grid-row: 4;
+  padding: 0.75em;
+  margin: 0 auto;
+}
+
+.game-hover-bar-bottom svg {
+  height: 20px;
+  width: 20px;
+  line-height: normal;
+}
+
+  .product-box .product-img .game-hover ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .product-box .product-img .game-hover ul i {
+      font-size: 14px; }
+    .product-box .product-img .game-hover ul li {
+      -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.08);
+              box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.08);
+      background-color: #fff;
+      border-radius: 100%;
+      line-height: 1.6;
+      height: 45px;
+      width: 45px;
+      margin: 0 3px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      cursor: pointer; }
+      .product-box .product-img .game-hover ul li a {
+        color: var(--theme-yellow); }
+      .product-box .product-img .game-hover ul li .btn {
+        padding: 0; }
+      .product-box .product-img .game-hover ul li:hover {
+        background-color: var(--theme-yellow);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+        .product-box .product-img .game-hover ul li:hover .btn, .product-box .product-img .game-hover ul li:hover i {
+          color: #fff; }
+.product-box:hover .game-hover {
+opacity: 1;
+border-radius: 0%;
+-webkit-transform: scale(1);
+        transform: scale(1);
+-webkit-transition: all 0.3s ease;
+transition: all 0.3s ease; }
+
+
+
+
+
+
 
 
 @media screen and (max-width: 350px){
@@ -1246,15 +1399,7 @@ height: auto;
   }
 }
 
+
 @media screen and (max-width: 750px){
   /*menu-btn*/
-}
-
-
-
-
-@media (min-width: 1200px) {
-.page-main-header .main-header-right .nav-right > ul {
-  padding: 15px 15px;
-  }
 }

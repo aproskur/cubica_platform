@@ -6,12 +6,19 @@
         <div class="col-xl-3 col-sm-6 xl-4">
           <div class="card">
             <div class="product-box">
-              <div class="product-img"><img class="img-fluid" src="../assets/images/pinguin.jpg" alt="">
-                <div class="product-hover">
-                  <ul>
+              <div class="product-img"><img class="img-fluid" src="../assets/images/antarctica.png" alt="">
+                <div class="ribbon ribbon-success ribbon-game-rating"><a href="#"> <i data-feather="star"></i></a><div id="game-rating">3.7</div></div>
+                <div class="ribbon ribbon-success ribbon-right ribbon-downloads"><span id="total-downloads">1023</span></div>
+                <div class="game-hover">
+                  <ul class="game-hover-bar-center">
                     <li><a href="cart.html"><i class="icon-shopping-cart"></i></a></li>
                     <li><a data-bs-toggle="modal" data-bs-target="#exampleModalCenter16"><i class="icon-eye"></i></a></li>
                   </ul>
+                  <ul class="game-hover-bar-bottom">
+                    <li><a href="#"><i data-feather="edit"></i></a></li>
+                    <li><a href="#"><i data-feather="copy"></i></a></li>
+                    <li><a href="#"><i data-feather="archive"></i></a></li>
+                   <ul>
                 </div>
               </div>
               <div class="modal fade" id="exampleModalCenter16">
@@ -24,7 +31,7 @@
                             <h4>Игра 1</h4></a>
                           <div class="product-price-modal">
                              <div class="price-1">450 RUB/1 игра(запуск)</div>
-                            <div class="price-2">1900RUB/1 месяц</div>
+                            <div class="price-2">1900 RUB/1 месяц</div>
                           </div>
                           <div class="product-view">
                             <p class="mb-0">форма деятельности в условных ситуациях, направленная на воссоздание и усвоение общественного опыта, фиксированного в социально закрепленных способах осуществления предметных действий, в предметах науки и культуры</p>

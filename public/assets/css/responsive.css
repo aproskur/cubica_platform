@@ -1087,7 +1087,7 @@
     top: 36%;
     width: 40%; } }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 980px) {
   .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav {
     top: 65px; }
   .ttl-info {
