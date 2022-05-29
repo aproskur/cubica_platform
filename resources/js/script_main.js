@@ -6,9 +6,23 @@ const showDiv = document.getElementById('menu-show-div');
 const mediaQuery = window.matchMedia('(max-width: 750px)');
 const video = document.getElementById('video-intro');
 const catalogue = document.getElementById('catalogue');
-const tmp = document.getElementById('tmp');
 const constructorMenu = document.getElementById('constructor-menu');
+
+//кнопки на dive авторизации
+const loginBtn = document.getElementById('login-button');
+const loginDiv = document.getElementById('login-div');
+const loginDivCloseBtn = document.getElementById('close-login-div');
+const loginDivWrapper = document.getElementById('login-div-wrapper');
+
 let scrolling = false;
+
+loginBtn.addEventListener('click', () => {
+  showLogin();
+});
+
+loginDivCloseBtn.addEventListener('click', () => {
+  closeLoginDiv();
+})
 
 window.addEventListener('resize', () => {mediaChecker(mediaQuery)});
 window.onload = mediaChecker(mediaQuery);
@@ -20,7 +34,6 @@ window.addEventListener('scroll', function() {
   }
 });
 
-tmp.addEventListener('click', openConstructorMenu);
 
 function openConstructorMenu() {
   if(!constructorMenu.classList.contains('open')){
@@ -50,4 +63,12 @@ if (screenSize.matches) {
           menuBtnDiv.classList.remove('sidebar-toggler');
     }
   }
+}
+
+function showLogin() {
+  loginDivWrapper.style.display = 'flex';
+}
+
+function closeLoginDiv() {
+    loginDivWrapper.style.display = 'none';
 }

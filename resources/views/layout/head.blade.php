@@ -40,3 +40,4 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/photoswipe.css">
     <!-- Cubica custom styles -->
     <link href="{{ asset('css/style_main.css') }}" rel="stylesheet">
+    @livewireStyles
