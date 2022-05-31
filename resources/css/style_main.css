@@ -240,7 +240,7 @@ body.dark-only .create-account-link a {
   transform: scaleX(1);
 }
 
-#rememebrme + input[type="checkbox"]:checked { /* change "blue" browser color to yellow */
+input[type="checkbox"]:checked { /* change "blue" browser color to yellow */
   filter: invert(100%) hue-rotate(18deg) brightness(1.7);
 }
 
@@ -379,10 +379,26 @@ body.dark-only .page-main-header .main-header-right .nav-right .navmenu-dropdown
 }
 
 
-/*header*/
+/* header */
 body.light-only .page-main-header .main-header-right .nav-right.right-menu ul li:hover {
   background-color: #fff !important;
 }
+.page-main-header .main-header-right .nav-right.right-menu ul li svg:hover {
+  stroke: var(--theme-yellow);
+}
+
+.page-wrapper.horizontal-wrapper .page-main-header .main-header-right .nav-right > ul > li svg,
+.compact-wrapper .page-main-header .main-header-right .nav-right > ul > li svg {
+  stroke: #fff;
+}
+
+ ul.nav-menu.top-navmenu.navigation i:hover {
+   color: var(--theme-yellow);
+ }
+
+ body.dark-only ul.nav-menu.top-navmenu.navigation i:hover {
+    color: var(--theme-yellow);
+ }
 
 /* Убрать желтую подсветку при ховере на луну и лампочку */
 .page-main-header .main-header-right .nav-right.right-menu ul .change-mode:hover {

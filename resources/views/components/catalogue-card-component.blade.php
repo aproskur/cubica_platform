@@ -26,7 +26,7 @@
               {{ $gamePrice }}
               <span>RUB/запуск</span>
             </div>
-            <div>
+            <div><span style="color:var(--theme-yellow); font-weight:bold;">1</span>
               {{ $gamePrice }}
               <span>RUB/месяц</span>
             </div>
