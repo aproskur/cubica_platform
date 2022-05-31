@@ -76,25 +76,43 @@
         </div>
         </li>
         <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Жанр игры</span></a>
-          <ul class="nav-submenu menu-content">
-            <li><a href="">Настольная игра</a></li>
-            <li><a href="">Квест</a></li>
-            <li><a href="">Чат бот</a></li>
-          </ul>
+          <div class="nav-submenu menu-content nav-submenu-shop">
+            <div class="filter form-check m-t-10">
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="gametype1"></input>
+              <label class="filter-label form-check-label" for="gametype1">Настольная игра</label>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="gametype2"></input>
+              <label class="filter-label form-check-label" for="gametype2">Квест</label>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="gametype3"></input>
+              <label class="filter-label form-check-label" for="gametype3">Чат бот</label>
+          </div>
+        </div>
         </li>
         <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Разработчик</span></a>
-          <ul class="nav-submenu menu-content">
-            <li><a href="">Критерий</a></li>
-            <li><a href="">Критерий</a></li>
-          </ul>
+          <div class="nav-submenu menu-content nav-submenu-shop">
+            <div class="filter form-check m-t-10">
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="developer1"></input>
+              <label class="filter-label form-check-label" for="developer1">Критерий</label>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="developer2"></input>
+              <label class="filter-label form-check-label" for="developer2">Критерий</label>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="developer3"></input>
+              <label class="filter-label form-check-label" for="developer3">Критерий</label>
+            </div>
+          </div>
         </li>
+
         <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Мои игры</span></a>
-          <ul class="nav-submenu menu-content">
-            <li><a href="">Мои игры</a></li>
-            <li><a href="">Купленные игры</a></li>
-            <li><a href="">Избранное</a></li>
-          </ul>
+          <div class="nav-submenu menu-content nav-submenu-shop">
+            <div class="filter form-check m-t-10">
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="mygames1"></input>
+              <label class="filter-label form-check-label" for="mygames1">Мои игры</label>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="mygames2"></input>
+              <label class="filter-label form-check-label" for="mygames2">Купленные игры</label>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="mygames3"></input>
+              <label class="filter-label form-check-label" for="mygames3">Избранное</label>
+            </div>
+          </div>
         </li>
+
     </div>
     <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
   </div>
