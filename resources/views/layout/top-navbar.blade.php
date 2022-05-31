@@ -36,7 +36,11 @@
                           <li><a href="{{ url('/dashboard') }}">Личный кабинет</a></li>
                           <li>Мои подписки</li>
                           <li>Мои игры</li>
-                          <li>Выйти</li>
+                          <form method="POST" action="{{ route('logout') }}" x-data>
+                              @csrf
+                          <li><a href="{{ route('logout') }}" @click.prevent="$root.submit();">
+                              {{ __('Выход') }}</a></li>
+                          </form>
                       </ul>
                     </div>
                   </li>

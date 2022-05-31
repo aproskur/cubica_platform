@@ -51,6 +51,10 @@
               <label class="custom-radio-label form-check-label" for="sort5">
                 По стоимости
               </label>
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort">
+              <label class="custom-radio-label form-check-label" for="sort5">
+                По дате публикации
+              </label>
             </div>
           <div>
         </li>

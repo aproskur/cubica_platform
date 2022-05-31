@@ -105,6 +105,7 @@
 ==========================**/
 :root {
   --dark-txt: #e8ebf2;
+  --light-txt: #242934;
   --theme-color-green: #24695c;
   --theme-yellow: rgb(251, 188, 5);
   --theme-yellow-01: rgba(251, 188, 5, 0.1);
@@ -122,6 +123,8 @@
   --theme-grey-09: rgba(128, 128, 128, 0.9);
   --theme-grey-08: rgba(128, 128, 128, 0.8);
   --theme-grey-07: rgba(128, 128, 128, 0.7);
+  --bgr-light-secondary: #f5f7fb;
+  --bgr-light-primary: #fff;
 
 }
 
