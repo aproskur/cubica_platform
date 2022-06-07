@@ -24,12 +24,14 @@ loginDivCloseBtn.addEventListener('click', () => {
   closeLoginDiv();
 })
 
+
+//Event listener слушает, когда будет скролл вниз, убирает видео и поля зрения
 window.addEventListener('resize', () => {mediaChecker(mediaQuery)});
 window.onload = mediaChecker(mediaQuery);
 
 window.addEventListener('scroll', function() {
   console.log(document.documentElement.scrollTop);
-  if (document.documentElement.scrollTop > 600){
+  if (document.documentElement.scrollTop > 400){
   video.style.display = "none";
   }
 });
@@ -48,6 +50,8 @@ function menuButtonListener () {
   openNav();
 }
 
+
+//Функция меняет, то как работает кнопка-бургер в зависимости от размера экрана: если большой экран - то ховер, если маленький - боковое меню
 function mediaChecker(screenSize) {
 if (screenSize.matches) {
   if(!menuBtnDiv.classList.contains('sidebar-toggler')){
@@ -65,10 +69,13 @@ if (screenSize.matches) {
   }
 }
 
+
+//Появление на экране login div засчет того что display none меняется на display flex
 function showLogin() {
   loginDivWrapper.style.display = 'flex';
 }
 
+//закрыть login div кнопкой X
 function closeLoginDiv() {
     loginDivWrapper.style.display = 'none';
 }

@@ -20,16 +20,18 @@ class CatalogueCardComponent extends Component
      public $game;
 
      public $gameName;
-     public $gameDescription;
+     public $gameExcerpt;
      public $gamePrice;
+     public $id;
 
 
     public function __construct($game)
     {
         $this->game = $game;
         $this->gameName = $this->game->getName();
-        $this->gameDescription = $this->game->getDescription();
+        $this->gameExcerpt = $this->game->getDescription();
         $this->gamePrice = $this->game->getPrice();
+        $this->id = $this->game->getId();
     }
 
 

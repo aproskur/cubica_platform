@@ -7,8 +7,8 @@
           <div class="ribbon ribbon-success ribbon-right ribbon-downloads"><span id="total-downloads">1023</span></div>
           <div class="game-hover">
             <ul class="game-hover-bar-center">
-              <li><a href="cart.html"><i class="icon-shopping-cart"></i></a></li>
-              <li><a data-bs-toggle="modal" data-bs-target="#exampleModalCenter16"><i class="icon-eye"></i></a></li>
+              <li data-bs-toggle="modal" data-bs-target="#catalogueModal{{$id}}"><i class="fa-solid fa-info"></i></li>
+              <li><a href="#"><i class="fa-solid fa-play"></i></a></li>
             </ul>
             <ul class="game-hover-bar-bottom">
               <li><a href="#"><i data-feather="edit"></i></a></li>
@@ -17,23 +17,71 @@
              <ul>
           </div>
         </div>
-          @livewire('catalogue-modal')
-        <div class="product-details"><a href="{{ route('game-page') }}" >
-            <h4> {{ $gameName }}</h4></a>
-          <p> {{ $gameDescription }}</p>
-          <div class="product-price">
-            <div>
-              {{ $gamePrice }}
-              <span>RUB/запуск</span>
-            </div>
-            <div><span style="color:var(--theme-yellow); font-weight:bold;">1</span>
-              {{ $gamePrice }}
-              <span>RUB/месяц</span>
+        <!-- MODAL -->
+        <div class="modal fade" id="catalogueModal{{$id}}">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="product-box row">
+                  <div class="product-img col-lg-6"><img class="img-fluid" src="../assets/images/antarctica.png" alt=""></div>
+                  <div class="product-details col-lg-6 text-start"><a href="{{ route('game-page') }}" >
+                      <h4>{{$gameName}}</h4></a>
+                    <div class="product-price-modal">
+                      <div class=price-1>
+                        {{ number_format($gamePrice, 0, '.', ' ') }}
+                        <span>&#8381;/запуск</span>
+                      </div>
+                      <div class=price-2><span style="color:var(--theme-yellow); font-weight:bold;">1</span>
+                        {{ number_format($gamePrice, 0, '.', ' ') }}
+                        <span>&#8381;/месяц</span>
+                      </div>
+                    </div>
+                    <div class="modal-game-desc">
+                      <p><span style="color:var(--theme-yellow)">Учебная цель:<span>
+                      Текст про цель игры</p>
+                      <p><span style="color:var(--theme-yellow)">Аудитория игры:<span>
+                      Текст про то, для кого рассчитана игра</p>
+                    </div>
+
+                    <div class="product-qnty">
+                      <h6 class="f-w-600"></h6>
+
+                      <div class="modal-buttons"><button class="theme-button theme-button-square"><a href="cart.html"><i data-feather="shopping-cart" class="cart-button"></i></a></button>
+                        <button class="theme-button theme-button-square"><i data-feather="heart" class="heart-button"></i></button>
+                        <button class="theme-button theme-button-long"><a href="{{ route('game-page') }}">Смотреть подробности</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="product-view m-t-20">
+                      <p class="mb-0">{{$gameExcerpt}}</p>
+                    </div>
+                </div class="modal-btn-wrapper">
+                <button class="button-close" type="button" data-bs-dismiss="modal" aria-label="Close">&#10005;</button>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <!-- END OF MODAL -->
+
+        <div class="product-details"><a href="{{ route('game-page') }}" >
+          <div class="product-desc">
+            <h4 class="m-r-10"> {{ $gameName }}</h4></a>
+            <button class="theme-button"><i data-feather="heart" class="heart-button"></i></button>
+          </div>
+          <div class="product-price m-t-5">
+            <div>
+              {{ number_format($gamePrice, 0, '.', ' ') }}
+              <span>&#8381;/запуск</span>
+            </div>
+            <div><span style="color:var(--theme-yellow); font-weight:bold;">1</span>
+              {{ number_format($gamePrice, 0, '.', ' ') }}
+              <span>&#8381;/месяц</span>
+            </div>
+            <button class="theme-button"><a href="cart.html"><i data-feather="shopping-cart" class="cart-button"></i></a></button>
+          </div>
           <div class="icons-panel">
-            <i class="icon-heart"></i>
-            <a href="cart.html"><i class="icon-shopping-cart"></i></a>
         </div>
         </div>
       </div>

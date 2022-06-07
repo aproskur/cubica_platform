@@ -1,16 +1,20 @@
-<?php use App\Classes\Game; ?>
+
 <!-- Container-fluid starts-->
 <div class="container-fluid product-wrapper">
     <div class="product-wrapper-grid">
       <div class="row">
 
 
-        <?php $g = new Game("Игра 1", "Описание игры один", 450); ?>
-
+        @foreach($games as $game)
         <div class="col-xl-3 col-sm-6 xl-4">
-           <x-catalogue-card-component :game=$g />
-           <!--/x-catalogue-card-component -->
+           <x-catalogue-card-component :game=$game/>
         </div>
+        @endforeach
+        <div class="col-xl-3 col-sm-6 xl-4">
+             @livewire('catalogue-card')
+
+        </div>
+      </div>
 
     </div>
   </div>

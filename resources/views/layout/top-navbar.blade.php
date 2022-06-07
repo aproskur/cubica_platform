@@ -109,11 +109,11 @@
                         {{ __('Забыли пароль?') }}
                     </a>
                 @endif
-                <x-jet-button class="login-div__btn-login">
+                <x-jet-button class="theme-button">
                     {{ __('Вход') }}
                 </x-jet-button>
             </div>
-            <div class="create-account-link"> <a href="{{ route('register') }}" >Создать аккаунт</a> </div>
+            <div class="create-account-link animated-link"> <a href="{{ route('register') }}" >Создать аккаунт</a> </div>
 
           </form>
           <div class="close-login-div" id="close-login-div"> &#10005; </div>

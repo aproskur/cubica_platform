@@ -1,28 +1,28 @@
 
 <nav class="leftside-bar">
-  <div class="sidebar-user text-center p-0" style="border: none;">
-    <div class="container-fluid search-page m-b-20 p-0">
-      <div class="col-12">
-            <form class="search-form p-10">
-              <div class="form-group m-0">
-                <label class="sr-only">Email</label>
-              </div>
-              <div class="form-group mb-0">
-                <div class="input-group"><span class="input-group-text"><i class="icon-search"></i></span>
-                  <input class="form-control-plaintext" type="search" placeholder="Поиск по играм">
-                </div>
-              </div>
-            </form>
-      </div>
-    </div>
-  </div>
   <div class="main-navbar">
-    <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
-    <div id="mainnav">
+      <div id="mainnav">
       <ul class="nav-menu custom-scrollbar">
-        <li class="back-btn">
-          <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
-        </li>
+        <div class="sidebar-user text-center p-0" style="border: none;">
+          <div class="container-fluid search-page m-b-20 p-0">
+            <div class="col-12">
+                  <form class="search-form p-10">
+                    <div class="form-group m-0">
+                      <label class="sr-only">Email</label>
+                    </div>
+                    <div class="form-group mb-0">
+                      <div class="input-group"><span class="input-group-text"><i class="icon-search"></i></span>
+                        <input class="form-control-plaintext" type="search" placeholder="Поиск по играм">
+                      </div>
+                    </div>
+                  </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="animated-link"><a role="button" class="reset-button" type="button" name="button">Cбросить все фильтры</a></div>
+
+
         <li class="sidebar-main-title">
           <div>
             <h6>Сортировка           </h6>
@@ -116,9 +116,8 @@
             </div>
           </div>
         </li>
+        <div class="animated-link"><a role="button" class="reset-button" type="button" name="button">Cбросить все фильтры</a></div>
 
-    </div>
-    <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+      </ul>
   </div>
-  <button class="m-t-50 m-l-20 btn btn-warning reset-button" type="button" name="button">Cбросить все фильтры</button>
 </nav>

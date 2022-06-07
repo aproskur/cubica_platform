@@ -52,6 +52,8 @@
 
           <!-- Container-fluid Ends-->
 
+        
+
             @include('layout/product')
 
           <!-- Container-fluid CATALOGUE Ends-->
