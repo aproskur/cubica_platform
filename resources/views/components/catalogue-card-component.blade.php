@@ -66,23 +66,23 @@
         <!-- END OF MODAL -->
 
         <div class="product-details"><a href="{{ route('game-page') }}" >
-          <div class="product-desc">
-            <h4 class="m-r-10"> {{ $gameName }}</h4></a>
-            <button class="theme-button"><i data-feather="heart" class="heart-button"></i></button>
-          </div>
-          <div class="product-price m-t-5">
-            <div>
-              {{ number_format($gamePrice, 0, '.', ' ') }}
-              <span>&#8381;/запуск</span>
-            </div>
-            <div><span style="color:var(--theme-yellow); font-weight:bold;">1</span>
-              {{ number_format($gamePrice, 0, '.', ' ') }}
-              <span>&#8381;/месяц</span>
-            </div>
+          <div class="product-price">
             <button class="theme-button"><a href="cart.html"><i data-feather="shopping-cart" class="cart-button"></i></a></button>
+            <div class="price-wrapper">
+              <div>
+                {{ number_format($gamePrice, 0, '.', ' ') }}
+                <span>&#8381;/запуск</span>
+              </div>
+              <div><span style="color:var(--theme-yellow); font-weight:bold;">1</span>
+                {{ number_format($gamePrice, 0, '.', ' ') }}
+                <span>&#8381;/месяц</span>
+              </div>
+            </div>
           </div>
-          <div class="icons-panel">
-        </div>
+          <div class="product-desc">
+            <button class="theme-button"><i data-feather="heart" class="heart-button"></i></button>
+            <a href="{{ route('game-page') }}" ><h4> {{ $gameName }}</h4></a>
+          </div>
         </div>
       </div>
     </div>

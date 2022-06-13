@@ -103,30 +103,7 @@
 /**=====================
      01. General CSS Start
 ==========================**/
-:root {
-  --dark-txt: #e8ebf2;
-  --light-txt: #242934;
-  --theme-color-green: #24695c;
-  --theme-yellow: rgb(251, 188, 5);
-  --theme-yellow-01: rgba(251, 188, 5, 0.1);
-  --theme-yellow-02: rgba(251, 188, 5, 0.2);
-  --theme-yellow-03: rgba(251, 188, 5, 0.3);
-  --theme-yellow-05: rgba(251, 188, 5, 0.5);
-  --theme-yellow-06: rgba(251, 188, 5, 0.6);
-  --theme-yellow-07: rgba(251, 188, 5, 0.7);
-  --theme-yellow-08: rgba(251, 188, 5, 0.8);
-  --theme-yellow-09: rgba(251, 188, 5, 0.9);
-  --bgr-dark: #191c1e;
-  --bgr-dark-09: rgba(25, 28, 30, 0.9);
-  --bgr-dark-07: rgba(25, 28, 30, 0.7);
-  --theme-grey: #808080;
-  --theme-grey-09: rgba(128, 128, 128, 0.9);
-  --theme-grey-08: rgba(128, 128, 128, 0.8);
-  --theme-grey-07: rgba(128, 128, 128, 0.7);
-  --bgr-light-secondary: #f5f7fb;
-  --bgr-light-primary: #fff;
 
-}
 
 html {
   max-width: 100vw;

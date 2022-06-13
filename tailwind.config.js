@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+    darkMode: 'class',
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './vendor/laravel/jetstream/**/*.blade.php',
@@ -10,8 +11,13 @@ module.exports = {
 
     theme: {
         extend: {
+          colors: {
+            'bgr-dark': '#191c1e',
+            'theme_yellow': 'rgb(251, 188, 5)',
+            'theme_yellow_07': 'rgba(251, 188, 5, 0.7)',
+          },
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
             },
         },
     },

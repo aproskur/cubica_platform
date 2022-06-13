@@ -1,0 +1,72 @@
+:root {
+  --dark-txt: #e8ebf2;
+  --light-txt: #242934;
+  --theme-color-green: #24695c;
+  --theme-yellow: rgb(251, 188, 5);
+  --theme-yellow-01: rgba(251, 188, 5, 0.1);
+  --theme-yellow-02: rgba(251, 188, 5, 0.2);
+  --theme-yellow-03: rgba(251, 188, 5, 0.3);
+  --theme-yellow-05: rgba(251, 188, 5, 0.5);
+  --theme-yellow-06: rgba(251, 188, 5, 0.6);
+  --theme-yellow-07: rgba(251, 188, 5, 0.7);
+  --theme-yellow-08: rgba(251, 188, 5, 0.8);
+  --theme-yellow-09: rgba(251, 188, 5, 0.9);
+  --bgr-dark: #191c1e;
+  --bgr-dark-09: rgba(25, 28, 30, 0.9);
+  --bgr-dark-07: rgba(25, 28, 30, 0.7);
+  --theme-grey: #808080;
+  --theme-grey-09: rgba(128, 128, 128, 0.9);
+  --theme-grey-08: rgba(128, 128, 128, 0.8);
+  --theme-grey-07: rgba(128, 128, 128, 0.7);
+  --bgr-light-secondary: #f5f7fb;
+  --bgr-light-primary: #fff;
+}
+
+
+.register-div {
+  border: 1px solid var(--theme-yellow-07);
+}
+
+.custom-label {
+  color: var(--dark-txt);
+}
+
+.theme-button {
+  background-color: var(--bgr-dark);
+  border: solid 1px var(--theme-grey);
+}
+
+.theme-button:hover {
+  background-color: var(--bgr-dark);
+  border: solid 1px var(--theme-yellow);
+}
+
+.animated-link a {
+  position: relative;
+  text-decoration: none;
+  color: var(--theme-grey);
+}
+
+
+.animated-link a:hover {
+  text-decoration: none;
+}
+
+.animated-link a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--theme-yellow-06);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.animated-link a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}

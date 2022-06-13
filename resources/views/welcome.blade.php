@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="ru">
 @include ('layout/head')
 <link rel="stylesheet" type="text/css" href="../assets/css/photoswipe.css">
 </head>
@@ -52,7 +54,7 @@
 
           <!-- Container-fluid Ends-->
 
-        
+
 
             @include('layout/product')
 
