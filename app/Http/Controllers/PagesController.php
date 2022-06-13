@@ -8,13 +8,17 @@ use App\Models\Game;
 class PagesController extends Controller
 {
 
-  public function gamePage() {
-    $url = route('game-page');
-    return view('game-page')->with('game-page', $url);
+//  public function gamePage() {
+  //  $url = route('game-page');
+  //  return view('game-page')->with('game-page', $url);
+//  }
+
+  public function index() {
+    $games = Game::all();
+    return view('index', ['games' => $games]);
   }
 
-  public function mainPage() {
-    $games = Game::all();
-    return view('/welcome', ['games' => $games]);
+  public function game() {
+    return view('game');
   }
 }

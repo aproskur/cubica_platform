@@ -19,38 +19,21 @@ use App\Http\Controllers\GamesController;
 
 @include_once('admin_web.php');
 
-//Route::get('/', function() {
-//  return view('welcome');
-//});
-
-Route::get('/', [PagesController::class, 'mainPage']);
+Route::get('/', [PagesController::class, 'index']);
+Route::get('/game', [PagesController::class, 'game']);
 
 Route::get('/signup', function() {
   return view('user_access.signup');
 });
 
-Route::get('/shop', function() {
-  return view('shop');
-});
-
 Route::get('/game-page', [PagesController::class, 'gamePage'])->name('game-page');
 
-Route::get('/test', function() {
-  return view('test');
-});
 
-Route::get('/games_test', function() {
-  return view('games_test', [
-    'games' => Game::all()
+Route::get('/games/{game}', function(Game $game) {
+  return view('game-page', [
+    'game' => $game
   ]);
 });
-
-Route::resource('/games', GamesController::class);
-//Route::get('/{game}', function(Game $game){
-//  return view('game', [
-//    'game'=>$game;
-//  ]);
-//}
 
 //Route::get('/', function () {
 //    return redirect()->route('index');

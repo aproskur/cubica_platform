@@ -65,7 +65,7 @@
         </div>
         <!-- END OF MODAL -->
 
-        <div class="product-details"><a href="{{ route('game-page') }}" >
+        <div class="product-details"><a href="#" >
           <div class="product-price">
             <button class="theme-button"><a href="cart.html"><i data-feather="shopping-cart" class="cart-button"></i></a></button>
             <div class="price-wrapper">
@@ -81,7 +81,7 @@
           </div>
           <div class="product-desc">
             <button class="theme-button"><i data-feather="heart" class="heart-button"></i></button>
-            <a href="{{ route('game-page') }}" ><h4> {{ $gameName }}</h4></a>
+            <a href="{{ url('games/{game}') }}"><h4> {{ $gameName }}</h4></a>
           </div>
         </div>
       </div>

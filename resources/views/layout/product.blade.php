@@ -10,10 +10,6 @@
            <x-catalogue-card-component :game=$game/>
         </div>
         @endforeach
-        <div class="col-xl-3 col-sm-6 xl-4">
-             @livewire('catalogue-card')
-
-        </div>
       </div>
 
     </div>
