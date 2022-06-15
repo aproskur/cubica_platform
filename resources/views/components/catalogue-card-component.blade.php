@@ -81,7 +81,6 @@
           </div>
           <div class="product-desc">
             <button class="theme-button"><i data-feather="heart" class="heart-button"></i></button>
-            <a href="{{ route('game-page') }}"><h4> {{ $game->getName(); }}</h4></a>
             <a href="{{ url('games/'.$id) }}"><h4> {{ $gameName }}</h4></a>
 
           </div>

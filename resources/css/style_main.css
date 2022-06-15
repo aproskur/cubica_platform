@@ -34,7 +34,14 @@ body.dark-only a {
   color: var(--dark-txt);
 }
 
+body.dark-only .page-main-header,
+body.dark-only .main-header-left,
+body.dark-only .main-header-right,
+body.dark-only .main-header{
+  background-color: var(--bgr-dark);
+}
 
+.page-main-header,
 .main-header-left,
 .main-header-right,
 .main-header {
@@ -1723,6 +1730,14 @@ transition: all 0.3s ease; }
 .product-box .product-img .game-hover ul.game-hover-bar-center i {
   font-size: 1.5rem;
 }
+
+/* Footer */
+body.dark-only footer {
+  background-color: var(--bgr-dark);
+}
+
+
+/*Footer ends */
 
 
 
