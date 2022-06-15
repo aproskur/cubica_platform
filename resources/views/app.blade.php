@@ -4,11 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="viho admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, viho admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="pixelstrap">
-    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <meta name="description" content="Платформа для разработки обучающих игр">
+    <meta name="author" content="Cubica">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
     <title>{{config('app.name', 'cubica')}}</title>
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -39,14 +38,31 @@
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
-
-    <link rel="stylesheet" type="text/css" href="../assets/css/photoswipe.css">
     <!-- Cubica custom styles -->
     <link href="{{ asset('css/style_main.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../assets/css/photoswipe.css">
+    <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+document.documentElement.classList.add('dark')
+} else {
+document.documentElement.classList.remove('dark')
+}
+
+// Whenever the user explicitly chooses light mode
+localStorage.theme = 'light'
+
+// Whenever the user explicitly chooses dark mode
+localStorage.theme = 'dark'
+
+// Whenever the user explicitly chooses to respect the OS preference
+localStorage.removeItem('theme')
+    </script>
+
 </head>
 
+
   <body class="dark-only">
+
     <!-- Loader starts-->
         <div class="loader-wrapper">
           <div class="theme-loader">
@@ -55,10 +71,22 @@
         </div>
     <!-- Loader ends-->
 
+
       @yield('content')
 
 
-
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 footer-copyright">
+              <p class="mb-0">Copyright {{date('Y')}} © Cubica</p>
+            </div>
+            <div class="col-md-6">
+              <p class="pull-right mb-0">Hand crafted & made with <i class="fa fa-heart font-secondary"></i></p>
+            </div>
+          </div>
+        </div>
+      </footer>
       @livewireScripts
       <!-- latest jquery-->
       <script src="../assets/js/jquery-3.5.1.min.js"></script>
@@ -66,15 +94,12 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" integrity="sha512-24XP4a9KVoIinPFUbcnjIjAjtS59PUoxQj3GNVpWc86bCqPuy3YxAcxJrxFCxXe4GHtAumCbO2Ze2bddtuxaRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
       <!-- Sidebar jquery-->
-      <script src="../assets/js/sidebar-menu.js"></script>
+
       <script src="../assets/js/config.js"></script>
       <!-- Bootstrap js-->
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
       <!-- Plugins JS start-->
-      <script src="../assets/js/photoswipe/photoswipe.min.js"></script>
-      <script src="../assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
-      <script src="../assets/js/photoswipe/photoswipe.js"></script>
       <!-- Plugins JS Ends-->
       <!--
       <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" integrity="sha512-lOtDAY9KMT1WH9Fx6JSuZLHxjC8wmIBxsNFL6gJPaG7sLIVoSO9yCraWOwqLLX+txsOw0h2cHvcUJlJPvMlotw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -86,7 +111,10 @@
       <script src="../assets/js/offcanvas.js"></script>
       <script src="./js/app.js"></script>
       <script src="./js/script_main.js"></script>
+
       <script src="../assets/js/slick-slider/slick.min.js"></script>
       <script src="../assets/js/slick-slider/slick-theme.js"></script>
+
+      <script src="../assets/js/sidebar-menu.js"></script>
   </body>
 </html>

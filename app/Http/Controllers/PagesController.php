@@ -18,7 +18,11 @@ class PagesController extends Controller
     return view('index', ['games' => $games]);
   }
 
-  public function game() {
-    return view('game');
+  public function getGamePage($game) {
+    return view('game', [
+      'game' => Game::findOrFail($game)
+    ]);
   }
+
+
 }

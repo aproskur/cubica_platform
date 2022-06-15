@@ -19,21 +19,26 @@ use App\Http\Controllers\GamesController;
 
 @include_once('admin_web.php');
 
-Route::get('/', [PagesController::class, 'index']);
-Route::get('/game', [PagesController::class, 'game']);
+Route::get('/', [PagesController::class, 'index'])->name('main');
+Route::get('games', [PagesController::class, 'getGamePage'])->name('game-page');
 
 Route::get('/signup', function() {
   return view('user_access.signup');
 });
 
-Route::get('/game-page', [PagesController::class, 'gamePage'])->name('game-page');
-
-
-Route::get('/games/{game}', function(Game $game) {
-  return view('game-page', [
-    'game' => $game
+Route::get('games/{game}', function($game) {
+  return view('game', [
+    'game' => Game::findOrFail($game)
   ]);
 });
+
+//Route::get('game/{game}', function($game) {
+//  return view('game');
+//})->name('test-view');
+
+//Route::get('test/{test}', function($test) {
+//  return view('game');
+//})->name('test-view');
 
 //Route::get('/', function () {
 //    return redirect()->route('index');

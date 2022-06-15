@@ -524,6 +524,9 @@ body.light-only .search-page .search-form .form-group .input-group-text i {
 /* SIDEBAR END */
 
 /*  MODAL GAME */
+.central-icon::before {
+font-size: 50px;
+}
 
 body.dark-only .product-box .modal .modal-header {
   background-color: var(--bgr-dark);
@@ -532,7 +535,7 @@ body.dark-only .product-box .modal .modal-header {
 
 .button-close {
   position: relative;
-  top: -315px;
+  top: -375px;
   right: -350px;
   box-sizing: content-box;
   font-size: 2em;

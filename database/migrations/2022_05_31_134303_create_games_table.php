@@ -24,6 +24,7 @@ class CreateGamesTable extends Migration
             $table->string('additional_photo_path', 2048)->nullable();
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
+            $table->decimal('subscr_price')->nullable;
         });
     }
 

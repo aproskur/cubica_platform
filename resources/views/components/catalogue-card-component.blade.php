@@ -7,8 +7,8 @@
           <div class="ribbon ribbon-success ribbon-right ribbon-downloads"><span id="total-downloads">1023</span></div>
           <div class="game-hover">
             <ul class="game-hover-bar-center">
-              <li data-bs-toggle="modal" data-bs-target="#catalogueModal{{$id}}"><i class="fa-solid fa-info"></i></li>
-              <li><a href="#"><i class="fa-solid fa-play"></i></a></li>
+              <li data-bs-toggle="modal" data-bs-target="#catalogueModal{{$id}}"><a><i class="icofont icofont-document-search central-icon"></i></a></li>
+              <li><a href="#"><i class="icon-game central-icon"></i></a></li>
             </ul>
             <ul class="game-hover-bar-bottom">
               <li><a href="#"><i data-feather="edit"></i></a></li>
@@ -28,11 +28,11 @@
                       <h4>{{$gameName}}</h4></a>
                     <div class="product-price-modal">
                       <div class=price-1>
-                        {{ number_format($gamePrice, 0, '.', ' ') }}
+                        {{ number_format($game->price, 0, '.', ' ') }}
                         <span>&#8381;/запуск</span>
                       </div>
-                      <div class=price-2><span style="color:var(--theme-yellow); font-weight:bold;">1</span>
-                        {{ number_format($gamePrice, 0, '.', ' ') }}
+                      <div class=price-2>
+                        {{ number_format($game->subscr_price, 0, '.', ' ') }}
                         <span>&#8381;/месяц</span>
                       </div>
                     </div>
@@ -48,7 +48,7 @@
 
                       <div class="modal-buttons"><button class="theme-button theme-button-square"><a href="cart.html"><i data-feather="shopping-cart" class="cart-button"></i></a></button>
                         <button class="theme-button theme-button-square"><i data-feather="heart" class="heart-button"></i></button>
-                        <button class="theme-button theme-button-long"><a href="{{ route('game-page') }}">Смотреть подробности</a></button>
+                        <button class="theme-button theme-button-long"><a href="{{ url('games/'.$id) }}">Смотреть подробности</a></button>
                       </div>
                     </div>
                   </div>
@@ -73,15 +73,17 @@
                 {{ number_format($gamePrice, 0, '.', ' ') }}
                 <span>&#8381;/запуск</span>
               </div>
-              <div><span style="color:var(--theme-yellow); font-weight:bold;">1</span>
-                {{ number_format($gamePrice, 0, '.', ' ') }}
+              <div>
+                {{ number_format($game->subscr_price, 0, '.', ' ') }}
                 <span>&#8381;/месяц</span>
               </div>
             </div>
           </div>
           <div class="product-desc">
             <button class="theme-button"><i data-feather="heart" class="heart-button"></i></button>
-            <a href="{{ url('games/{game}') }}"><h4> {{ $gameName }}</h4></a>
+            <a href="{{ route('game-page') }}"><h4> {{ $game->getName(); }}</h4></a>
+            <a href="{{ url('games/'.$id) }}"><h4> {{ $gameName }}</h4></a>
+
           </div>
         </div>
       </div>

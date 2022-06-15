@@ -62,7 +62,7 @@
                         <div class="card-body">
                           <div class="pro-group pt-0 border-0">
                             <div class="product-page-details mt-0">
-                              <h3>Название игры</h3>
+                              <h3>{{$game->name ?? 'Default name'}}</h3>
                               </div>
                             </div>
                             <div class="game-page-details">
@@ -80,7 +80,7 @@
 
                               <div class="gamepage_product-price">
                                 <div class="price-1">
-                                  550RUB/запуск
+                                  {{ $game->price ?? 'Def'}}/запуск
                                 </div>
                                 <div class="price-2">
                                   1500RUB/месяц
@@ -98,7 +98,7 @@
 
                           </div>
                           <div class="pro-group">
-                              <p>Краткое описание игры </p>
+                              <p>{{ $game->excerpt}}</p>
                           </div>
                           <div class="pro-group">
                             <div class="row">

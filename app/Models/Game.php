@@ -13,6 +13,18 @@ class Game extends Model
 
     protected $primaryKey = 'id';
 
+   // public $name;
+   // public $price;
+   // public $excerpt;
+   // public $id;
+   //
+   //  public function __construct($name, $price, $excerpt, $id) {
+   //     $this->name = $name;
+   //     $this->price = $price;
+   //     $this->excerpt = $excerpt;
+   //     $this->id = $id;
+   // }
+
 
     public function getName() {
       return $this->name;
@@ -20,6 +32,10 @@ class Game extends Model
 
     public function getPrice() {
       return $this->price;
+    }
+
+    public function getSubscrPrice() {
+      return $this->subscr_price;
     }
 
     public function getDescription() {

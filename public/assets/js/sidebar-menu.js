@@ -24,13 +24,13 @@
               jQuery('.submenu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
           }
           jQuery('.submenu-title').click(function () {
-              jQuery('.submenu-title').toggleClass('active');
+              jQuery('.submenu-title').removeClass('active');
               jQuery('.submenu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
-              jQuery('.submenu-content').slideToggle('normal');
+              jQuery('.submenu-content').slideUp('normal');
               if (jQuery(this).next().is(':hidden') == true) {
                   jQuery(this).addClass('active');
                   jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-down"></i></div>');
-                  jQuery(this).next().slideToggle('normal');
+                  jQuery(this).next().slideDown('normal');
               } else {
                   jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
               }
@@ -45,13 +45,13 @@
               jQuery('.menu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
           }
           jQuery('.menu-title').click(function () {
-              jQuery('.menu-title').toggleClass('active');
+              jQuery('.menu-title').removeClass('active');
               jQuery('.menu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
-              jQuery('.menu-content').slideToggle('normal');
+              jQuery('.menu-content').slideUp('normal');
               if (jQuery(this).next().is(':hidden') == true) {
                   jQuery(this).addClass('active');
                   jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-down"></i></div>');
-                  jQuery(this).next().slideToggle('normal');
+                  jQuery(this).next().slideDown('normal');
               } else {
                   jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
               }
@@ -64,13 +64,13 @@
             $('.page-body-wrapper').removeClass('horizontal-menu').addClass('sidebar-icon');
             jQuery('.submenu-title').append('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
           jQuery('.submenu-title').click(function () {
-              jQuery('.submenu-title').toggleClass('active');
+              jQuery('.submenu-title').removeClass('active');
               jQuery('.submenu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
-              jQuery('.submenu-content').slideToggle('normal');
+              jQuery('.submenu-content').slideUp('normal');
               if (jQuery(this).next().is(':hidden') == true) {
                   jQuery(this).addClass('active');
                   jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-down"></i></div>');
-                  jQuery(this).next().slideToggle('normal');
+                  jQuery(this).next().slideDown('normal');
               } else {
                   jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
               }
@@ -79,13 +79,13 @@
 
           jQuery('.menu-title').append('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
           jQuery('.menu-title').click(function () {
-              jQuery('.menu-title').toggleClass('active');
+              jQuery('.menu-title').removeClass('active');
               jQuery('.menu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
-              jQuery('.menu-content').slideToggle('normal');
+              jQuery('.menu-content').slideUp('normal');
               if (jQuery(this).next().is(':hidden') == true) {
                   jQuery(this).addClass('active');
                   jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-down"></i></div>');
-                  jQuery(this).next().slideToggle('normal');
+                  jQuery(this).next().slideDown('normal');
               } else {
                   jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
               }
