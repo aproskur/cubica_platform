@@ -2,7 +2,8 @@
   <div class="main-header-right">
     <div class="main-header-left">
       <div><a href="/"><img class="img-fluid logo-cubica" src="../assets/images/logo_cubica-svg.svg" alt="лого"></a></div>
-      <div class="onhover-dropdown">
+@if (Route::has('login'))
+      <div class="onhover-dropdown" id="left-sidebar-toggler">
         <div class="menu-btn" id="menu-btn-div">
             <div class="menu-btn-burger"></div>
         </div>
@@ -11,24 +12,25 @@
               <li>Магазин игр</li>
               <li>О платформе</li>
               <li>Поддержка</li>
+              @auth
               <li>Личный кабинет</li>
               <li>Мои подписки</li>
+              @endauth
           </ul>
         </div>
       </div>
     </div>
 
 
-
-
-  @if (Route::has('login'))
           <div class="nav-right col right-menu m-r-20">
+            <div class="" id="right-sidebar-toggler">
+
+            </div>
             <ul class="nav-menu top-navmenu navigation">
               <li class="change-mode">
                 <div class="mode"><i class="fa fa-lightbulb-o"></i></div>
               </li>
                 @auth
-
                   <li class="round-btn-link p-0 onhover-dropdown">
                     <button class="btn-info round-button" type="button" aria-expanded="false"><a href='#' class="header-button-link"><i data-feather="user"></i></a></button>
                     <div class="navmenu-dropdown onhover-show-div nav-usermenu">
@@ -46,12 +48,11 @@
                   </li>
 
                 @else
-
                   <li class="round-btn-link p-0">
                   <button class="btn-info round-button" type="button" id="login-button" aria-expanded="false"><a href='#' class="header-button-link"><i data-feather="log-in"></i></a></button>
                   </li>
 
-                @if (Route::has('register'))
+
               <li class="round-btn-link p-0">
                 <div class="navmenu-dropdown onhover-show-div" id="">
                   <ul class="m-t-5">
@@ -62,13 +63,13 @@
                   </ul>
                 </div>
               </li>
-              @endif
+
             @endauth
           </ul>
         </div>
       </div>
     </div>
-@endif
+
 
 <div class="constructor-nav-menu">
   <div class="container-fluid">
@@ -113,14 +114,15 @@
                     {{ __('Вход') }}
                 </x-jet-button>
             </div>
+            @if (Route::has('register'))
             <div class="create-account-link animated-link"> <a href="{{ route('register') }}" >Создать аккаунт</a> </div>
-
+            @endif
           </form>
           <div class="close-login-div" id="close-login-div"> &#10005; </div>
 
       </div>
 
   </div>
-
+@endif
 
 @include('layout.offcanvas')

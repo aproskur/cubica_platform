@@ -11,9 +11,10 @@
               <li><a href="#"><i class="icon-game central-icon"></i></a></li>
             </ul>
             <ul class="game-hover-bar-bottom">
-              <li><a href="#"><i data-feather="edit"></i></a></li>
-              <li><a href="#"><i data-feather="copy"></i></a></li>
-              <li><a href="#"><i data-feather="archive"></i></a></li>
+                <li><a href="#"><i data-feather="edit"></i></a></li>
+                <li><a href="#"><i data-feather="copy"></i></a></li>
+                <li><a href="#"><i class="fa fa-check-square-o"></i></a></li>
+                <li><a href="#"><i data-feather="archive"></i></a></li>
              <ul>
           </div>
         </div>
@@ -25,7 +26,7 @@
                 <div class="product-box row">
                   <div class="product-img col-lg-6"><img class="img-fluid" src="../assets/images/antarctica.png" alt=""></div>
                   <div class="product-details col-lg-6 text-start"><a href="{{ route('game-page') }}" >
-                      <h4>{{$gameName}}</h4></a>
+                      <h4>{{$game->name}}</h4></a>
                     <div class="product-price-modal">
                       <div class=price-1>
                         {{ number_format($game->price, 0, '.', ' ') }}
@@ -37,9 +38,9 @@
                       </div>
                     </div>
                     <div class="modal-game-desc">
-                      <p><span style="color:var(--theme-yellow)">Учебная цель:<span>
+                      <p><span>Учебная цель:<span>
                       Текст про цель игры</p>
-                      <p><span style="color:var(--theme-yellow)">Аудитория игры:<span>
+                      <p><span>Аудитория игры:<span>
                       Текст про то, для кого рассчитана игра</p>
                     </div>
 
@@ -48,7 +49,7 @@
 
                       <div class="modal-buttons"><button class="theme-button theme-button-square"><a href="cart.html"><i data-feather="shopping-cart" class="cart-button"></i></a></button>
                         <button class="theme-button theme-button-square"><i data-feather="heart" class="heart-button"></i></button>
-                        <button class="theme-button theme-button-long"><a href="{{ url('games/'.$id) }}">Смотреть подробности</a></button>
+                        <button class="theme-button theme-button-std"><a href="{{ url('games/'.$id) }}">Смотреть подробности</a></button>
                       </div>
                     </div>
                   </div>
@@ -67,7 +68,7 @@
 
         <div class="product-details"><a href="#" >
           <div class="product-price">
-            <button class="theme-button"><a href="cart.html"><i data-feather="shopping-cart" class="cart-button"></i></a></button>
+            <button class="theme-button theme-button-square"><a href="cart.html"><i data-feather="shopping-cart" class="cart-button"></i></a></button>
             <div class="price-wrapper">
               <div>
                 {{ number_format($gamePrice, 0, '.', ' ') }}
@@ -80,7 +81,7 @@
             </div>
           </div>
           <div class="product-desc">
-            <button class="theme-button"><i data-feather="heart" class="heart-button"></i></button>
+            <button class="theme-button theme-button-square"><i data-feather="heart" class="heart-button"></i></button>
             <a href="{{ url('games/'.$id) }}"><h4> {{ $gameName }}</h4></a>
 
           </div>

@@ -36,100 +36,45 @@
               }
           });
           // jQuery('.submenu-content').hide();
-// РАБОТАЕТ ЭТОТ СКРИПТ
-//menu-title :тип сортировки, жанр игры, компетенции
-//Открывается одно - закрываются другие
-//Надо: клик - отерылось, клик - на это же закрылось
-//клик на другое - открылос
-              //       jQuery('.menu-title').append('<div class="TEST according-menu"><i class="fa fa-angle-right"></i></div>');
-              //       if ( $('.menu-title').hasClass('active') )
-              //       {
-              //           jQuery('.menu-title.active').find('div').replaceWith('<div class="TEST1 according-menu"><i class="fa fa-angle-down"></i></div>');
-              //       }else{
-              //         //При загрузке страницы все меню открыты
-              //           jQuery('.menu-title').find('div').replaceWith('<div class="TEST2 according-menu"><i class="fa fa-angle-right"></i></div>');
-              //       }
-              //       jQuery('.menu-title').click(function () {
-              //         //Все закрытые меню, когда одно открыто
-              //           jQuery('.menu-title').removeClass('active');
-              //           jQuery('.menu-title').find('div').replaceWith('<div class="TEST3 according-menu"><i class="fa fa-angle-right"></i></div>');
-              //           jQuery('.menu-content').slideUp('normal');
-              //
-              //           //Открытое меню
-              //           if (jQuery(this).next().is(':hidden') == true) {
-              //               jQuery(this).addClass('active');
-              //               jQuery(this).find('div').replaceWith('<div class="TEST4 according-menu"><i class="fa fa-angle-down"></i></div>');
-              //               jQuery(this).next().slideDown('normal');
-              //           } else {
-              //               jQuery(this).find('div').replaceWith('<div class="TEST5 according-menu"><i class="fa fa-angle-right"></i></div>');
-              //           }
-              //       });
-              //       // jQuery('.menu-content').hide();
-              // } else if ($('#pageWrapper').hasClass('horizontal-wrapper')) {
-              //     var contentwidth = jQuery(window).width();
-              //     if ((contentwidth) < '992') {
-              //         $('#pageWrapper').removeClass('horizontal-wrapper').addClass('compact-wrapper');
-              //         $('.page-body-wrapper').removeClass('horizontal-menu').addClass('sidebar-icon');
-              //         jQuery('.submenu-title').append('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
-              //       jQuery('.submenu-title').click(function () {
-              //           jQuery('.submenu-title').removeClass('active');
-              //           jQuery('.submenu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
-              //           jQuery('.submenu-content').slideUp('normal');
-              //           if (jQuery(this).next().is(':hidden') == true) {
-              //               jQuery(this).addClass('active');
-              //               jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-down"></i></div>');
-              //               jQuery(this).next().slideDown('normal');
-              //           } else {
-              //               jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
-              //           }
-              //       });
 
-
-//NEW script
-jQuery('.menu-title').append('<div class="TEST according-menu"><i class="fa fa-angle-right"></i></div>');
-if ( $('.menu-title').hasClass('active') )
-{
-    console.log("I am in test1 menu");
-    jQuery('.menu-title.active').find('div').replaceWith('<div class="TEST1 according-menu"><i class="fa fa-angle-down"></i></div>');
-}else {
-  //сюда заходит при загрузке страницы. все с классом test2
-    console.log("I am closing dropdown");
-    jQuery('.menu-title').find('div').replaceWith('<div class="TEST2 according-menu"><i class="fa fa-angle-right"></i></div>');
-}
-jQuery('.menu-title').click(function () {
-    jQuery(this).toggleClass('active');
-        if (jQuery(this).hasClass('active')){
-          console.log("I am opening dropdown")
-            jQuery(this).find('div').replaceWith('<div class="TEST33 according-menu"><i class="fa fa-angle-down"></i></div>');
-            jQuery(this).next().slideDown('normal');
-          } else {
-            jQuery(this).find('div').replaceWith('<div class="TEST44 according-menu"><i class="fa fa-angle-right"></i></div>');
-            jQuery(this).next().slideUp('normal');
-  }
-});
-// jQuery('.menu-content').hide();
-} else if ($('#pageWrapper').hasClass('horizontal-wrapper')) {
-var contentwidth = jQuery(window).width();
-if ((contentwidth) < '992') {
-  $('#pageWrapper').removeClass('horizontal-wrapper').addClass('compact-wrapper');
-  $('.page-body-wrapper').removeClass('horizontal-menu').addClass('sidebar-icon');
-  jQuery('.submenu-title').append('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
-jQuery('.submenu-title').click(function () {
-    jQuery('.submenu-title').removeClass('active');
-    jQuery('.submenu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
-    jQuery('.submenu-content').slideUp('normal');
-    if (jQuery(this).next().is(':hidden') == true) {
-        jQuery(this).addClass('active');
-        jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-down"></i></div>');
-        jQuery(this).next().slideDown('normal');
-    } else {
-        jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
-    }
-});
-
-
-
-
+          jQuery('.menu-title').append('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
+          if ( $('.menu-title').hasClass('active') )
+          {
+              jQuery('.menu-title.active').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-down"></i></div>');
+          }else{
+              jQuery('.menu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
+          }
+          jQuery('.menu-title').click(function () {
+              jQuery('.menu-title').removeClass('active');
+              jQuery('.menu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
+              jQuery('.menu-content').slideUp('normal');
+              if (jQuery(this).next().is(':hidden') == true) {
+                  jQuery(this).addClass('active');
+                  jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-down"></i></div>');
+                  jQuery(this).next().slideDown('normal');
+              } else {
+                  jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
+              }
+          });
+          // jQuery('.menu-content').hide();
+    } else if ($('#pageWrapper').hasClass('horizontal-wrapper')) {
+        var contentwidth = jQuery(window).width();
+        if ((contentwidth) < '992') {
+            $('#pageWrapper').removeClass('horizontal-wrapper').addClass('compact-wrapper');
+            $('.page-body-wrapper').removeClass('horizontal-menu').addClass('sidebar-icon');
+            jQuery('.submenu-title').append('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
+          jQuery('.submenu-title').click(function () {
+              jQuery('.submenu-title').removeClass('active');
+              jQuery('.submenu-title').find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
+              jQuery('.submenu-content').slideUp('normal');
+              if (jQuery(this).next().is(':hidden') == true) {
+                  jQuery(this).addClass('active');
+                  jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-down"></i></div>');
+                  jQuery(this).next().slideDown('normal');
+              } else {
+                  jQuery(this).find('div').replaceWith('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');
+              }
+          });
           // jQuery('.submenu-content').hide();
 
           jQuery('.menu-title').append('<div class="according-menu"><i class="fa fa-angle-right"></i></div>');

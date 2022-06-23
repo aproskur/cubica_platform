@@ -12,47 +12,57 @@
           </div>
         </div>
       </div>
-      <div class="card-body">
+      <div class="card-body offcanvas-card">
         <div class="row">
           <div class="col-12">
-            <ul class="icon-lists border navs-icon default-according style-1" id="accordionoc">
+
+            <ul class="icon-lists navs-icon default-according style-1" id="accordionoc">
               <li>
                 <button class="btn btn-link text-muted active" data-bs-toggle="collapse" data-bs-target="#collapseicon" aria-expanded="true"><i data-feather="folder-plus"></i><span> Все&nbspразделы</span></button>
+            @if (Route::has('login'))
                 <ul class="collapse show" id="collapseicon" aria-labelledby="collapseicon" data-parent="#accordionoc">
+
+                  <li><a href="javascript:void()"><span>Личный кабинет</span></a></li>
                   <li><a href="javascript:void()"><span>Мои игры</span></a></li>
                   <li><a href="javascript:void()"><span>Мои подписки</span></a></li>
-                  <li><a href="shop"><span>Магазин игр</span></a></li>
                   <li><a href="javascript:void()"><span>Конструктор</span></a></li>
-                  <li><a href="javascript:void()"><span>О платформе</span></a></li>
+                 <li><a href="javascript:void()"><span>Магазин игр</span></a></li>
+                 <li><a href="javascript:void()"><span>Поддержка</span></a></li>
               </ul>
               </li>
-                <li><a href="shop">Магазин</a></li>
-                <li><a href="#">Конструктор</a></li>
+
+                <li><a href="#">О платформе</a></li>
                 <li>
                   <div class="mode"><i class="fa fa-moon-o"></i></div>
                 </li>
+
+                <form method="POST" action="{{ route('logout') }}" x-data>
+                    @csrf
+                    @auth
                 <li>
-                  <button class="btn btn-primary" type="button"><a href="#"><i data-feather="log-in"></i>Вход</a></button>
+                  <a href="{{ route('logout') }}" @click.prevent="$root.submit();">
+                  <button class="theme-button theme-button-std theme-button-sidebar" type="button"><i data-feather="log-out"></i>
+                      {{ __('Выход') }}</button></a>
                 </li>
+                @else
+               <li>
+                 <button class="theme-button theme-button-std theme-button-sidebar" type="button" id="sidebar-login-btn"><a href="#"><i data-feather="log-in"></i>Вход</a></button>
+               </li>
+                @endauth
+                </form>
+
+                @if (Route::has('register'))
                 <li>
-                  <button class="btn btn-primary" type="button"><a href='signup'><i data-feather="log-out"></i>Выход</a></button>
+                  <button class="theme-button theme-button-std theme-button-sidebar" type="button"><a href="{{ route('register') }}"><i data-feather="user-plus"></i>Регистрация</a></button>
                 </li>
-                <li>
-                  <button class="btn btn-primary" type="button"><a href='signup'><i data-feather="user-plus"></i>Регистрация</a></button>
-                </li>
+                @endif
+
                 <li>
                   <div class="onhover-dropdown navs-dropdown">
-                  <button class="btn btn-primary" type="button"><a href='signup'><i data-feather="user"></i>Dropdown</a></button>
-                  <div class="onhover-show-div">
-                    <ul class="icon-lists navs-icon">
-                      <li><a href="javascript:void(0)"><i data-feather="home"></i><span> Настройки</span></a></li>
-                      <li><a href="javascript:void(0)"><i data-feather="airplay"></i><span> Мои игры</span></a></li>
-                      <li><a href="javascript:void(0)"><i data-feather="box"></i><span> Выход</span></a></li>
-                    </ul>
-                  </div>
                 </div>
                 </li>
               </ul>
+      @endif
           </div>
         </div>
       </div>

@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/prism.css">
     <!-- slick slider -->
     <link rel="stylesheet" type="text/css" href="../assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/rating.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/slick-theme.css">
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
@@ -38,8 +39,9 @@
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+
     <!-- Cubica custom styles -->
-    <link href="{{ asset('css/style_main.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/style_main.css') }}" rel="stylesheet">
     <script>
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -78,16 +80,18 @@ localStorage.removeItem('theme')
       <footer class="footer">
         <div class="container-fluid">
           <div class="row">
+            <div class="col-md-6">
+              <p class="mb-0"></p>
+            </div>
             <div class="col-md-6 footer-copyright">
               <p class="mb-0">Copyright {{date('Y')}} © Cubica</p>
-            </div>
-            <div class="col-md-6">
-              <p class="pull-right mb-0">Hand crafted & made with <i class="fa fa-heart font-secondary"></i></p>
             </div>
           </div>
         </div>
       </footer>
+
       @livewireScripts
+
       <!-- latest jquery-->
       <script src="../assets/js/jquery-3.5.1.min.js"></script>
       <!-- feather icon js-->
@@ -109,12 +113,15 @@ localStorage.removeItem('theme')
       <script src="../assets/js/script.js"></script>
       <script src="../assets/js/theme-customizer/customizer.js"></script>
       <script src="../assets/js/offcanvas.js"></script>
-      <script src="./js/app.js"></script>
-      <script src="./js/script_main.js"></script>
+      <script src="../js/app.js"></script>
 
       <script src="../assets/js/slick-slider/slick.min.js"></script>
       <script src="../assets/js/slick-slider/slick-theme.js"></script>
-
+      <script src="../assets/js/rating/jquery.barrating.js"></script>
+      <script src="../assets/js/rating/rating-script.js"></script>
       <script src="../assets/js/sidebar-menu.js"></script>
+      <script src="../js/script_main.js"></script>
+
+
   </body>
 </html>

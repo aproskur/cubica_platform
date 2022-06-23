@@ -34,6 +34,7 @@
 .theme-button {
   background-color: var(--bgr-dark);
   border: solid 1px var(--theme-grey);
+  color: var(--theme-grey);
 }
 
 .theme-button:hover {
