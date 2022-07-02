@@ -10,9 +10,13 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
 
-        <!-- Styles -->
+
+
+        <!-- Cubica custom styles -->
+          <link href="{{ asset('css/style_main.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link href="{{ asset('css/style_auth.css') }}" rel="stylesheet">
+
 
         @livewireStyles
 
@@ -26,18 +30,10 @@ document.documentElement.classList.add('dark')
 document.documentElement.classList.remove('dark')
 }
 
-// Whenever the user explicitly chooses light mode
-localStorage.theme = 'light'
-
-// Whenever the user explicitly chooses dark mode
-localStorage.theme = 'dark'
-
-// Whenever the user explicitly chooses to respect the OS preference
-localStorage.removeItem('theme')
         </script>
 
     </head>
-    <body class="font-sans antialiased dark">
+    <body class="font-sans antialiased">
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">

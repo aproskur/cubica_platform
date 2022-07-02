@@ -9,22 +9,17 @@
   @include ('layout/top-navbar')
 
   <!-- Page Body Start-->
-  <div class="page-body-wrapper horizontal-menu">
+  <div class="page-body-wrapper">
     <!-- Page Sidebar Start-->
     <header class="main-nav">
       @include('layout.sidebar-empty')
     </header>
     <!-- Page Sidebar Ends-->
     <div class="page-body">
-      <div class="container-fluid">
-        <div class="page-header">
-          <div class="row">
-            <div class="col-12">
               <!-- Container-fluid starts-->
               <div class="container-fluid">
-                <div>
                   <div class="row product-page-main p-0">
-                    <div class="col-xl-5 col-md-6 box-col-12 xl-50">
+                    <div class="col-xl-6 order-3 col-md-6  order-lg-1 col-lg-6  box-col-12 xl-50">
                       <div class="card">
                         <div class="card-body">
                           <div class="row">
@@ -34,7 +29,6 @@
                                 <div><img class="img-fluid" src="../assets/images/pinguin_portrait.png" alt=""></div>
                                 <div><img class="img-fluid" src="../assets/images/antarctica.png" alt=""></div>
                                 <div><img class="img-fluid" src="../assets/images/pinguin.jpg" alt=""></div>
-
                               </div>
                             </div>
                             <div class="col-xl-3 product-thumbnail">
@@ -57,14 +51,14 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-2 col-md-6 box-col-6 xl-50 proorder-lg-1">
+                    <div class="col-xl-6 order-1 col-md-12  order-lg-2 col-lg-6  box-col-6 xl-50">
                       <div class="card">
                         <div class="card-body">
                           <div class="pro-group pt-0 border-0">
                             <div class="product-page-details mt-0">
                               <h3>{{$game->name ?? 'Default name'}}</h3>
-                              </div>
                             </div>
+                          </div>
                             <div class="game-page-details">
 
 
@@ -102,11 +96,10 @@
 
 
                             <div class="gamepage_buttons-panel">
-                              <button class="theme-button theme-button-std" type="button" name="button"><a href="cart.html">Играть</a></button>
-                              <button class="theme-button theme-button-std" type="button" name="button"><a href="cart.html">Купить</a></button>
-                              <button class="theme-button theme-button-std" type="button" name="button"><a href="cart.html">Демо&nbsp;игра</a></button>
-                              <button class="theme-button theme-button-std" type="button" name="button"><a href="cart.html">В&nbsp;избранное</a></button>
-
+                              <a class="theme-button theme-button-std" role="button"  href="cart.html">Играть</a>
+                              <a class="theme-button theme-button-std" role="button"  href="cart.html">Купить</a>
+                              <a class="theme-button theme-button-std" role="button"  href="cart.html">Демо&nbsp;игра</a>
+                              <button class="theme-button theme-button-std">В&nbsp;избранное</button>
                             </div>
 
 
@@ -143,92 +136,91 @@
                           <div class="pro-group">
                             <div class="row">
                               <div class="gamepage_buttons-panel">
-                                <button class="theme-button theme-button-square"><a href="#"><i data-feather="edit"></i></a></button>
-                                <button class="theme-button theme-button-square"><a href="#"><i data-feather="copy"></i></a></button>
-                                <button class="theme-button theme-button-square"><a href="#"><i class="fa fa-check-square-o"></i></a></button>
-                                <button class="theme-button theme-button-square"><a href="#"><i data-feather="archive"></i></a></button>
+                                <button class="theme-button theme-button-square" href="#"><i data-feather="edit"></i></button>
+                                <button class="theme-button theme-button-square"><i data-feather="copy"></i></button>
+                                <button class="theme-button theme-button-square" href="#"><i class="fa fa-check-square-o"></i></button>
+                                <button class="theme-button theme-button-square"><i data-feather="archive"></i></button>
                               </div>
                            </div>
                       </div>
-                    </div>
-                    <div class="col-xl-2 col-md-6 box-col-6 xl-50 proorder-lg-1">
-
-
-
-
-
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="row product-page-main">
-                    <div class="col-sm-12">
-                      <ul class="nav nav-tabs border-tab mb-0" id="top-tab" role="tablist">
-                        <li class="nav-item"><a class="nav-link active" id="top-home-tab" data-bs-toggle="tab" href="#top-home" role="tab" aria-controls="top-home" aria-selected="false">Для чего и кого</a>
-                          <div class="material-border"></div>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" id="profile-top-tab" data-bs-toggle="tab" href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="false">Сюжет игры</a>
-                          <div class="material-border"></div>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" id="contact-top-tab" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="true">Отзывы</a>
-                          <div class="material-border"></div>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" id="brand-top-tab" data-bs-toggle="tab" href="#top-brand" role="tab" aria-controls="top-brand" aria-selected="true">Об авторе</a>
-                          <div class="material-border"></div>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" id="brand-top-tab" data-bs-toggle="tab" href="#top-brand" role="tab" aria-controls="top-brand" aria-selected="true">Поддержка</a>
-                          <div class="material-border"></div>
-                        </li>
-                      </ul>
-                      <div class="tab-content" id="top-tabContent">
-                        <div class="tab-pane fade active show" id="top-home" role="tabpanel" aria-labelledby="top-home-tab">
-                          <p class="mb-0 m-t-20">Набор компетенций </p>
-                          <p class="mb-0 m-t-20">Аудитория игры</p>
-                          <p class="mb-0 m-t-20">Цель игры</p>
-                          <p class="mb-0 m-t-20">Хэштеги</p>
-                        </div>
-                        <div class="tab-pane fade" id="top-profile" role="tabpanel" aria-labelledby="profile-top-tab">
-                          <p class="mb-0 m-t-20">Сюжет игры. Описание сюжета игры</p>
-                        </div>
-                        <div class="tab-pane fade" id="top-contact" role="tabpanel" aria-labelledby="contact-top-tab">
-                          <p class="mb-0 m-t-20">Отзыв 1</p>
-                          <p class="mb-0 m-t-20">Отзыв 2</p>
-                          <p class="mb-0 m-t-20">Отзыв 3</p>
-                          <p class="mb-0 m-t-20">Отзыв 4</p>
-                          <p class="mb-0 m-t-20">Отзыв 5</p>
-                          <p class="mb-0 m-t-20">Отзыв 6</p>
-                        </div>
-                        <div class="tab-pane fade" id="top-brand" role="tabpanel" aria-labelledby="brand-top-tab">
-                          <p class="mb-0 m-t-20">Инфо об авторе</p>
-                          <p class="mb-0 m-t-20">Игра автора</p>
-                          <p class="mb-0 m-t-20">Игра автора</p>
-                          <p class="mb-0 m-t-20">Игра автора</p>
-                          <p class="mb-0 m-t-20">Игра автора</p>
+                    </div></div>
+                    <div class="col-xl-12 order-2 col-md-12  order-lg-3 col-lg-12 box-col-6 xl-100">
+                          <div class="card">
+                            <div class="row product-page-main">
+                              <div class="col-sm-12">
+                                <ul class="nav nav-tabs border-tab mb-0" id="top-tab" role="tablist">
+                                  <li class="nav-item"><a class="nav-link active" id="top-home-tab" data-bs-toggle="tab" href="#top-home" role="tab" aria-controls="top-home" aria-selected="false">Для чего и кого</a>
+                                    <div class="material-border"></div>
+                                  </li>
+                                  <li class="nav-item"><a class="nav-link" id="profile-top-tab" data-bs-toggle="tab" href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="false">Сюжет игры</a>
+                                    <div class="material-border"></div>
+                                  </li>
+                                  <li class="nav-item"><a class="nav-link" id="contact-top-tab" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="true">Отзывы</a>
+                                    <div class="material-border"></div>
+                                  </li>
+                                  <li class="nav-item"><a class="nav-link" id="brand-top-tab" data-bs-toggle="tab" href="#top-brand" role="tab" aria-controls="top-brand" aria-selected="true">Об авторе</a>
+                                    <div class="material-border"></div>
+                                  </li>
+                                  <li class="nav-item"><a class="nav-link" id="support-top-tab" data-bs-toggle="tab" href="#top-brand" role="tab" aria-controls="top-brand" aria-selected="true">Поддержка</a>
+                                    <div class="material-border"></div>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="top-tabContent">
+                                  <div class="tab-pane fade active show" id="top-home" role="tabpanel" aria-labelledby="top-home-tab">
+                                    <p class="mb-0 m-t-20">Набор компетенций </p>
+                                    <p class="mb-0 m-t-20">Аудитория игры</p>
+                                    <p class="mb-0 m-t-20">Цель игры</p>
+                                    <p class="mb-0 m-t-20">Хэштеги</p>
+                                  </div>
+                                  <div class="tab-pane fade" id="top-profile" role="tabpanel" aria-labelledby="profile-top-tab">
+                                    <p class="mb-0 m-t-20">Сюжет игры. Описание сюжета игры</p>
+                                  </div>
+                                  <div class="tab-pane fade" id="top-contact" role="tabpanel" aria-labelledby="contact-top-tab">
+                                    <p class="mb-0 m-t-20">Отзыв 1</p>
+                                    <p class="mb-0 m-t-20">Отзыв 2</p>
+                                    <p class="mb-0 m-t-20">Отзыв 3</p>
+                                    <p class="mb-0 m-t-20">Отзыв 4</p>
+                                    <p class="mb-0 m-t-20">Отзыв 5</p>
+                                    <p class="mb-0 m-t-20">Отзыв 6</p>
+                                  </div>
+                                  <div class="tab-pane fade" id="top-brand" role="tabpanel" aria-labelledby="brand-top-tab">
+                                    <p class="mb-0 m-t-20">Инфо об авторе</p>
+                                    <p class="mb-0 m-t-20">Игра автора</p>
+                                    <p class="mb-0 m-t-20">Игра автора</p>
+                                    <p class="mb-0 m-t-20">Игра автора</p>
+                                    <p class="mb-0 m-t-20">Игра автора</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!-- Container-fluid Ends-->
-            </div>
-          </div>
-        </div>
-      </div>
 
 
 
 
       <!-- Container-fluid CATALOGUE Ends-->
-
-
     </div>
 
-    <!-- footer start-->
-    <div class="container-fluid">
-
-    </div>
+          <footer class="footer">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="mb-0"></p>
+                </div>
+                <div class="col-md-6 footer-copyright">
+                  <p class="mb-0">Copyright {{date('Y')}} © Cubica</p>
+                </div>
+              </div>
+            </div>
+          </footer>
 </div>
+
+
+
 <!-- login js-->
 <!-- Plugin used-->
 

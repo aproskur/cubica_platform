@@ -307,7 +307,15 @@ $(".mode").on("click", function () {
         $('.mode i').toggleClass("fa-moon-o").toggleClass("fa-lightbulb-o");
         // $('.mode-sun').toggleClass("show")
         $('body').toggleClass("dark-only");
-        $('body').toggleClass("light-only");
+        //$('body').toggleClass("light-only");
         var color = $(this).attr("data-attr");
+        if ($('body').hasClass('dark-only')){
         localStorage.setItem('body', 'dark-only');
+        localStorage.setItem('theme', 'dark');
+        }
+        if($('body').hasClass("dark-only") && localStorage.getItem('theme') == 'light') {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
     });

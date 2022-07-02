@@ -3,8 +3,8 @@
     <div class="card">
       <div class="product-box">
         <div class="product-img"><img class="img-fluid" src="../assets/images/pinguin_portrait.png" alt="">
-          <div class="ribbon ribbon-success ribbon-game-rating"><a href="#"> <i data-feather="star"></i></a><div id="game-rating">3.7</div></div>
-          <div class="ribbon ribbon-success ribbon-right ribbon-downloads"><span id="total-downloads">1023</span></div>
+          <div class="ribbon ribbon-success ribbon-game-rating"><a href="#"> <i data-feather="star"></i></a><span>3.7</span></div>
+          <div class="ribbon ribbon-success ribbon-right ribbon-downloads"><span>1023</span></div>
           <div class="game-hover">
             <ul class="game-hover-bar-center">
               <li data-bs-toggle="modal" data-bs-target="#catalogueModal{{$id}}"><a><i class="icofont icofont-document-search central-icon"></i></a></li>
@@ -15,7 +15,7 @@
                 <li><a href="#"><i data-feather="copy"></i></a></li>
                 <li><a href="#"><i class="fa fa-check-square-o"></i></a></li>
                 <li><a href="#"><i data-feather="archive"></i></a></li>
-             <ul>
+             </ul>
           </div>
         </div>
         <!-- MODAL -->
@@ -38,18 +38,16 @@
                       </div>
                     </div>
                     <div class="modal-game-desc">
-                      <p><span>Учебная цель:<span>
+                      <p><span>Учебная цель:</span>
                       Текст про цель игры</p>
-                      <p><span>Аудитория игры:<span>
+                      <p><span>Аудитория игры:</span>
                       Текст про то, для кого рассчитана игра</p>
                     </div>
 
                     <div class="product-qnty">
-                      <h6 class="f-w-600"></h6>
-
-                      <div class="modal-buttons"><button class="theme-button theme-button-square"><a href="cart.html"><i data-feather="shopping-cart" class="cart-button"></i></a></button>
+                      <div class="modal-buttons"><button class="theme-button theme-button-square"><i data-feather="shopping-cart" class="cart-button"></i></button>
                         <button class="theme-button theme-button-square"><i data-feather="heart" class="heart-button"></i></button>
-                        <button class="theme-button theme-button-std"><a href="{{ url('games/'.$id) }}">Смотреть подробности</a></button>
+                        <a class="theme-button theme-button-std" href="{{ url('games/'.$id) }}">Смотреть подробности</a>
                       </div>
                     </div>
                   </div>
@@ -57,7 +55,7 @@
                     <div class="product-view m-t-20">
                       <p class="mb-0">{{$gameExcerpt}}</p>
                     </div>
-                </div class="modal-btn-wrapper">
+                  </div>
                 <button class="button-close" type="button" data-bs-dismiss="modal" aria-label="Close">&#10005;</button>
                 </div>
               </div>
@@ -66,9 +64,9 @@
         </div>
         <!-- END OF MODAL -->
 
-        <div class="product-details"><a href="#" >
+        <div class="product-details">
           <div class="product-price">
-            <button class="theme-button theme-button-square"><a href="cart.html"><i data-feather="shopping-cart" class="cart-button"></i></a></button>
+            <button class="theme-button theme-button-square"><i data-feather="shopping-cart" class="cart-button"></i></button>
             <div class="price-wrapper">
               <div>
                 {{ number_format($gamePrice, 0, '.', ' ') }}

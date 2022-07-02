@@ -18,17 +18,12 @@ const sidebarLoginBtn = document.getElementById('sidebar-login-btn');
 let scrolling = false;
 
 
-
-
-
-
-
 //Event listener для круглой кнопки login, которая вызывает showLogin и открывается login-div
-if(document.body.contains(document.getElementById('loginBtn'))) {
+if(loginBtn !== null){
 loginBtn.addEventListener('click', () => {
         showLogin();
        });
-}
+     }
 
 loginDivCloseBtn.addEventListener('click', () => {
   closeLoginDiv();
@@ -36,12 +31,12 @@ loginDivCloseBtn.addEventListener('click', () => {
 
 
 //Listener для кнопки вход в мобильном меню offcanvas sidemenu
-if(document.body.contains(document.getElementById('sidebarLoginBtn'))) {
-   sidebarLoginBtn.addEventListener('click', () => {
-     closeNav();
-     showLogin();
-   });
-}
+//if(document.body.contains(document.getElementById('sidebarLoginBtn'))) {
+//   sidebarLoginBtn.addEventListener('click', () => {
+//     closeNav();
+  //   showLogin();
+//   });
+//}
 
 // //Listener для кнопки вход в мобильном меню offcanvas sidemenu
 //    sidebarLoginBtn.addEventListener('click', () => {
@@ -55,16 +50,18 @@ function showLogin() {
   loginDivWrapper.style.display = 'flex';
 }
 
-//Event listener слушает, когда будет скролл вниз, убирает видео и поля зрения
+//Event listener слушает, когда будет скролл вниз, убирает видео из поля зрения
 window.addEventListener('resize', () => {mediaChecker(mediaQuery)});
 
 window.onload = mediaChecker(mediaQuery);
 
-window.addEventListener('scroll', function() {
-  if (document.documentElement.scrollTop > 400){
-  video.style.display = "none";
-  }
-});
+if (video !== null && video !== undefined){
+  window.addEventListener('scroll', function() {
+    if (document.documentElement.scrollTop > 400){
+    video.style.display = "none";
+    }
+  })
+}
 
 
 
@@ -126,4 +123,41 @@ $(window).on('resize', function(){
       $('#left-sidebar-toggler').append($('#menu-btn-div'))
       $('#right-sidebar-toggler').removeClass('right-burger-alignment');
     }
+});
+
+//$(document).ready(function() {
+//  if (localStorage.getItem('theme') === 'light') {
+//    $('body').removeClass('dark-only');
+//  } else {
+//    $('body').addClass('dark-only');
+//  }
+//});
+
+// $(document).ready(function() {
+//  if($('body').hasClass("dark-only") && localStorage.getItem('theme') !== 'light') {
+//   localStorage.setItem('theme', 'dark');
+//   console.log('dark theme is set')
+//  } else {
+//  localStorage.setItem('theme', 'light');
+//   console.log('light theme is set')
+// }
+// });
+
+$(document).ready(function() {
+ if($('body').hasClass("dark-only") && localStorage.getItem('theme') == 'light') {
+  localStorage.setItem('theme', 'light');
+  localStorage.removeItem('body', 'dark-only');
+  $('body').removeClass('dark-only');
+  console.log('light theme is set')
+ }
+ if(!$('body').hasClass("dark-only") && localStorage.getItem('theme') == 'light'){
+   localStorage.setItem('theme', 'light');
+   localStorage.removeItem('body', 'dark-only');
+    console.log('dark theme is set beacuse body is not dark-only')
+ }
+ else {
+ localStorage.setItem('theme', 'dark');
+ localStorage.setItem('body', 'dark-only');
+  console.log('dark theme is set')
+}
 });

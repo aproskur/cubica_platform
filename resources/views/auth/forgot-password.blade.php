@@ -4,8 +4,8 @@
             <x-jet-authentication-card-logo />
         </x-slot>
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+        <div class="mb-4 text-sm dark:text-white text-gray-600">
+            {{ __('Забыли пароль? Не проблема. Введите свой email и мы отправим вам ссылку на сброс пароля, чтобы вы могли установить новый пароль.') }}
         </div>
 
         @if (session('status'))
@@ -25,8 +25,8 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <x-jet-button>
-                    {{ __('Email Password Reset Link') }}
+                <x-jet-button class="h-12">
+                    {{ __('Отправить ссылку для сбороса пароля на email') }}
                 </x-jet-button>
             </div>
         </form>

@@ -74,10 +74,6 @@ body.dark-only .main-header{
 }
 .menu-btn {
   position: relative;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,10 +110,6 @@ body.dark-only .main-header{
 }
 
 .menu-btn-onhover-show-div {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   flex-direction: column;
 }
@@ -144,10 +136,6 @@ body.dark-only .main-header{
   margin-top: 10em;
   max-width: 500px;
   max-height: 350px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   padding: 5em;
   border-radius: 20px;
@@ -175,10 +163,6 @@ body.dark-only .login-div {
 
 
 .login-div__login {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -197,20 +181,12 @@ body.dark-only .login-div {
 
 
 .login-div__password {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
 .login-div__remember {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   margin-top: 2em;
   align-items: center;
@@ -221,10 +197,6 @@ body.dark-only .login-div {
 }
 
 .login-div__forgot {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -528,7 +500,6 @@ body.dark-only .compact-wrapper .page-main-header .main-header-right .nav-right 
   height: calc(100vh - 100px); /* changed: calc(100vh - 355px); */
   left: -300px;
   z-index: 99;
-  -webkit-transition: color 1s ease;
   transition: color 1s ease;
   overflow: hidden;
   overflow-y: auto;
@@ -571,8 +542,6 @@ body.light-only .search-page .search-form .form-group .input-group-text i {
 .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li .nav-link:hover {
   background-color: inherit;
   border: 1px solid var(--theme-yellow);
-
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   position: relative;
 }
@@ -581,7 +550,6 @@ body.light-only .search-page .search-form .form-group .input-group-text i {
 
 .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li .nav-link {
   border-radius: 5px;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   border-color: var(--theme-yellow);
 }
@@ -643,10 +611,6 @@ body.dark-only .product-box .modal .modal-header {
 
 
 .product-price-modal {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   padding-right: 1em;
@@ -672,13 +636,10 @@ body.dark-only .product-box .modal .modal-header {
 
 .modal-buttons {
   width: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   align-items: center;
-  column-gap: 1em;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
 }
 
 .price-wrapper {
@@ -689,10 +650,6 @@ body.dark-only .product-box .modal .modal-header {
 }
 
 .product-price {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
 
 }
@@ -855,10 +812,6 @@ body.dark-only .theme-button a:hover {
 
 
 .game-card-header {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
 }
@@ -943,6 +896,24 @@ body.dark-only .border {
   display: none;
 }
 
+@-webkit-keyframes opening {
+  0% {
+    transform: translateY(-20px);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes opening {
   0% {
     transform: translateY(-20px);
@@ -968,17 +939,16 @@ body.dark-only .constructor-menu.open {
 .constructor-menu.open  {
   padding: 2em;
   margin-top: 5em;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-left: 300px;
-  animation-name: opening;
-  animation-duration: 0.51s;
-  animation-timing-function: linear;
+  -webkit-animation-name: opening;
+          animation-name: opening;
+  -webkit-animation-duration: 0.51s;
+          animation-duration: 0.51s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 
@@ -1794,15 +1764,11 @@ body.dark-only .dropdown-ul li:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 0;
   border-radius: 100%;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: all 0.3s ease;
+  transform: scale(0);
   transition: all 0.3s ease; }
 
 
@@ -1831,35 +1797,24 @@ body.dark-only .dropdown-ul li:hover {
 
 
   .product-box .product-img .game-hover ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     }
     .product-box .product-img .game-hover ul i {
       font-size: 20px; }
     .product-box .product-img .game-hover ul li {
-      -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.08);
-              box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.08);
+      box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.08);
       background-color: #fff;
       border-radius: 15%;
       line-height: 1.6;
       height: 45px;
       width: 45px;
       margin: 0 3px;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
       justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
       align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      align-items: center;
+      justify-content: center;
       cursor: pointer; }
       .product-box .product-img .game-hover ul li a {
         color: var(--bgr-dark); }
@@ -1867,16 +1822,13 @@ body.dark-only .dropdown-ul li:hover {
         padding: 0; }
       .product-box .product-img .game-hover ul li:hover {
         background-color: var(--theme-grey);
-        -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease; }
         .product-box .product-img .game-hover ul li:hover .btn, .product-box .product-img .game-hover ul li:hover i {
           color: #fff; }
 .product-box:hover .game-hover {
 opacity: 1;
 border-radius: 0%;
--webkit-transform: scale(1);
-        transform: scale(1);
--webkit-transition: all 0.3s ease;
+transform: scale(1);
 transition: all 0.3s ease; }
 
 .product-box .product-img .game-hover ul li svg:hover {
@@ -2038,25 +1990,20 @@ height: auto;
     position: fixed;
     z-index: -1;
     background-color: #fff;
-    -webkit-transition: all linear 0.3s;
     transition: all linear 0.3s;
     border-top: 1px solid #e6edef;
-    -webkit-box-shadow: 0 2px 2px 2px rgba(113, 113, 113, 0.08);
-            box-shadow: 0 2px 2px 2px rgba(113, 113, 113, 0.08);
+    box-shadow: 0 2px 2px 2px rgba(113, 113, 113, 0.08);
     width: 100%;
     left: 0;
     padding: 0 20px;
-
-    -webkit-transform: translateY(-35px) scaleY(0);
-            transform: translateY(-35px) scaleY(0);
+    transform: translateY(-35px) scaleY(0);
     opacity: 0;
     visibility: hidden;
     height: 70px; }
     .page-wrapper .page-main-header .main-header-right .nav-right > ul.open {
       z-index: 1;
       opacity: 1;
-      -webkit-transform: translateY(0px) scaleY(1);
-              transform: translateY(0px) scaleY(1);
+      transform: translateY(0px) scaleY(1);
       visibility: visible; }
 }
 
@@ -2065,3 +2012,4 @@ height: auto;
     margin-left: 10px;
   }
 }
+

@@ -77,18 +77,7 @@ localStorage.removeItem('theme')
       @yield('content')
 
 
-      <footer class="footer">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6">
-              <p class="mb-0"></p>
-            </div>
-            <div class="col-md-6 footer-copyright">
-              <p class="mb-0">Copyright {{date('Y')}} © Cubica</p>
-            </div>
-          </div>
-        </div>
-      </footer>
+
 
       @livewireScripts
 

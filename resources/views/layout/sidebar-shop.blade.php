@@ -19,8 +19,8 @@
             </div>
           </div>
         </div>
+        <div class="animated-link"><a role="button" class="reset-button" href="#"> Cбросить все фильтры</a></div>
 
-        <div class="animated-link"><a role="button" class="reset-button" type="button" name="button">Cбросить все фильтры</a></div>
 
 
         <li class="sidebar-main-title">
@@ -31,32 +31,32 @@
         <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Тип сортировки</span></a>
           <div class="nav-submenu menu-content nav-submenu-shop">
             <div class="form-check m-t-20">
-              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort1">
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort1"/>
               <label class="custom-radio-label form-check-label" for="sort1">
                 По алфавиту
               </label>
-              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort2">
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort2"/>
               <label class="custom-radio-label form-check-label" for="sort2">
                 По популярности
               </label>
-              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort3">
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort3"/>
               <label class="custom-radio-label form-check-label" for="sort3">
                 По рейтингу
               </label>
-              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort4">
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort4"/>
               <label class="custom-radio-label form-check-label" for="sort4">
                 По длительности
               </label>
-              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort">
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort5"/>
               <label class="custom-radio-label form-check-label" for="sort5">
                 По стоимости
               </label>
-              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort">
-              <label class="custom-radio-label form-check-label" for="sort5">
+              <input class="custom-radio form-check-input" type="radio" name="flexRadioDefault" id="sort6"/>
+              <label class="custom-radio-label form-check-label" for="sort6">
                 По дате публикации
               </label>
             </div>
-          <div>
+          </div>
         </li>
         <li class="sidebar-main-title">
           <div>
@@ -66,15 +66,15 @@
         <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Компетенции</span></a>
           <div class="nav-submenu menu-content nav-submenu-shop">
             <div class="filter form-check m-t-10">
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence1"></input>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence1">
               <label class="filter-label form-check-label" for="competence1">Стратегическое мышление</label>
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence2"></input>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence2">
               <label class="filter-label form-check-label" for="competence2">Лидерство</label>
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence3"></input>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence3">
               <label class="filter-label form-check-label" for="competence3">Работа в команде</label>
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence4"></input>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence4">
               <label class="filter-label form-check-label" for="competence4">Компетенция</label>
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence5"></input>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="competence5">
               <label class="filter-label form-check-label" for="competence5">Компетенция</label>
           </div>
         </div>
@@ -82,11 +82,11 @@
         <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Жанр игры</span></a>
           <div class="nav-submenu menu-content nav-submenu-shop">
             <div class="filter form-check m-t-10">
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="gametype1"></input>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="gametype1">
               <label class="filter-label form-check-label" for="gametype1">Настольная игра</label>
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="gametype2"></input>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="gametype2">
               <label class="filter-label form-check-label" for="gametype2">Квест</label>
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="gametype3"></input>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="gametype3">
               <label class="filter-label form-check-label" for="gametype3">Чат бот</label>
           </div>
         </div>
@@ -94,30 +94,29 @@
         <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Разработчик</span></a>
           <div class="nav-submenu menu-content nav-submenu-shop">
             <div class="filter form-check m-t-10">
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="developer1"></input>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="developer1">
               <label class="filter-label form-check-label" for="developer1">Критерий</label>
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="developer2"></input>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="developer2">
               <label class="filter-label form-check-label" for="developer2">Критерий</label>
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="developer3"></input>
+              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="developer3">
               <label class="filter-label form-check-label" for="developer3">Критерий</label>
             </div>
           </div>
         </li>
 
-        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Мои игры</span></a>
-          <div class="nav-submenu menu-content nav-submenu-shop">
-            <div class="filter form-check m-t-10">
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="mygames1"></input>
-              <label class="filter-label form-check-label" for="mygames1">Мои игры</label>
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="mygames2"></input>
-              <label class="filter-label form-check-label" for="mygames2">Купленные игры</label>
-              <input class="filter-checkbox form-check-input" type="checkbox" value="" id="mygames3"></input>
-              <label class="filter-label form-check-label" for="mygames3">Избранное</label>
+          <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Мои игры</span></a>
+            <div class="nav-submenu menu-content nav-submenu-shop">
+              <div class="filter form-check m-t-10">
+                <input class="filter-checkbox form-check-input" type="checkbox" value="" id="mygames1">
+                <label class="filter-label form-check-label" for="mygames1">Мои игры</label>
+                <input class="filter-checkbox form-check-input" type="checkbox" value="" id="mygames2">
+                <label class="filter-label form-check-label" for="mygames2">Купленные игры</label>
+                <input class="filter-checkbox form-check-input" type="checkbox" value="" id="mygames3">
+                <label class="filter-label form-check-label" for="mygames3">Избранное</label>
+              </div>
             </div>
-          </div>
-        </li>
-        <div class="animated-link"><a role="button" class="reset-button" type="button" name="button">Cбросить все фильтры</a></div>
-
-      </ul>
+          </li>
+        </ul>
+    </div>
   </div>
 </nav>
