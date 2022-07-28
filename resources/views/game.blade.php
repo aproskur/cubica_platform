@@ -63,7 +63,7 @@
 
 
                               <div class="data-rating-board">
-                                <div class="d-flex">
+                                <div class="d-flex stars-reviews">
                                   <div class="">
                                     <select id="u-rating-fontawesome" name="rating" autocomplete="off" style="display: none;">
                                     <option value="1">1</option>
@@ -78,9 +78,10 @@
                                   <a href="#" data-rating-value="4" data-rating-text="4" class=""></a>
                                   <a href="#" data-rating-value="5" data-rating-text="5" class=""></a>
                                 </div>
+                                <div><a href="#">244 отзыва</a></div>
                               </div>
 
-                                <div><a href="#">244 отзыва</a></div>
+
                                 <div>Играли 6800 раз</div>
                               </div>
 
@@ -95,7 +96,7 @@
                             </div>
 
 
-                            <div class="gamepage_buttons-panel">
+                            <div class="gamepage_buttons-panel wide-buttons-bar">
                               <a class="theme-button theme-button-std" role="button"  href="cart.html">Играть</a>
                               <a class="theme-button theme-button-std" role="button"  href="cart.html">Купить</a>
                               <a class="theme-button theme-button-std" role="button"  href="cart.html">Демо&nbsp;игра</a>
@@ -136,10 +137,10 @@
                           <div class="pro-group">
                             <div class="row">
                               <div class="gamepage_buttons-panel">
-                                <button class="theme-button theme-button-square" href="#"><i data-feather="edit"></i></button>
-                                <button class="theme-button theme-button-square"><i data-feather="copy"></i></button>
-                                <button class="theme-button theme-button-square" href="#"><i class="fa fa-check-square-o"></i></button>
-                                <button class="theme-button theme-button-square"><i data-feather="archive"></i></button>
+                                <button class="theme-button theme-button-square" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Редактировать"><i data-feather="edit"></i></button>
+                                <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Копировать"><i data-feather="copy"></i></button>
+                                <button class="theme-button theme-button-square" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Публикация"><i class="fa fa-check-square-o"></i></button>
+                                <div data-bs-toggle="tooltip" data-bs-placement="top" title="Добавить в архив"><button class="theme-button theme-button-square"><i data-feather="archive"></i></button></div>
                               </div>
                            </div>
                       </div>

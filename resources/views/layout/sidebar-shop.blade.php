@@ -3,16 +3,19 @@
   <div class="main-navbar">
       <div id="mainnav">
       <ul class="nav-menu custom-scrollbar">
+        <li class="back-btn">
+          <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
+        </li>
         <div class="sidebar-user text-center p-0" style="border: none;">
           <div class="container-fluid search-page m-b-20 p-0">
             <div class="col-12">
-                  <form class="search-form p-10">
+                  <form class="sidebar-search-form search-form p-10">
                     <div class="form-group m-0">
                       <label class="sr-only">Email</label>
                     </div>
                     <div class="form-group mb-0">
                       <div class="input-group"><span class="input-group-text"><i class="icon-search"></i></span>
-                        <input class="form-control-plaintext" type="search" placeholder="Поиск по играм">
+                        <input class="form-control-plaintext" type="search" placeholder="Поиск по играм" id="sidebar-searchform">
                       </div>
                     </div>
                   </form>

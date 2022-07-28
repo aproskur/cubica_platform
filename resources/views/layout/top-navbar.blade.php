@@ -1,13 +1,14 @@
 <div class="page-main-header">
   <div class="main-header-right">
     <div class="main-header-left">
-      <div><a href="/"><svg class="main-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11520 4224" width="240" height="80">
-          <path fill-rule="evenodd" class="s0" d="m6027 2029c73 69 270 164 304 354 90 502-842 670-1363 625l121-322c73-19 868-8 905-231-35-250-645-253-896-256l-133-328c1713-69 940-465 246-433l-97 3c-132-250-108-321-109-323 398-33 837 12 1143 226 493 345-107 671-121 685z"/>
-          <path fill-rule="evenodd" class="s0" d="m8233 1154c-1170-348-2091 986-1011 1656 265 164 813 242 1011 110l-120-303c-325 15-420 54-701-93-409-213-460-732 16-974 278-142 379-94 686-85z"/>
-          <path fill-rule="evenodd" class="s0" d="m2966 1487c-300-26-440-45-693 85-159 81-336 231-343 476-6 237 166 409 323 496 195 107 455 128 709 90l129 320c-451 64-680 71-1038-134-224-128-471-412-466-772 11-756 1012-1078 1490-872z"/>
-          <path fill-rule="evenodd" class="s0" d="m8234 2806c-216-703 233-1481 876-1491 643-11 1139 815 897 1486l-315-124c28-301 34-454-88-696-201-399-716-468-977 13-145 268-84 395-83 691z"/>
-          <path fill-rule="evenodd" class="s0" d="m3184 2330c-117-213-248-734-101-991l305 120-23 240c-33 720 768 1132 1110 407 97-205 92-401 59-645l309-117c192 373-38 1480-912 1480-360 0-630-280-747-494z"/>
-          <path fill-rule="evenodd" class="s0" d="m6399 1315c68-123 266-99 299 40 11 49 28 1389-12 1471-60 122-271 96-305-41-12-54-29-1385 18-1470z"/>
+      <div><a href="/"><svg  class="main-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="6258.9 13891.05 8482.55 1917.95">
+        <metadata id="CorelCorpID_0Corel-Layer"/>
+        <path class="fil0" d="M10820 14138c-306,-214 -745,-259 -1143,-226 1,2 -23,73 109,323l97 -3c694,-32 1467,364 -246,433l133 328c251,3 861,6 896,256 -37,223 -832,212 -905,231l-121 322c521,45 1453,-123 1363,-625 -34,-190 -231,-285 -304,-354 14,-14 614,-340 121,-685l0 0z"/>
+        <path class="fil0" d="M12905 13948c-1170,-348 -2091,986 -1011,1656 265,164 813,242 1011,110l-120 -303c-325,15 -420,54 -701,-93 -409,-213 -460,-732 16,-974 278,-142 379,-94 686,-85l119 -311z"/>
+        <path class="fil0" d="M7749 13970c-478,-206 -1479,116 -1490,872 -5,360 242,644 466,772 358,205 587,198 1038,134l-129 -320c-254,38 -514,17 -709,-90 -157,-87 -329,-259 -323,-496 7,-245 184,-395 343,-476 253,-130 393,-111 693,-85l111 -311 0 0z"/>
+        <path class="fil0" d="M13216 15479c-1,-296 -62,-423 83,-691 261,-481 776,-412 977,-13 122,242 116,395 88,696l315 124c242,-671 -254,-1497 -897,-1486 -643,10 -1092,788 -876,1491l310 -121 0 0z"/>
+        <path class="fil0" d="M8603 15618c874,0 1104,-1107 912,-1480l-309 117c33,244 38,440 -59,645 -342,725 -1143,313 -1110,-407l23 -240 -305 -120c-147,257 -16,778 101,991 117,214 387,494 747,494l0 0z"/>
+        <path class="fil0" d="M11053 15579c34,137 245,163 305,41 40,-82 23,-1422 12,-1471 -33,-139 -231,-163 -299,-40 -47,85 -30,1416 -18,1470z"/>
       </svg></a></div>
 
 @if (Route::has('login'))
@@ -34,7 +35,10 @@
             <div class="" id="right-sidebar-toggler">
 
             </div>
+
+
             <ul class="nav-menu top-navmenu navigation">
+
               <li class="change-mode">
                 <div class="mode"><i class="fa fa-lightbulb-o"></i></div>
               </li>
@@ -75,6 +79,13 @@
             @endauth
           </ul>
         </div>
+      </div>
+      <div class="secondary-menu">
+        <ul class="sub-navmenu">
+          <li data-bs-toggle="tooltip" data-bs-placement="top" title="Фильтр" class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="filter" id="sidebar-toggle"></i></li>
+          <li data-bs-toggle="tooltip" data-bs-placement="top" title="Поиск" class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="search" id="button-search"></i></li>
+          <li class="toggle-sidebar"> <button class="theme-button theme-button-std" type="button" name="button">Добавить игру</button>  </li>
+        </ul>
       </div>
     </div>
 

@@ -6,7 +6,7 @@
         <div class="ribbon ribbon-success ribbon-right ribbon-downloads"><span id="total-downloads">1023</span></div>
         <div class="game-hover">
           <ul class="game-hover-bar-center">
-            <li data-bs-toggle="modal" data-bs-target="#exampleModalCenter16"><i class="fa-solid fa-info"></i></li>
+            <li data-bs-toggle="modal" data-bs-target="#exampleModalCenter16"><i class="fa-solid fa-info tooltip"></i></li>
             <li><a href="#"><i class="fa-solid fa-play"></i></a></li>
           </ul>
           <ul class="game-hover-bar-bottom">

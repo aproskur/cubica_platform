@@ -169,6 +169,8 @@ $toggle_nav_top.click(function() {
   $nav = $('.main-nav');
   $nav.toggleClass('close_icon');
   $header.toggleClass('close_icon');
+  console.log("SIDEBAR!!!!");
+  $('#sidebar-searchform').focus();
 });
 
 $( window ).resize(function() {
@@ -180,6 +182,7 @@ $( window ).resize(function() {
     $nav = $('.main-nav');
     $nav.toggleClass('close_icon');
     $header.toggleClass('close_icon');
+    $("#sidebar-searchform" ).focus();
   });
 });
 
@@ -200,11 +203,12 @@ $('.mobile-sidebar').click(function(){
 // });
 
 //    responsive sidebar
+
 var $window = $(window);
 var widthwindow = $window.width();
 (function($) {
 "use strict";
-if(widthwindow+17 <= 993) {
+if(widthwindow <= 993) {
     $toggle_nav_top.attr('checked', false);
     $nav.addClass("close_icon");
     $header.addClass("close_icon");
@@ -212,7 +216,9 @@ if(widthwindow+17 <= 993) {
 })(jQuery);
 $( window ).resize(function() {
 var widthwindaw = $window.width();
-if(widthwindaw+17 <= 991){
+console.log('checking width on resize')
+if(widthwindaw <= 991){
+  console.log("condition" + widthwindaw);
     $toggle_nav_top.attr('checked', false);
     $nav.addClass("close_icon");
     $header.addClass("close_icon");

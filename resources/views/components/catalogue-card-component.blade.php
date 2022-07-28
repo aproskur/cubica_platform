@@ -7,14 +7,14 @@
           <div class="ribbon ribbon-success ribbon-right ribbon-downloads"><span>1023</span></div>
           <div class="game-hover">
             <ul class="game-hover-bar-center">
-              <li data-bs-toggle="modal" data-bs-target="#catalogueModal{{$id}}"><a><i class="icofont icofont-document-search central-icon"></i></a></li>
-              <li><a href="#"><i class="icon-game central-icon"></i></a></li>
+              <span data-bs-toggle="tooltip" data-bs-placement="top" title="Информация"><li data-bs-toggle="modal"   data-bs-target="#catalogueModal{{$id}}"><a><i class="icofont icofont-document-search central-icon"></i></a></li></span>
+              <li data-bs-toggle="tooltip" data-bs-placement="top" title="Играть"><a href="#"><i class="icon-game central-icon"></i></a></li>
             </ul>
             <ul class="game-hover-bar-bottom">
-                <li><a href="#"><i data-feather="edit"></i></a></li>
-                <li><a href="#"><i data-feather="copy"></i></a></li>
-                <li><a href="#"><i class="fa fa-check-square-o"></i></a></li>
-                <li><a href="#"><i data-feather="archive"></i></a></li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Редактировать"><a href="#"><i data-feather="edit"></i></a></li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Копировать"><a href="#"><i data-feather="copy"></i></a></li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Публикация"><a href="#"><i class="fa fa-check-square-o"></i></a></li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" title="В архив"><a href="#"><i data-feather="archive"></i></a></li>
              </ul>
           </div>
         </div>
@@ -45,8 +45,9 @@
                     </div>
 
                     <div class="product-qnty">
-                      <div class="modal-buttons"><button class="theme-button theme-button-square"><i data-feather="shopping-cart" class="cart-button"></i></button>
-                        <button class="theme-button theme-button-square"><i data-feather="heart" class="heart-button"></i></button>
+                      <div class="modal-buttons">
+                        <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Купить"><i data-feather="shopping-cart" class="cart-button"></i></button>
+                        <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Добавить в избранное"><i data-feather="heart" class="heart-button"></i></button>
                         <a class="theme-button theme-button-std" href="{{ url('games/'.$id) }}">Смотреть подробности</a>
                       </div>
                     </div>
@@ -66,7 +67,7 @@
 
         <div class="product-details">
           <div class="product-price">
-            <button class="theme-button theme-button-square"><i data-feather="shopping-cart" class="cart-button"></i></button>
+            <button class="theme-button theme-button-square cart-button" data-bs-toggle="tooltip" data-bs-placement="top" title="Купить"><i data-feather="shopping-cart" ></i></button>
             <div class="price-wrapper">
               <div>
                 {{ number_format($gamePrice, 0, '.', ' ') }}
@@ -79,7 +80,7 @@
             </div>
           </div>
           <div class="product-desc">
-            <button class="theme-button theme-button-square"><i data-feather="heart" class="heart-button"></i></button>
+            <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Добавить в избранное"><i data-feather="heart" class="heart-button"></i></button>
             <a href="{{ url('games/'.$id) }}"><h4> {{ $gameName }}</h4></a>
 
           </div>
