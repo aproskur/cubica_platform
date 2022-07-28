@@ -30,27 +30,34 @@ body {
   color: var(--light-txt);
 }
 
+
 input {
   caret-color: var(--theme-yellow);
 }
 
-.page-body {
-  margin-top: 20px !important;
+body.dark-only {
+  color: var(--dark-txt);
+  background-color: var(--bgr-dark);
 }
+
+
+/* Чтобы верхнее дополнителное меню не перекрывало то, что под ним */
+.page-body {
+  margin-top: 76px !important;
+}
+
+@media (max-width: 960px) {
+  .page-body {
+    margin-top: 110px !important;
+  }
+}
+
+/* Лого */
 
 .main-logo {
   fill: var(--theme-grey);
   width: 200px;
   padding: 20px;
-}
-
-
-.secondary-menu {
-  background-color: #fff;
-}
-
-body.dark-only .secondary-menu {
-  background-color: var(--bgr-dark);
 }
 
 .main-logo:hover {
@@ -62,6 +69,21 @@ body.dark-only .secondary-menu {
       padding: 5px;
       width: 175px;
     }
+}
+
+.logo-cubica {
+  max-width: 200px;
+}
+
+/* Лого END */
+
+
+.secondary-menu {
+  background-color: #fff;
+}
+
+body.dark-only .secondary-menu {
+  background-color: var(--bgr-dark);
 }
 
 
@@ -97,9 +119,7 @@ body.dark-only .main-header{
   color: var(--theme-grey);
 }
 
-.logo-cubica {
-  max-width: 200px;
-}
+
 .menu-btn {
   position: relative;
   display: -webkit-box;
@@ -373,6 +393,8 @@ body.dark-only .animated-link a {
 }
 
 
+/* Анимированная ссылка END */
+
 .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li {
   padding: 5px 20px;
 }
@@ -390,11 +412,6 @@ body.dark-only .animated-link a {
   stroke: #fff;
 }
 
-body.dark-only {
-  padding-top: 4rem;
-  color: var(--dark-txt);
-  background-color: var(--bgr-dark) !important;
-}
 
 body.dark-only .page-wrapper.compact-wrapper .page-main-header {
   border-bottom: none;
@@ -418,6 +435,7 @@ body.dark-only .card {
 
 .card {
   border: none !important;
+  background-color: var(--bgr-light-secondary);
 }
 
 .card .product-box {
@@ -667,13 +685,11 @@ body.light-only .search-page .search-form .form-group .input-group-text i {
   border: 1px solid var(--bgr-light-primary);
 }
 
-
+body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li .nav-link.active,
 body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li .nav-link:hover {
   border: 1px solid var(--theme-yellow);
 }
 
-
-body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li .nav-link.active,
 body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li .nav-link {
   border: 1px solid var(--bgr-dark);
 }
@@ -789,7 +805,7 @@ body.dark-only .product-box .modal .modal-header {
 }
 
 
-/* CATALOGUE CARD GAMES */
+/*  Карточка в каталоге игр на главной странице CATALOGUE CARD GAMES */
 
 body.dark-only .product-box .product-img .game-hover ul li {
   background-color: rgba(255, 255, 255, 0.7);
@@ -829,24 +845,23 @@ body.dark-only .product-box .product-img .game-hover ul li:hover {
 }
 
 
+.game-card-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
 
 @media screen and (min-width: 1200px) and (max-width: 1366px) {
-.product-box .product-details {
-padding: 10px 0px;
+  .product-box .product-details {
+  padding: 10px 0px;
+  }
 }
-}
-body.light-only .theme-button svg:hover {
-  stroke: var(--theme-grey);
-}
+/*  END Карточка в каталоге игр на главной странице CATALOGUE CARD GAMES */
 
-.catalogue-heart {
-  align-self: center;
-  font-size: 25px;
-}
 
-.product-price button {
-
-}
 
 /* BUTTONS */
 
@@ -901,6 +916,11 @@ body.dark-only a.theme-button:hover {
   color: var(--light-txt);
 }
 
+.catalogue-heart {
+  align-self: center;
+  font-size: 25px;
+}
+
 body.dark-only .theme-button:hover{
   color: #fff;
 }
@@ -944,17 +964,8 @@ body.dark-only .theme-button-square svg:hover {
 /* BUTTONS end */
 
 
-.game-card-header {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-between;
-}
 
-
-/* OFFCANVAS */
+/* OFFCANVAS Меню для мобильных устройств */
 
 body.dark-only .sidenav {
     background-color: var(--bgr-dark);
@@ -1034,7 +1045,7 @@ body.dark-only .border {
   padding: 0.75em;
 }
 
-/* end of OFFCANVAS */
+/* OFFCANVAS Меню для мобильных устройств END */
 
 /*constructor menu*/
 
@@ -1060,39 +1071,8 @@ body.dark-only .border {
   }
 }
 
-body.dark-only .constructor-menu.open {
-  margin-top: 0.25em;
-}
 
-.constructor-menu.open  {
-  padding: 2em;
-  margin-top: 5em;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 300px;
-  animation-name: opening;
-  animation-duration: 0.51s;
-  animation-timing-function: linear;
-}
-
-
-
-.constructor-menu li {
-  padding: .5em;
-  border-radius: 5px;
-}
-
-.constructor-menu.open li:hover  {
-  background-color: var(--theme-yellow-08);
-}
-/* End of constructor menu*/
-
-/*Filter CHECKBOX*/
+/* Filter CHECKBOX Чекбоксы*/
 .filter .filter-label {
 
   padding-left: 25px;
@@ -1119,8 +1099,10 @@ body.dark-only .filter .filter-label {
   color: var(--theme-grey);
 }
 
+/* Filter CHECKBOX Чекбоксы END */
 
-/*Filter Radiobutton*/
+
+/* Filter Radiobutton Радиобаттоны */
 .form-check .custom-radio-label {
   padding-left: 25px;
   font-size: 13px;
@@ -1167,6 +1149,9 @@ body.dark-only .form-check .custom-radio-label {
   box-shadow: none;
 }
 
+
+/* Filter Radiobutton Радиобаттоны  END*/
+
 .nav-toggle {
   cursor: pointer;
   border-radius: 5px;
@@ -1188,18 +1173,12 @@ body.dark-only .form-check .custom-radio-label {
   cursor: pointer;
 }
 
-/*
-body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:nth-child(2) {
-  border-left: 1px solid var(--theme-yellow-01);
-  border-right: 1px solid var(--theme-yellow-01);
-}
-*/
 
 .onhover-show-div {
   border-color: var(--theme-yellow-08);
 }
 
-/* video */
+/* video ВИДЕO */
 .embed-responsive{
   position: relative;
   padding-top: 56.25%;
@@ -1215,9 +1194,9 @@ body.dark-only .page-main-header .main-header-right .nav-right.right-menu ul li:
     border: 0;
 
 }
+/* video ВИДЕO END*/
 
-
-/*DROPDOWN FOR BURGER_MENU */
+/* DROPDOWN FOR BURGER_MENU */
 .page-main-header .navmenu-dropdown {
   width: 300px;
   top: 65px;
@@ -2012,6 +1991,7 @@ transition: all 0.3s ease; }
 }
 
 /* Footer */
+
 body.dark-only footer {
   background-color: var(--bgr-dark);
 }
@@ -2086,7 +2066,7 @@ body.dark-only footer {
 }
 
 
-/* End of game page */
+/*  Страница игры END */
 
 
 /* RESPONSIVENESS */

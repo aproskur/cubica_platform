@@ -114,19 +114,19 @@
                                 <table>
                                   <tbody>
                                     <tr>
-                                      <td> <b>Жанр игры&nbsp;&nbsp;:</b></td>
+                                      <td> <b>Жанр игры:</b></td>
                                       <td class="txt-success">&nbsp;In stock</td>
                                     </tr>
                                     <tr>
-                                      <td> <b>Форма&nbsp;&nbsp;:</b></td>
+                                      <td> <b>Форма:</b></td>
                                       <td>&nbsp;Pixelstrap</td>
                                     </tr>
                                     <tr>
-                                      <td> <b>Длительность&nbsp;&nbsp;:</b></td>
+                                      <td> <b>Длительность:</b></td>
                                       <td>&nbsp;ABC</td>
                                     </tr>
                                     <tr>
-                                      <td> <b>Автор&nbsp;&nbsp;:</b></td>
+                                      <td> <b>Автор:</b></td>
                                       <td>&nbsp;Cotton                                </td>
                                     </tr>
                                   </tbody>
