@@ -21,6 +21,13 @@ use App\Http\Controllers\GamesController;
 
 Route::get('/', [PagesController::class, 'index'])->name('main');
 Route::get('games', [PagesController::class, 'getGamePage'])->name('game-page');
+Route::get('/cart', [PagesController::class, 'getCartPage'])->name('cart');
+Route::get('/about', [PagesController::class, 'getAboutPage'])->name('about');
+Route::get('/support', [PagesController::class, 'getSupportPage'])->name('support');
+Route::get('/gamesupport', [PagesController::class, 'getGameSupportPage'])->name('gamesupport');
+Route::get('/launch', [PagesController::class, 'getGameLaunchPage'])->name('launch');
+Route::get('/subscriptions', [PagesController::class, 'getSubscrPage'])->name('subscriptions');
+
 
 Route::get('/signup', function() {
   return view('user_access.signup');
@@ -31,6 +38,8 @@ Route::get('games/{game}', function($game) {
     'game' => Game::findOrFail($game)
   ]);
 });
+
+
 
 //Route::get('game/{game}', function($game) {
 //  return view('game');

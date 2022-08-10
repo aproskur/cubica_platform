@@ -29,10 +29,10 @@
                 <ul class="collapse show" id="collapseicon" aria-labelledby="collapseicon" data-parent="#accordionoc">
                   <li><a href="javascript:void()"><span>Личный кабинет</span></a></li>
                   <li><a href="javascript:void()"><span>Мои игры</span></a></li>
-                  <li><a href="javascript:void()"><span>Мои подписки</span></a></li>
+                  <li><a href="{{ route('subscriptions') }}"><span>Мои подписки</span></a></li>
                   <li><a href="javascript:void()"><span>Конструктор</span></a></li>
                   <li><a href="javascript:void()"><span>Магазин игр</span></a></li>
-                  <li><a href="javascript:void()"><span>Поддержка</span></a></li>
+                  <li><a href="{{ route('support') }}"><span>Поддержка</span></a></li>
                 </ul>
               </li>
 

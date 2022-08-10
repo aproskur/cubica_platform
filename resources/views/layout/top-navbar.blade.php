@@ -19,8 +19,8 @@
         <div class="navmenu-dropdown onhover-show-div" id="menu-show-div">
           <ul class="m-t-5">
               <li>Магазин игр</li>
-              <li>О платформе</li>
-              <li>Поддержка</li>
+              <li><a href="{{ route('about') }}">О платформе</a></li>
+              <li><a href="{{ route('support') }}">Поддержка</a></li>
               @auth
               <li>Личный кабинет</li>
               <li>Мои подписки</li>

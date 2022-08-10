@@ -24,5 +24,29 @@ class PagesController extends Controller
     ]);
   }
 
+  public function getCartPage() {
+    return view('cart');
+  }
+
+  public function getAboutPage() {
+    return view('about');
+  }
+
+  public function getSupportPage() {
+    return view('support');
+  }
+
+  public function getGameSupportPage() {
+    return view('gamesupport');
+  }
+
+  public function getGameLaunchPage() {
+    return view('launch');
+  }
+
+  public function getSubscrPage() {
+    return view('subscriptions');
+  }
+
 
 }
