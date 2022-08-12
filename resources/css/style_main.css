@@ -46,6 +46,24 @@ body.dark-only {
   margin-top: 76px !important;
 }
 
+/*Убрать лишнее поле под хедером */
+.page-wrapper.compact-wrapper .page-body-wrapper .page-body {
+  padding-top: 0;
+}
+
+/*  ПОДУМАТЬ!!!! найти хорошее соотношение с боковым меню
+.page-wrapper .page-body-wrapper .page-header {
+  padding-bottom: 10px;
+} */
+
+#video-intro .card-body {
+  padding: 0
+}
+
+.card-video-body {
+  padding: 0;
+}
+
 @media (max-width: 960px) {
   .page-body {
     margin-top: 110px !important;

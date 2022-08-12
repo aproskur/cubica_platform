@@ -27,11 +27,11 @@
       </div>
       <!-- Container-fluid starts-->
   @guest
-      <div class="container-fluid m-t-0">
-        <div class="row starter-main m-t-0">
-          <div class="col-sm-12 m-t-0">
-            <div class="card m-t-0" id="video-intro">
-              <div class="card-body">
+      <div class="container-fluid">
+        <div class="row starter-main">
+          <div class="col-sm-12">
+            <div class="card card-video"  id="video-intro">
+              <div class="card-video-body card-body">
                 <div class="col-12">
                   <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item youtube" src="https://www.youtube.com/embed/6cHoZ7DQCMU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

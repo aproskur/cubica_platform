@@ -46,7 +46,7 @@
 
                     <div class="product-qnty">
                       <div class="modal-buttons">
-                        <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Купить"><i data-feather="shopping-cart" class="cart-button"></i></button>
+                        <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Купить"><a href="{{ route('cart') }}"></a><i data-feather="shopping-cart" class="cart-button"></i></button>
                         <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Добавить в избранное"><i data-feather="heart" class="heart-button"></i></button>
                         <a class="theme-button theme-button-std" href="{{ url('games/'.$id) }}">Смотреть подробности</a>
                       </div>

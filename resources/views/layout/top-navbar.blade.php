@@ -31,10 +31,15 @@
     </div>
 
 
-          <div class="nav-right col right-menu m-r-20">
-            <div class="" id="right-sidebar-toggler">
+    @if (Route::is('launch'))
+    <div style="color:var(--theme-yellow); margin-left:2rem;" class="nav-game-name">
+      {{$game->name ?? 'Название игры'}}
+    </div>
+    @endif
 
-            </div>
+          <div class="nav-right col right-menu m-r-20">
+            <div class="" id="right-sidebar-toggler"></div>
+
 
 
             <ul class="nav-menu top-navmenu navigation">

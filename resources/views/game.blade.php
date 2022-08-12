@@ -97,7 +97,7 @@
 
 
                             <div class="gamepage_buttons-panel wide-buttons-bar">
-                              <a class="theme-button theme-button-std" role="button"  href="cart.html">Играть</a>
+                              <a class="theme-button theme-button-std" role="button"  href="#">Играть</a>
                               <a class="theme-button theme-button-std" role="button"  href="{{ route('cart') }}">Купить</a>
                               <a class="theme-button theme-button-std" role="button"  href="cart.html">Демо&nbsp;игра</a>
                               <button class="theme-button theme-button-std">В&nbsp;избранное</button>

@@ -9,7 +9,7 @@
         <div class="sidebar-user text-center p-0" style="border: none;">
           <div class="container-fluid search-page m-b-20 p-0">
             <div class="col-12">
-                  <form class="sidebar-search-form search-form p-10">
+                  <form class="sidebar-search-form search-form p-t-20 p-l-10">
                     <div class="form-group m-0">
                       <label class="sr-only">Email</label>
                     </div>
