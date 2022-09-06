@@ -9,7 +9,7 @@
         <div class="sidebar-user text-center p-0" style="border: none;">
           <div class="container-fluid search-page m-b-20 p-0">
             <div class="col-12">
-                  <form class="sidebar-search-form search-form p-t-20 p-l-10">
+                  <form class="sidebar-search-form search-form p-t-20 p-l-10 p-r-10">
                     <div class="form-group m-0">
                       <label class="sr-only">Email</label>
                     </div>
@@ -23,9 +23,6 @@
           </div>
         </div>
         <div class="animated-link"><a role="button" class="reset-button" href="#"> Cбросить все фильтры</a></div>
-
-
-
         <li class="sidebar-main-title">
           <div>
             <h6>Сортировка           </h6>
@@ -106,7 +103,6 @@
             </div>
           </div>
         </li>
-
           <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="filter"></i><span>Мои игры</span></a>
             <div class="nav-submenu menu-content nav-submenu-shop">
               <div class="filter form-check m-t-10">

@@ -26,6 +26,77 @@
   accent-color: var(--theme-yellow);
 }
 
+
+header.main-nav .main-navbar .nav-menu .custom-select {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bgr-dark);
+  border: 0;
+  color: var(--dark-txt);
+  font-weight: bold;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;       /* Remove default arrow */
+  border: 1px solid var(--bgr-dark);
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  padding: 13px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  width: 87%;
+  margin-left: 1rem;
+}
+
+ header.main-nav .main-navbar .nav-menu .custom-select:hover {
+   border: 1px solid var(--theme-yellow);
+   color: var(--white);
+ }
+
+.page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li a {
+  color: var(--white);
+  font-weight: normal;
+  line-height: 2;
+}
+
+/* Убрать отступы в селекте на странице LAUNCH, чтобы другие паддинги не пострадали */
+.page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li .select-option a {
+  padding: 0;
+}
+
+
+/* Расстояния между названиями игр */
+.select-option {
+  margin-bottom: 0.75rem;
+}
+
+
+#selectedGame {
+  padding: 0;
+  margin: 0;
+}
+
+ header.main-nav .main-navbar .nav-menu .custom-select3 {
+   position: relative;
+   font-family: "Montserrat", sans-serif;
+   background-color: var(--bgr-dark);
+   border: 0;
+   color: var(--dark-txt);
+   font-weight: bold;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   margin-left: 1rem;
+   margin-top: 1rem;
+   padding-left: 25px;
+    font-size: 13px;
+    letter-spacing: 0.07em;
+    font-weight: normal;
+ }
+
+.select-option a {
+  background-color:var(--bgr-dark);
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: var(--light-txt);
 }
@@ -46,15 +117,7 @@ body.dark-only {
   margin-top: 76px !important;
 }
 
-/*Убрать лишнее поле под хедером */
-.page-wrapper.compact-wrapper .page-body-wrapper .page-body {
-  padding-top: 0;
-}
-
-/*  ПОДУМАТЬ!!!! найти хорошее соотношение с боковым меню
-.page-wrapper .page-body-wrapper .page-header {
-  padding-bottom: 10px;
-} */
+/* убирает лишнее пространство над видео */
 
 #video-intro .card-body {
   padding: 0
@@ -63,6 +126,7 @@ body.dark-only {
 .card-video-body {
   padding: 0;
 }
+
 
 @media (max-width: 960px) {
   .page-body {
@@ -372,14 +436,16 @@ body.dark-only .login-div {
 
 /* Анимированная ссылка */
 
-.animated-link {
-  margin-top: 30px;
-}
+
 
 .animated-link a {
   position: relative;
   text-decoration: none;
   color: var(--light-txt);
+}
+
+.inactive  a {
+  color: grey !important;
 }
 
 body.dark-only .animated-link a {
@@ -2086,6 +2152,134 @@ body.dark-only footer {
 
 /*  Страница игры END */
 
+
+/* Страница запуск игры LAUNCH */
+.launch-heading {
+  font-size: 1.75rem;
+}
+
+/* Switcher */
+/* The switch - the box around the slider */
+.switch {
+ position: relative;
+ display: inline-block;
+ width: 45px;
+ height: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+.share-div-container {
+  position: relative;
+}
+
+.share-div {
+
+  display: none;
+  position: absolute;
+  padding: 5px 10px;
+  background-color: grey;
+  border-radius: 5px;
+  top: -130%;
+  right: -230%;
+  width: fit-content;
+}
+
+.share-div.open {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+
+
+.share-div span {
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  font-size: 11px;
+  align-self: center;
+}
+
+
+.share-div::after {
+  display: block;
+  width: 0;
+  content: " ";
+  border-top: 11px solid var(--theme-grey);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  position: absolute;
+  /*top: 22px;
+  right: 70px; */
+  top: 34px;
+  right: 79px;
+}
+
+.share-div svg:hover {
+  color: var(--theme-yellow);
+}
+
+/* The slider */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: -15px;
+ background-color: var(--theme-grey);
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 18px;
+ width: 18px;
+ left: 4px;
+ bottom: 4px;
+ background-color: white;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+input:checked + .slider {
+ background-color: var(--theme-yellow);
+}
+
+input:focus + .slider {
+ box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+ -webkit-transform: translateX(20px);
+ -ms-transform: translateX(20px);
+ transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+ border-radius: 34px;
+}
+
+.slider.round:before {
+ border-radius: 50%;
+}
+
+body.dark-only .form-control, body.dark-only .form-select {
+  background-color: var(--theme-grey);
+  border-color: var(--theme-grey);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* СТраница запуск игры END */
 
 /* RESPONSIVENESS */
 

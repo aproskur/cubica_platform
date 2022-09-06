@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <!-- App css-->
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../assets/css/select2.css">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
 
@@ -109,6 +110,7 @@ localStorage.removeItem('theme')
       <script src="../assets/js/rating/jquery.barrating.js"></script>
       <script src="../assets/js/rating/rating-script.js"></script>
       <script src="../assets/js/sidebar-menu.js"></script>
+
       <script src="../js/script_main.js"></script>
 
 

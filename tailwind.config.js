@@ -13,6 +13,8 @@ module.exports = {
         extend: {
           colors: {
             'bgr-dark': '#191c1e',
+            'txtDark': '#e8ebf2',
+            'themeYellow': 'rgb(251, 188, 5)',
             'theme_yellow': 'rgb(251, 188, 5)',
             'theme_yellow_07': 'rgba(251, 188, 5, 0.7)',
             'bgrdark': '#191c1e',

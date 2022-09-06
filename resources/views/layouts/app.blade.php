@@ -16,6 +16,8 @@
           <link href="{{ asset('css/style_main.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link href="{{ asset('css/style_auth.css') }}" rel="stylesheet">
+        <!-- Cubica custom styles -->
+          <link href="{{ asset('css/style_main.css') }}" rel="stylesheet">
 
 
         @livewireStyles
@@ -36,12 +38,12 @@ document.documentElement.classList.remove('dark')
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-themegrey">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white shadow">
+                <header class="bg-bgrdark shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>

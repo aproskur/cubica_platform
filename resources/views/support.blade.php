@@ -9,7 +9,12 @@
     <header class="main-nav">
       @include('layout.sidebar-empty')
     </header>
-    <p style="margin-top: 145px; margin-left: 300px; color:var(--theme-yellow);"> Поддержка </p>
+    <div class="page-body">
+
+<p style="margin-top: 145px; margin-left: 300px; color:var(--theme-yellow);"> Поддержка</p>
+
+
+    </div>
   </div>
 </div>
 @endsection

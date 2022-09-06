@@ -33,7 +33,7 @@
 
     @if (Route::is('launch'))
     <div style="color:var(--theme-yellow); margin-left:2rem;" class="nav-game-name">
-      {{$game->name ?? 'Название игры'}}
+      {{$game->name ?? 'Корпорация Антарктика'}}
     </div>
     @endif
 

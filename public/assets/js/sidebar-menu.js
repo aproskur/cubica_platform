@@ -307,3 +307,14 @@ $("#left-arrow").click(function () {
     $('.custom-scrollbar').animate({
         scrollTop: $('a.nav-link.menu-title.active').offset().top - 500
     }, 1000); */
+
+
+
+
+
+$(document).ready(function() {
+  console.log($(".custom-select3").children());
+  $(".custom-select3").delegate('div', 'click', function() {
+    $('#selectedGame').html($(this).html());
+  })
+})

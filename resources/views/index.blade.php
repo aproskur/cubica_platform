@@ -16,15 +16,7 @@
     </header>
     <!-- Page Sidebar Ends-->
     <div class="page-body">
-      <div class="container-fluid">
-        <div class="page-header">
-          <div class="row">
-            <div class="col-12">
 
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- Container-fluid starts-->
   @guest
       <div class="container-fluid">
@@ -53,15 +45,12 @@
       <div class="container-fluid product-wrapper">
           <div class="product-wrapper-grid">
             <div class="row">
-
-
               @foreach($games as $game)
               <div class="col-xl-3 col-sm-6 xl-4">
                  <x-catalogue-card-component :game=$game/>
               </div>
               @endforeach
             </div>
-
           </div>
         </div>
       </div>
@@ -72,9 +61,9 @@
       <!-- Container-fluid CATALOGUE Ends-->
 
 
-    </div>
+    </div> <!-- page body wrapper horizontal menu end -->
 
-    <!-- footer start-->
+<!-- Footer starts -->
     <div class="container-fluid">
       <footer class="footer">
         <div class="container-fluid">
@@ -89,5 +78,5 @@
         </div>
       </footer>
     </div>
-</div>
+</div> <!-- div of page wrapper Page wrapper end -->
 @endsection
