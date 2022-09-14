@@ -138,7 +138,7 @@
                             <div class="row">
                               <div class="gamepage_buttons-panel">
                                 <button class="theme-button theme-button-square" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Редактировать"><i data-feather="edit"></i></button>
-                                <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Копировать"><i data-feather="copy"></i></button>
+                                <button class="theme-button theme-button-square" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Копировать"><i data-feather="copy"></i></button>
                                 <button class="theme-button theme-button-square" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Публикация"><i class="fa fa-check-square-o"></i></button>
                                 <div data-bs-toggle="tooltip" data-bs-placement="top" title="Добавить в архив"><button class="theme-button theme-button-square"><i data-feather="archive"></i></button></div>
                               </div>
@@ -226,3 +226,9 @@
 <!-- Plugin used-->
 
 @endsection
+@push('scripts')
+  <script src="{{ asset('assets/js/rating/jquery.barrating.js') }}"></script>
+  <script src="{{ asset('assets/js/rating/rating-script.js') }}"></script>
+  <script src="{{ asset('assets/js/slick-slider/slick.min.js') }}"></script>
+  <script src="{{ asset('assets/js/slick-slider/slick-theme.js') }}"></script>
+@endpush

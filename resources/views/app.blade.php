@@ -17,6 +17,8 @@
     <!-- Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css">
+
+
     <!-- ico-font-->
     <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css">
     <!-- Themify icon-->
@@ -87,6 +89,7 @@ localStorage.removeItem('theme')
       <!-- feather icon js-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" integrity="sha512-24XP4a9KVoIinPFUbcnjIjAjtS59PUoxQj3GNVpWc86bCqPuy3YxAcxJrxFCxXe4GHtAumCbO2Ze2bddtuxaRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+      <script src="{{ asset('assets/js/icons/feather-icon/feather-icon.js') }}"></script>
       <!-- Sidebar jquery-->
 
       <script src="../assets/js/config.js"></script>
@@ -100,18 +103,15 @@ localStorage.removeItem('theme')
       <script src="../assets/js/animation/scroll-reveal/reveal-custom.js"></script>
       <script src="../assets/js/animation/scroll-reveal/scrollreveal.min.js"></script> -->
       <!-- Theme js-->
-      <script src="../assets/js/script.js"></script>
-      <script src="../assets/js/theme-customizer/customizer.js"></script>
-      <script src="../assets/js/offcanvas.js"></script>
-      <script src="../js/app.js"></script>
+      <script src="{{ asset('assets/js/script.js') }}"></script>
+      <script src="{{ asset('assets/js/theme-customizer/customizer.js') }}"></script>
+      <script src="{{ asset('assets/js/offcanvas.js') }}"></script>
+      <script src="{{ asset('js/app.js') }}"></script>
 
-      <script src="../assets/js/slick-slider/slick.min.js"></script>
-      <script src="../assets/js/slick-slider/slick-theme.js"></script>
-      <script src="../assets/js/rating/jquery.barrating.js"></script>
-      <script src="../assets/js/rating/rating-script.js"></script>
-      <script src="../assets/js/sidebar-menu.js"></script>
+      <script src="{{ asset('assets/js/sidebar-menu.js') }}"></script>
+      <script src="{{ asset('js/script_main.js') }}"></script>
 
-      <script src="../js/script_main.js"></script>
+      @stack('scripts')
 
 
   </body>

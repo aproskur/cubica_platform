@@ -926,12 +926,24 @@ body.dark-only a.theme-button:hover {
   max-height: 30px;
 }
 
+/*
 
 .theme-button-square {
   max-width: 50px;
   height: 30px;
   padding: 3px 8px;
 }
+*/
+
+.theme-button-square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  flex-shrink: 0;
+}
+
 
 .theme-button-sidebar {
     width: 150px !important;
@@ -2098,9 +2110,6 @@ body.dark-only footer {
   margin-bottom: 0;
 }
 
-.gamepage_buttons-panel .theme-button-square:nth-of-type(3){
-  width: 23px;
-}
 
 
 /*  Страница игры END */
@@ -2108,7 +2117,9 @@ body.dark-only footer {
 
 /* Страница запуск игры LAUNCH */
 .launch-heading {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--theme-yellow-02);
+  padding-bottom: 0.5rem;
 }
 
 /* Switcher */
@@ -2227,6 +2238,31 @@ body.dark-only .form-control, body.dark-only .form-select {
   background-color: var(--theme-grey);
   border-color: var(--theme-grey);
   color: rgba(255, 255, 255, 0.7);
+}
+
+.launch-link-generator {
+  padding: 1rem 1rem;
+  border: 1px solid var(--bgr-dark);
+  gap: 1rem;
+}
+
+
+
+.launch-link-generator:hover {
+  border: 1px solid var(--theme-yellow);
+  border-radius: 5px;
+}
+
+
+
+.launch-quantity-selector {
+  width: 5rem;
+  border-radius: 5px;
+}
+
+
+.launch-date-selector {
+  width: 8rem;
 }
 
 

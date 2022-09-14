@@ -28,7 +28,7 @@
                         <x-jet-dropdown align="right" width="60">
                             <x-slot name="trigger">
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border text-sm leading-4 font-medium rounded-md text-gray-500 bg-bgrdark hover:text-txtDark hover:border-themeYellow focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border text-sm leading-4 font-medium rounded-md text-gray-500 border-gray-500 bg-bgrdark hover:text-txtDark hover:border-themeYellow focus:outline-none focus:bg-bgrdark active:bg-bgrdark transition">
                                         {{ Auth::user()->currentTeam->name }}
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -56,7 +56,7 @@
                                         </x-jet-dropdown-link>
                                     @endcan
 
-                                    <div class="border-t border-gray-100"></div>
+                                    <div class=""></div>
 
                                     <!-- Team Switcher -->
                                     <div class="block px-4 py-2 text-xs text-gray-400">
@@ -82,7 +82,7 @@
                                 </button>
                             @else
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border text-sm leading-4 font-medium rounded-md text-gray-500 bg-bgrdark hover:text-txtDark hover:border-themeYellow focus:outline-none transition">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-gray-500 text-sm leading-4 font-medium rounded-md text-gray-500 bg-bgrdark hover:text-txtDark hover:border-themeYellow focus:outline-none transition">
                                         {{ Auth::user()->name }}
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -109,7 +109,7 @@
                                 </x-jet-dropdown-link>
                             @endif
 
-                            <div class="border-t border-gray-100"></div>
+                            <div class=""></div>
 
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}" x-data>
