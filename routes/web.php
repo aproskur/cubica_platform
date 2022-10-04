@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\CatalogueCardController;
 use App\Models\Game;
+use App\Models\Launch_link;
 use App\Http\Controllers\GamesController;
+use App\Http\Controllers\LinksController;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +28,12 @@ Route::get('/cart', [PagesController::class, 'getCartPage'])->name('cart');
 Route::get('/about', [PagesController::class, 'getAboutPage'])->name('about');
 Route::get('/support', [PagesController::class, 'getSupportPage'])->name('support');
 Route::get('/gamesupport', [PagesController::class, 'getGameSupportPage'])->name('gamesupport');
-Route::get('/launch', [PagesController::class, 'getGameLaunchPage'])->name('launch');
+//Route::get('/launch', [PagesController::class, 'getGameLaunchPage'])->name('launch');
 Route::get('/subscriptions', [PagesController::class, 'getSubscrPage'])->name('subscriptions');
+Route::get('launch/{game_id}', [GamesController::class, 'renderLaunchGamePage'])->name('launch-game');
+Route::post('launch', [GamesController::class, 'editAlias'])->name('alias');
+
+//Route::get('/launch', [PagesController::class, 'getGameLaunchPage'])->name('launch'); //tmp method for test!!!
 
 
 Route::get('/signup', function() {
@@ -39,6 +46,17 @@ Route::get('games/{game}', function($game) {
   ]);
 });
 
+Route::get('launch/edit/{id}', [GamesController::class, 'editLinkAlias']);
+Route::post('launch/edit/', [GamesController::class, 'createAlias']);
+
+/*
+Route::get('launch/{game_id}', function($game_id) {
+  $games_table = Game::all();
+  $game = Game::findOrFail($game_id);
+  $game_excerpt = Str::limit($game->name, $limit=25, $end='...');
+  return view('launch', ['all_games' => $games_table, 'game' => $game, 'excerpt' => $game_excerpt ]);
+})->name('launch-game');
+*/
 
 
 //Route::get('game/{game}', function($game) {

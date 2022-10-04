@@ -32,7 +32,6 @@ input:focus {
   border: var(--theme-yellow-07) !important;
 }
 
-
 html.dark .theme-button {
   background-color: var(--bgr-dark);
 }

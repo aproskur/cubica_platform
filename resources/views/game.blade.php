@@ -18,23 +18,23 @@
     <div class="page-body">
               <!-- Container-fluid starts-->
               <div class="container-fluid">
-                  <div class="row product-page-main p-0">
-                    <div class="col-xl-6 order-3 col-md-6  order-lg-1 col-lg-6  box-col-12 xl-50">
-                      <div class="card">
+                  <div class="row product-page-main" style="padding-top:0;">
+                    <div class="col-lg-6 col-md-6 order-3 order-lg-1">
+                      <div class="card" style="margin-right:0;">
                         <div class="card-body">
                           <div class="row">
-                            <div class="col-xl-9 product-main">
+                            <div class="col-md-9 product-main">
                               <div class="pro-slide-single">
-                                <div><img class="img-fluid" src="../assets/images/arctic_scenery.jpg" alt=""></div>
+                                <div><img class="img-fluid" src="../assets/images/arctic.jpg" alt=""></div>
                                 <div><img class="img-fluid" src="../assets/images/pinguin_portrait.png" alt=""></div>
                                 <div><img class="img-fluid" src="../assets/images/antarctica.png" alt=""></div>
                                 <div><img class="img-fluid" src="../assets/images/pinguin.jpg" alt=""></div>
                               </div>
                             </div>
-                            <div class="col-xl-3 product-thumbnail">
+                            <div class="col-md-3 product-thumbnail">
                               <div class="pro-slide-right">
                                 <div>
-                                  <div class="slide-box"><img src="../assets/images/arctic_scenery.jpg" alt=""></div>
+                                  <div class="slide-box"><img src="../assets/images/arctic.jpg" alt=""></div>
                                 </div>
                                 <div>
                                   <div class="slide-box"><img src="../assets/images/pinguin_portrait.png" alt=""></div>
@@ -51,7 +51,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 order-1 col-md-12  order-lg-2 col-lg-6  box-col-6 xl-50">
+                    <div class="col-lg-6 col-md-12 order-lg-2 order-1 ">
                       <div class="card">
                         <div class="card-body">
                           <div class="pro-group pt-0 border-0">
@@ -97,14 +97,14 @@
 
 
                             <div class="gamepage_buttons-panel wide-buttons-bar">
-                              <a class="theme-button theme-button-std" role="button"  href="#">Играть</a>
+                              <a class="theme-button theme-button-std" role="button"  href="{{ url('launch/'.$game->id ) }}">Играть</a>
                               <a class="theme-button theme-button-std" role="button"  href="{{ route('cart') }}">Купить</a>
                               <a class="theme-button theme-button-std" role="button"  href="cart.html">Демо&nbsp;игра</a>
                               <button class="theme-button theme-button-std">В&nbsp;избранное</button>
                             </div>
 
 
-                          </div>
+
                           <div class="pro-group">
                               <p>{{ $game->excerpt}}</p>
                           </div>
@@ -144,11 +144,13 @@
                               </div>
                            </div>
                       </div>
-                    </div></div>
-                    <div class="col-xl-12 order-2 col-md-12  order-lg-3 col-lg-12 box-col-6 xl-100">
+                    </div>
+                  </div>
+                </div>
+                    <div class="col-xxl-12 col-xl-12 order-2 col-md-12  order-lg-3 col-lg-12 box-col-6">
                           <div class="card">
                             <div class="row product-page-main">
-                              <div class="col-sm-12">
+                              <div class="col-12">
                                 <ul class="nav nav-tabs border-tab mb-0" id="top-tab" role="tablist">
                                   <li class="nav-item"><a class="nav-link active" id="top-home-tab" data-bs-toggle="tab" href="#top-home" role="tab" aria-controls="top-home" aria-selected="false">Для чего и кого</a>
                                     <div class="material-border"></div>

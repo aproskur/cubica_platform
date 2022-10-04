@@ -46,4 +46,8 @@ class Game extends Model
       return $this->id;
     }
 
+    public function getAllGames() {
+
+    }
+
 }

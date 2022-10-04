@@ -18,11 +18,11 @@ class PagesController extends Controller
     return view('index', ['games' => $games]);
   }
 
-  public function getGamePage($game) {
-    return view('game', [
-      'game' => Game::findOrFail($game)
-    ]);
-  }
+  //public function getGamePage($game) {
+  //  return view('game', [
+  //    'game' => Game::findOrFail($game)
+  //  ]);
+  //}
 
   public function getCartPage() {
     return view('cart');
@@ -40,13 +40,13 @@ class PagesController extends Controller
     return view('gamesupport');
   }
 
-  public function getGameLaunchPage() {
-    return view('launch');
-  }
-
   public function getSubscrPage() {
     return view('subscriptions');
   }
+
+
+
+
 
 
 }

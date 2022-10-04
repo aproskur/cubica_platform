@@ -102,6 +102,7 @@ body {
 }
 
 
+
 input {
   caret-color: var(--theme-yellow);
 }
@@ -450,6 +451,32 @@ body.dark-only .animated-link a {
 
 
 /* Анимированная ссылка END */
+
+/* Modal Модал */
+
+body.dark-only .modal-content {
+  background-color: var(--bgr-dark);
+  border: 1px solid var(--theme-yellow-01);
+}
+
+body.dark-only .modal-content form input {
+  background-color: var(--bgr-dark);
+  color: var(--theme-yellow);
+  border: 1px solid var(--theme-yellow-03);
+  height: 3em;
+  border-radius: 5px;
+
+}
+
+ .modal-footer {
+  border-top: 1px solid var(--theme-yellow-03);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+/* End Modal */
 
 .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li {
   padding: 5px 20px;
@@ -913,6 +940,8 @@ body.dark-only .product-box .product-img .game-hover ul li:hover {
   color: var(--theme-grey);
 }
 
+
+
 body.dark-only a.theme-button {
   color: var(--theme-grey);
 }
@@ -942,7 +971,13 @@ body.dark-only a.theme-button:hover {
   height: 30px;
   width: 30px;
   flex-shrink: 0;
+  padding: 2px 3px;
 }
+
+/*
+button.theme-button-square {
+  padding: 0;
+} */
 
 
 .theme-button-sidebar {
@@ -1008,6 +1043,10 @@ body.dark-only .theme-button-square svg:hover {
 
 .theme-button i {
    padding: 5em;
+}
+
+.btn-close-yellow {
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fc0'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
 }
 
 /* BUTTONS end */
@@ -1142,7 +1181,7 @@ body.dark-only .border {
 /* Filter CHECKBOX Чекбоксы*/
 .filter .filter-label {
 
-  padding-left: 25px;
+  padding-left: 10px;
   font-size: 13px;
   color: var(--light-txt);
   display: block;
@@ -1155,12 +1194,17 @@ body.dark-only .filter .filter-label {
   color: var(--dark-txt);
 }
 
+/*
 .filter .filter-checkbox {
   margin-left: -0.5em;
   margin-top: 0.2em;
+} */
+
+.form-check {
+  margin-left: 10px;
 }
 
-.filter-checkbox form-check-input
+
 
 .filter .filter-label:hover {
   color: var(--theme-grey);
@@ -2059,6 +2103,10 @@ body.dark-only footer {
   align-items: flex-end;
 }
 
+.product-page-main {
+
+}
+
 
 .stars-reviews {
   gap: 1em;
@@ -2095,6 +2143,7 @@ body.dark-only footer {
 .gamepage_buttons-panel {
   display: flex;
   gap: 1em;
+  padding-bottom: 2em;
 }
 
 .wide-buttons-bar > * {
@@ -2116,6 +2165,7 @@ body.dark-only footer {
 
 
 /* Страница запуск игры LAUNCH */
+
 .launch-heading {
   font-size: 1.25rem;
   border-bottom: 1px solid var(--theme-yellow-02);
@@ -2226,6 +2276,7 @@ input:checked + .slider:before {
 }
 
 /* Rounded sliders */
+
 .slider.round {
  border-radius: 34px;
 }
@@ -2240,13 +2291,26 @@ body.dark-only .form-control, body.dark-only .form-select {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.launch-container {
+  margin-left: 1.75em;
+  margin-right: auto;
+  max-width: 880px;
+
+}
+
 .launch-link-generator {
   padding: 1rem 1rem;
   border: 1px solid var(--bgr-dark);
   gap: 1rem;
+  margin: 5px;
+
 }
 
-
+.launch-link {
+  align-self: center;
+  margin-left: 2em;
+  overflow: hidden;
+}
 
 .launch-link-generator:hover {
   border: 1px solid var(--theme-yellow);
@@ -2258,11 +2322,14 @@ body.dark-only .form-control, body.dark-only .form-select {
 .launch-quantity-selector {
   width: 5rem;
   border-radius: 5px;
+  max-height: 36px
 }
 
 
 .launch-date-selector {
-  width: 8rem;
+
+  max-height: 36px;
+
 }
 
 
@@ -2359,7 +2426,7 @@ height: auto;
   }
 }
 
-@media (max-width: 1229px) and (min-width: 992px){
+@media (max-width: 1350px) and (min-width: 992px){
   .wide-buttons-bar {
     display: grid;
     grid-template-columns: 1fr 1fr
@@ -2381,6 +2448,24 @@ height: auto;
   .button-close {
     top: 0;
     right: 3%;
+    }
   }
-}
+
+  @media (min-width: 1400px) {
+    .button-close {
+      top: -374px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .product-page-main {
+      margin-top: -20px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .product-page-main {
+      margin-top: -30px;
+    }
+  }
 

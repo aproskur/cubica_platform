@@ -1,10 +1,10 @@
 <nav x-data="{ open: false }" class="bg-bgrdark border-b border-gray-100">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl ml-0 mx-auto pl-4 sm:px-6 lg:px-1">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center  text-txtDark">
+                <div class="shrink-0 flex items-center text-txtDark">
                     <a href="{{ route('main') }}">
                         <x-jet-application-mark class="block h-9 w-auto" />
                     </a>
