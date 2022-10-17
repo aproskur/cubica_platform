@@ -31,12 +31,21 @@
     </div>
 
 
-
     @if (Route::is('launch-game'))
-    <div style="color:var(--theme-yellow); margin-left:2rem;" class="nav-game-name">
-      {{ $excerpt }}
+    <div style="color:var(--dark-txt); margin-left:2rem;" class="nav-game-name">
+      <p>Страница запуска игры</p>
     </div>
     @endif
+
+    @if (Request::is('games/*'))
+    <div style="color:var(--dark-txt); margin-left:2rem;" class="nav-game-name">
+      <p style="padding-left: 51px;">Страница игры</p>
+    </div>
+    @endif
+
+
+
+
 
           <div class="nav-right col right-menu m-r-20">
             <div class="" id="right-sidebar-toggler"></div>

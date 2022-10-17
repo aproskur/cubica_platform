@@ -112,6 +112,21 @@ body.dark-only {
   background-color: var(--bgr-dark);
 }
 
+.page-wrapper .page-body-wrapper .page-header .row h3 {
+  text-transform: none;
+}
+
+/*  Это работает только на странице запуска игры
+.page-wrapper.compact-wrapper .page-body-wrapper header.main-nav {
+  top: 90px;
+}
+*/
+
+.main-header-right div p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
 
 /* Чтобы верхнее дополнителное меню не перекрывало то, что под ним */
 .page-body {
@@ -2249,12 +2264,18 @@ body.dark-only footer {
   top: -130%;
   right: -230%;
   width: fit-content;
+  z-index:1000;
 }
 
 .share-div.open {
     display: flex;
     justify-content: space-evenly;
     gap: 5px;
+    color: white;
+}
+
+.share-div.open svg {
+  fill: white;
 }
 
 
@@ -2265,6 +2286,7 @@ body.dark-only footer {
   font-size: 11px;
   align-self: center;
 }
+
 
 
 .share-div::after {
@@ -2504,6 +2526,28 @@ height: auto;
     right: 3%;
     }
   }
+
+  @media (max-width: 1199px)  {
+      .launch-link-generator {
+        border-bottom: 1px solid var(--theme-yellow-02);
+      }
+
+      .launch-link-generator:hover {
+        border: 1px solid var(--bgr-dark);
+        border-bottom: 1px solid var(--theme-yellow-02);
+      }
+    }
+
+    @media (hover: none) {
+      .launch-link-generator {
+        border-bottom: 1px solid var(--theme-yellow-02);
+      }
+
+      .launch-link-generator:hover {
+        border: 1px solid var(--bgr-dark);
+        border-bottom: 1px solid var(--theme-yellow-02);
+      }
+    }
 
   @media (min-width: 1400px) {
     .button-close {

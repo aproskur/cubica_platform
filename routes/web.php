@@ -23,7 +23,7 @@ use Illuminate\Support\Str;
 @include_once('admin_web.php');
 
 Route::get('/', [PagesController::class, 'index'])->name('main');
-Route::get('games', [PagesController::class, 'getGamePage'])->name('game-page');
+//Route::get('games', [PagesController::class, 'getGamePage'])->name('game-page');
 Route::get('/cart', [PagesController::class, 'getCartPage'])->name('cart');
 Route::get('/about', [PagesController::class, 'getAboutPage'])->name('about');
 Route::get('/support', [PagesController::class, 'getSupportPage'])->name('support');
@@ -48,7 +48,11 @@ Route::get('games/{game}', function($game) {
 
 Route::get('launch/edit/{id}', [GamesController::class, 'editLinkAlias']);
 Route::post('launch/edit/', [GamesController::class, 'createAlias']);
-
+Route::post('launch/generate-link/{id}', [GamesController::class, 'generateLink'])->name('generate-link');
+Route::put('launch/update-link/{id}/{link_id}', [GamesController::class, 'updateLink'])->name('update-link');
+Route::post('launch/create-link/{id}', [GamesController::class, 'createLink'])->name('create-link');
+Route::delete('launch/delete/{id}', [GamesController::class, 'deleteLink'])->name('delete');
+Route::put('launch/edit-alias', [GamesController::class, 'editAlias'])->name('edit-alias');
 /*
 Route::get('launch/{game_id}', function($game_id) {
   $games_table = Game::all();
@@ -58,14 +62,6 @@ Route::get('launch/{game_id}', function($game_id) {
 })->name('launch-game');
 */
 
-
-//Route::get('game/{game}', function($game) {
-//  return view('game');
-//})->name('test-view');
-
-//Route::get('test/{test}', function($test) {
-//  return view('game');
-//})->name('test-view');
 
 //Route::get('/', function () {
 //    return redirect()->route('index');

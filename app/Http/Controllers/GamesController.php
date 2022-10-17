@@ -19,6 +19,7 @@ class GamesController extends Controller
 
     }
 
+    /* Функция загружает страницу запуска игры */
     public function renderLaunchGamePage($game_id) {
       $games_table = Game::all();
       $game = Game::findOrFail($game_id);
@@ -32,12 +33,11 @@ class GamesController extends Controller
 
 
     public function editLinkAlias($id) {
-
         $data = Launch_link::find($id);
         return view('edit', ['data' => $data]);
     }
 
-
+    /* Функция чтобы создавать псевдоним ссылки или переименовывать её. Кнопка на странице запуска игры*/
     public function createAlias(Request $request) {
       try {
         $data=Launch_link::find($request->id);
@@ -49,6 +49,43 @@ class GamesController extends Controller
          catch(ModelNotFoundException $err){
              //Show error page
          }
+       }
+
+      public function generateLink($id) {
+         $link = new Launch_link;
+         $link->link = "https://cubica.ru/play=".Str::random(12);
+         $link->launch_quantity = null;
+         $link->expiry = null;
+         $link->save();
+                return redirect('/launch/'. $id);
+       }
+
+       public function updateLink($id, $link_id, Request $request) {
+         $link = Launch_link::find($link_id);
+         $link->launch_quantity=$request->launches;
+         $link->expiry = $request->datepicker;
+
+         $link->save();
+          return redirect('/launch/'.$id);
+
+       }
+    
+    public function createLink($id, Request $request) {
+      $date = $request->datepicker;
+      $launches=$request->launches;
+      $link = new Launch_link;
+      $link->link = "https://cubica.ru/play=".Str::random(12);
+      $link->launch_quantity = $launches;
+      $link->expiry = $date;
+      $link->save();
+        return redirect('/launch/'.$id);
+    }
+
+    public function deleteLink($id) {
+      $data = Launch_link::find($id);
+      $data->delete();
+      return redirect('launch/'. '1');
+
     }
 
 

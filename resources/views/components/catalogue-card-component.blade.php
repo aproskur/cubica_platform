@@ -25,8 +25,8 @@
               <div class="modal-header">
                 <div class="product-box row">
                   <div class="product-img col-lg-6"><img class="img-fluid" src="../assets/images/antarctica.png" alt=""></div>
-                  <div class="product-details col-lg-6 text-start"><a href="{{ route('game-page') }}" >
-                      <h4>{{$game->name}}</h4></a>
+                  <div class="product-details col-lg-6 text-start">
+                      <h4>{{$game->name}}</h4>
                     <div class="product-price-modal">
                       <div class=price-1>
                         {{ number_format($game->price, 0, '.', ' ') }}
@@ -82,6 +82,7 @@
           <div class="product-desc">
             <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Добавить в избранное"><i data-feather="heart"></i></button>
             <a href="{{ url('games/'.$id) }}"><h4> {{ $gameName }}</h4></a>
+          
 
           </div>
         </div>

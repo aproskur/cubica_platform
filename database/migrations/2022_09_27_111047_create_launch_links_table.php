@@ -17,8 +17,8 @@ class CreateLaunchLinksTable extends Migration
             $table->id();
             $table->string('link');
             $table->string('link_alias')->nullable();
-            $table->integer('launch_quantity');
-            $table->date('expiry');
+            $table->integer('launch_quantity')->nullable();
+            $table->date('expiry')->nullable();
         });
     }
 
