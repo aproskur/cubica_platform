@@ -55,12 +55,15 @@
             @method('PUT')
               <div class="row launch-link-generator" style="margin:0px;">
                   <div class="col-xl-6 col-lg-12 d-flex gap-2">
+
                     <div class="switcher" style="align-self:center;">
                       <label class="switch">
                         <input value="{{ $link->active }}" {{ $link->active == 1 ? 'checked=checked' : '' }} class="link-activator" type="checkbox" name="activator"/>
                         <span class="slider round"></span>
                       </label>
                     </div>
+                    <input class="status" type="hidden" name="status" value="">
+
                     <div class="launch-link">
                       @if (!$link->link_alias)
                         {{ $link->link }}

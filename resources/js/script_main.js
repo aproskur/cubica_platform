@@ -260,10 +260,15 @@ document.getElementById("llc").addEventListener("click", function(e) {
           datepicker.toggleAttribute('disabled');
           quantity_picker.toggleAttribute('disabled');
           e.target.toggleAttribute('checked');
+
+           const hiddenInput =  e.target.parentElement.parentElement.nextSibling.nextSibling
             if(datepicker.classList.contains("active-link")){
               e.target.value="1";
+              hiddenInput.value="1";
             } else {
               e.target.value="0";
+              console.log("set to 0");
+              hiddenInput.value="0";
             }
 
           e.target.form.submit();

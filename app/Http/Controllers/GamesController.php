@@ -77,8 +77,7 @@ class GamesController extends Controller
          $link = Launch_link::find($link_id);
          $link->launch_quantity=$request->launches;
          $link->expiry = $request->datepicker;
-         //$link->active = $request->activator;
-
+         $link->active = $request->status;
          $link->save();
           return redirect('/launch/'.$id);
 
