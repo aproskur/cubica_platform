@@ -53,6 +53,7 @@ Route::put('launch/update-link/{id}/{link_id}', [GamesController::class, 'update
 Route::post('launch/create-link/{id}', [GamesController::class, 'createLink'])->name('create-link');
 Route::delete('launch/delete/{id}', [GamesController::class, 'deleteLink'])->name('delete');
 Route::put('launch/edit-alias', [GamesController::class, 'editAlias'])->name('edit-alias');
+Route::put('launch/archive/{id}', [GamesController::class, 'archiveLink'])->name('archive');
 /*
 Route::get('launch/{game_id}', function($game_id) {
   $games_table = Game::all();

@@ -46,7 +46,7 @@
           <div class="product-wrapper-grid">
             <div class="row">
               @foreach($games as $game)
-              <div class="col-xl-3 col-sm-6 xl-4">
+              <div class="col-xl-2 col-sm-6 xl-4">
                  <x-catalogue-card-component :game=$game/>
               </div>
               @endforeach

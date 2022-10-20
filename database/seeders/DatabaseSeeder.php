@@ -31,8 +31,22 @@ class DatabaseSeeder extends Seeder
 
          Launch_link::create([
            'link' => 'https://cubica.ru/play='.Str::random(12),
+           'launch_quantity' => 10,
+           'expiry' => '2022-10-15',
+           'active' => 1
+         ]);
+
+         Launch_link::create([
+           'link' => 'https://cubica.ru/play='.Str::random(12),
            'launch_quantity' => 100,
            'expiry' => '2022-09-22'
+         ]);
+
+         Launch_link::create([
+           'link' => 'https://cubica.ru/play='.Str::random(12),
+           'launch_quantity' => 5,
+           'expiry' => '2022-09-10',
+           'active' => 1
          ]);
 
 

@@ -51,6 +51,8 @@ header.main-nav .main-navbar .nav-menu .custom-select {
    color: var(--white);
  }
 
+
+
 .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li a {
   color: var(--white);
   font-weight: normal;
@@ -126,6 +128,11 @@ body.dark-only {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 0;
+  color: var(--theme-grey);
+}
+
+body.dark-only .main-header-right div p {
+  color: var(--dark-txt);
 }
 
 /* Чтобы верхнее дополнителное меню не перекрывало то, что под ним */
@@ -149,6 +156,13 @@ body.dark-only {
     margin-top: 110px !important;
   }
 }
+
+
+/* максимальная ширина карточки каталога нужна для того, чтобы не съезжали серые ribbons справа */
+.catalogue-card {
+  max-width: 450px;
+}
+
 
 /* Лого */
 
@@ -2297,6 +2311,14 @@ input:checked + .slider:before {
  transform: translateX(20px);
 }
 
+input[type="checkbox"][name="activator"]:checked div.launch-link {
+  background-color: var(--theme-yellow-02);
+  border-color: var(--theme-yellow);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+
 /* Rounded sliders */
 
 .slider.round {
@@ -2307,9 +2329,35 @@ input:checked + .slider:before {
  border-radius: 50%;
 }
 
+/*
+.form-control, .form-select {
+  background-color: var(--theme-yellow-02);
+  border-color: var(--theme-yellow);
+  color: var(--light-txt);
+}
+
+body.dark-only .form-control, body.dark-only .form-select {
+  background-color: var(--theme-yellow-02);
+  border-color: var(--theme-yellow);
+  color: rgba(255, 255, 255, 0.7);
+}
+*/
+
 body.dark-only .form-control, body.dark-only .form-select {
   background-color: var(--theme-grey);
   border-color: var(--theme-grey);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-control.active-link, .form-select.active-link  {
+  background-color: var(--theme-yellow-02);
+  border-color: var(--theme-yellow);
+  color: var(--light-txt);
+}
+
+body.dark-only .form-control.active-link, body.dark-only .form-select.active-link {
+  background-color: var(--theme-yellow-02);
+  border-color: var(--theme-yellow);
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -2322,10 +2370,13 @@ body.dark-only .form-control, body.dark-only .form-select {
 
 .launch-link-generator {
   padding: 1rem 1rem;
-  border: 1px solid var(--bgr-dark);
+  border: 1px solid var(--bgr-light-secondary);
   gap: 1rem;
   margin: 5px;
+}
 
+body.dark-only .launch-link-generator {
+  border: 1px solid var(--bgr-dark);
 }
 
 .launch-link {
@@ -2335,6 +2386,11 @@ body.dark-only .form-control, body.dark-only .form-select {
 }
 
 .launch-link-generator:hover {
+  border: 1px solid var(--theme-yellow);
+  border-radius: 5px;
+}
+
+body.dark-only .launch-link-generator:hover {
   border: 1px solid var(--theme-yellow);
   border-radius: 5px;
 }
@@ -2448,6 +2504,12 @@ height: auto;
   }
 }
 
+@media (max-width: 733px) {
+  .nav-game-name {
+    display: none;
+  }
+}
+
 @media (max-width: 1350px) and (min-width: 992px){
   .wide-buttons-bar {
     display: grid;
@@ -2473,6 +2535,7 @@ height: auto;
     }
   }
 
+
   @media (max-width: 1199px)  {
       .launch-link-generator {
         border-bottom: 1px solid var(--theme-yellow-02);
@@ -2483,6 +2546,7 @@ height: auto;
         border-bottom: 1px solid var(--theme-yellow-02);
       }
     }
+
 
     @media (hover: none) {
       .launch-link-generator {

@@ -1,6 +1,6 @@
 
   <div>
-    <div class="card">
+    <div class="card catalogue-card">
       <div class="product-box">
         <div class="product-img"><img class="img-fluid" src="../assets/images/pinguin_portrait.png" alt="">
           <div class="ribbon ribbon-success ribbon-game-rating"><a href="#"> <i data-feather="star"></i></a><span>3.7</span></div>
@@ -82,7 +82,7 @@
           <div class="product-desc">
             <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Добавить в избранное"><i data-feather="heart"></i></button>
             <a href="{{ url('games/'.$id) }}"><h4> {{ $gameName }}</h4></a>
-          
+
 
           </div>
         </div>

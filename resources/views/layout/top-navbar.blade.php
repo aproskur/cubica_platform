@@ -43,6 +43,12 @@
     </div>
     @endif
 
+    @if (Request::is('/'))
+    <div style="color:var(--dark-txt); margin-left:2rem;" class="nav-game-name">
+      <p>Магазин игр</p>
+    </div>
+    @endif
+
 
 
 

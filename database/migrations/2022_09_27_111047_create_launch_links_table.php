@@ -19,6 +19,9 @@ class CreateLaunchLinksTable extends Migration
             $table->string('link_alias')->nullable();
             $table->integer('launch_quantity')->nullable();
             $table->date('expiry')->nullable();
+            $table->boolean('archived')->default(0);
+            $table->boolean('active')->default(0);
+            $table->timestamps();
         });
     }
 
