@@ -7,6 +7,8 @@ use App\Models\Game;
 use App\Models\Launch_link;
 use Illuminate\Support\Str;
 
+
+
 class GamesController extends Controller
 {
     /**
@@ -14,98 +16,28 @@ class GamesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // public function index()
+    // {
+    //   $games = Game::all();
+    //   return view('index', ['games' => $games]);
+    // }
+
     public function index()
     {
-
+      $games = Game::latest()->paginate(3);
+      return view('index', ['games' => $games]);
     }
 
-    /* Функция загружает страницу запуска игры */
-    public function renderLaunchGamePage($game_id) {
-      $games_table = Game::all();
-      $game = Game::findOrFail($game_id);
-      $game_excerpt = Str::limit($game->name, $limit=25, $end='...');
-      $links = Launch_link::query()
-        -> select('id', 'link', 'link_alias', 'launch_quantity', 'expiry', 'archived', 'active')
-        -> orderBy('created_at', 'desc')
-        -> get();
-      $links_collection = $links->sortBy('archived');
-
-
-      return view('launch', ['all_games' => $games_table, 'game' => $game, 'excerpt' => $game_excerpt, 'links' => $links_collection ]);
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id  (i used eloquent binding to add Game $game instead of $id - less code, no checks)
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Game $game)
+    {
+        return view('game', ['game' => $game]);
     }
-
-
-    public function editLinkAlias($id) {
-        $data = Launch_link::find($id);
-        return view('edit', ['data' => $data]);
-    }
-
-    public function archiveLink($id) {
-        $data = Launch_link::find($id);
-        $data->archived = true;
-        $data->save();
-        return redirect('/launch/'. '1');
-    }
-
-
-    /* Функция чтобы создавать псевдоним ссылки или переименовывать её. Кнопка на странице запуска игры*/
-    public function createAlias(Request $request) {
-      try {
-        $data=Launch_link::find($request->id);
-        $data->link_alias = $request->link_alias;
-        $data->save();
-        $game_id=$request->game_id;
-          return redirect('/launch/'.$game_id);
-      }
-         catch(ModelNotFoundException $err){
-             //Show error page
-         }
-       }
-
-      public function generateLink($id) {
-         $link = new Launch_link;
-         $link->link = "https://cubica.ru/play=".Str::random(12);
-         $link->launch_quantity = null;
-         $link->expiry = null;
-         $link->archived = 0;
-         $link->active = 0;
-         $link->save();
-                return redirect('/launch/'. $id);
-       }
-
-       public function updateLink($id, $link_id, Request $request) {
-         $link = Launch_link::find($link_id);
-         $link->launch_quantity=$request->launches;
-         $link->expiry = $request->datepicker;
-         $link->active = $request->status;
-         $link->save();
-          return redirect('/launch/'.$id);
-
-       }
-
-    public function createLink($id, Request $request) {
-      $date = $request->datepicker;
-      $launches=$request->launches;
-      $link = new Launch_link;
-      $link->link = "https://cubica.ru/play=".Str::random(12);
-      $link->launch_quantity = $launches;
-      $link->expiry = $date;
-      $link->save();
-        return redirect('/launch/'.$id);
-    }
-
-    public function deleteLink($id) {
-      $data = Launch_link::find($id);
-      $data->delete();
-      return redirect('launch/'. '1');
-
-    }
-
-
-
-
-
-
 
 
 
@@ -130,16 +62,7 @@ class GamesController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.

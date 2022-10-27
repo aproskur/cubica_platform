@@ -39,31 +39,35 @@
           </div>
           <div class="row launch-container m-b-15">
             <div class="d-flex flex-column flex-sm-row  gap-3 m-t-10 justify-content-md-between">
-              <form action="{{ route('generate-link', ['id'=>$game->id]) }}" method="POST">
+              {{-- <form action="{{ route('create-link', ['id'=>$game->id]) }}" method="POST" id="createLink"> --}}
+               <form action="{{ route('store') }}" method="POST" id="createLink">
                 @csrf
                 <button style="align-self:center;" class="theme-button theme-button-std" type="submit" name="button">  <span> Добавить ссылку </span> </button>
+                <input type="hidden" id="game_id" name="gameId" value="{{ $game->id }}">
               </form>
+
               <div class="animated-link" style="align-self:center;">
                 <a href="#">Перейти в админку игры</a>
               </div>
             </div>
           </div>
+          <div id="static-container">
           @foreach ($links as $link)
             @if ($link->archived === 0)
-          <form method="POST" action="{{ route('update-link', ['id' => $game->id, 'link_id' => $link->id]) }}">
+          <form class="main-form" method="POST" action="{{ route('update-link', ['game_id' => $game->id, 'link_id' => $link->id]) }}">
             @csrf
             @method('PUT')
               <div class="row launch-link-generator" style="margin:0px;">
                   <div class="col-xl-6 col-lg-12 d-flex gap-2">
-
                     <div class="switcher" style="align-self:center;">
                       <label class="switch">
-                        <input value="{{ $link->active }}" {{ $link->active == 1 ? 'checked=checked' : '' }} class="link-activator" type="checkbox" name="activator"/>
+                        <input value="{{ $link->active }}" {{ $link->active == 1 ? 'checked=checked' : '' }} class="link-activator trigger" type="checkbox" name="activator"/>
                         <span class="slider round"></span>
                       </label>
                     </div>
                     <input class="status" type="hidden" name="status" value="">
-
+                    <input class="game-id" type="hidden" name="gameIdForm" value="{{ $game->id }}">
+                    <input class="link-id" type="hidden" name="linkIdForm" value="{{ $link->id }}">
                     <div class="launch-link">
                       @if (!$link->link_alias)
                         {{ $link->link }}
@@ -76,7 +80,7 @@
                     </a>
                   </div>
                   <div class="col-xl-5 col-lg-12 d-flex gap-2 gap-md-3 gap-lg-3">
-                      <select onchange="this.form.submit()" name="launches" class="form-select digits launch-quantity-selector" data-bs-toggle="tooltip" data-bs-placement="top" title="Количество запусков">
+                      <select onchange="this.form.submit()" name="launches" class="trigger form-select digits launch-quantity-selector" data-bs-toggle="tooltip" data-bs-placement="top" title="Количество запусков">
                         <option value="{{ $link->launch_quantity }}"> {{ $link->launch_quantity === null ? html_entity_decode('&infin;') : $link->launch_quantity }} </option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -90,7 +94,7 @@
                         <option value="100">100</option>
                       </select>
                       <div>
-                        <input onchange="this.form.submit()" name="datepicker" class="form-control digits launch-date-selector" type="date" value="{{ $link->expiry }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Срок действия ссылки">
+                        <input onchange="this.form.submit()" name="datepicker" class="trigger form-control digits launch-date-selector" type="date" value="{{ $link->expiry }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Срок действия ссылки">
                       </div>
                       <div class="d-flex gap-2 gap-md-3 gap-lg-3">
                         <div class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Копировать">
@@ -103,13 +107,13 @@
                             <i data-feather="facebook"></i>
                           </div>
                         </div>
-                        <button formaction="{{ route('archive', ['id'=>$link->id]) }}"class="theme-button theme-button-square" name="button">
+                        <button formaction="{{ route('archive-link', ['game_id'=>$game->id, 'link_id'=>$link->id]) }}"class="theme-button theme-button-square" name="button">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line><svg>
                         </button>
                       </div>
                   </form>
                       {{-- THIS IS A COMMENT
-                      <form action="{{ route('delete', ['id'=>$link->id]) }}" method="POST">
+                      <form action="{{ route('delete-link', ['game_id'=>$game->id, 'link_id'=>$link->id]) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Удалить ссылку">
@@ -140,7 +144,7 @@
                             <div class="col-xl-5 col-lg-12 d-flex gap-2 gap-md-3 gap-lg-3">
 
                               {{--
-                              <form action="{{ route('delete', ['id'=>$link->id]) }}" method="POST">
+                              <form action="{{ route('delete-link', ['game_id'=>$game->id, 'link_id'=>$link->id]) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Удалить ссылку">
@@ -151,6 +155,7 @@
                           </div>
                           @endif
                 @endforeach
+              </div>
           </div>
         </div>
       </div>
@@ -166,4 +171,7 @@
 
 @push('scripts')
   <script src="{{ asset('js/test.js') }}"></script>
+  <script>
+
+   </script>
 @endpush

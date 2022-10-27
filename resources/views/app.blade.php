@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Платформа для разработки обучающих игр">
     <meta name="author" content="Cubica">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
     <title>{{config('app.name', 'cubica')}}</title>
@@ -110,6 +111,9 @@ localStorage.removeItem('theme')
 
       <script src="{{ asset('assets/js/sidebar-menu.js') }}"></script>
       <script src="{{ asset('js/script_main.js') }}"></script>
+
+
+
 
       @stack('scripts')
 

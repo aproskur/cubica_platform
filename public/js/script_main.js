@@ -19772,7 +19772,7 @@ function clickCreateLink(e) {
   var switcher = e.currentTarget;
   switcher.value = checkbox.checked ? true : false;
   event.currentTarget.closest('form').submit();
-} // Get the element, add a click listener...
+} // Get the element, add a click listener...:ballot_box_with_check:
 
 
 document.getElementById("llc").addEventListener("click", function (e) {
@@ -19782,8 +19782,8 @@ document.getElementById("llc").addEventListener("click", function (e) {
     var quantity_picker = e.target.parentElement.parentElement.parentElement.nextSibling.nextSibling.querySelector('.form-select');
     datepicker.classList.toggle("active-link");
     quantity_picker.classList.toggle("active-link");
-    datepicker.toggleAttribute('disabled');
-    quantity_picker.toggleAttribute('disabled');
+    datepicker.toggleAttribute("readonly");
+    quantity_picker.toggleAttribute("readonly");
     e.target.toggleAttribute('checked');
     var hiddenInput = e.target.parentElement.parentElement.nextSibling.nextSibling;
 
@@ -19807,15 +19807,74 @@ for (var i = 0; i < switcher.length; i++) {
   console.log(switcher[i]);
   var datepicker = switcher[i].parentElement.parentElement.parentElement.nextSibling.nextSibling.querySelector('.form-control');
   datepicker.classList.add("active-link");
-  datepicker.setAttribute("disabled");
+  datepicker.setAttribute("readonly");
   var quantity_picker = switcher[i].parentElement.parentElement.parentElement.nextSibling.nextSibling.querySelector('.form-select');
   quantity_picker.classList.add('active-link');
-  quantity_picker.setAttribute('disabled');
+  quantity_picker.setAttribute("readonly");
+  var hiddenStatusField = switcher[i].parentElement.parentElement.nextSibling.nextSibling;
+  hiddenStatusField.value = "1";
 }
 
-function submitSwitchData() {
-  this.form.submit();
-}
+var offSwitcher = document.querySelectorAll("input[value='0']");
+
+for (var _i = 0; _i < offSwitcher.length; _i++) {
+  var _hiddenStatusField = offSwitcher[_i].parentElement.parentElement.nextSibling.nextSibling;
+  _hiddenStatusField.value = "0";
+} // jQuery(document).ready(function(){
+//    jQuery('#createLink').click(function(e){
+//      let gameId= $("#game_id").val();
+//      console.log(gameId);
+//      let url = "game/" + gameId + "/create-link";
+//      console.log("ajax");
+//       e.preventDefault();
+//
+//       $.ajaxSetup({
+//          headers: {
+//              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//          }
+//      });
+//       jQuery.ajax({
+//          url: url,
+//          method: 'post',
+//          data: {
+//          },
+//          success: function(data){
+//             //location.reload();
+//          }})
+//       });
+//    });
+// jQuery(document).ready(function(){
+//    jQuery("#static-container").on('change', '.trigger', function(e) {
+//            $(e.target.form).submit(function(event){
+//                let formData = {
+//                      gameId: $(".game-id", this).val(),
+//                      linkId: $(".link-id", this).val(),
+//                      launches: $(".launch-quantity-selector",this).val(),
+//                      date: $(".launch-date-selector", this).val()
+//                      };
+//                      console.log("formData");
+//                      console.log(formData[gameId]);
+//                var url = "game/" + formData[gameId] +"/update/link/" + formData[linkId];
+//                console.log('url');
+//                console.log("ajax");
+//             e.preventDefault();
+//             $.ajaxSetup({
+//                headers: {
+//                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//                }
+//            });
+//             jQuery.ajax({
+//                url: url,
+//                method: 'put',
+//                data: formData,
+//                dataType: "json",
+//                encode: true,
+//                success: function(data){
+//                   console.log("PUT");
+//                }});
+//             });
+//           });
+//        });
 })();
 
 /******/ })()

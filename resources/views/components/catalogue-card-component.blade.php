@@ -1,8 +1,9 @@
+@props(['game'])
 
   <div>
     <div class="card catalogue-card">
       <div class="product-box">
-        <div class="product-img"><img class="img-fluid" src="../assets/images/pinguin_portrait.png" alt="">
+        <div class="product-img"><img class="img-fluid" src="{{ asset('storage/app/public/'. $game->cover_photo_path) }}" alt="">
           <div class="ribbon ribbon-success ribbon-game-rating"><a href="#"> <i data-feather="star"></i></a><span>3.7</span></div>
           <div class="ribbon ribbon-success ribbon-right ribbon-downloads"><span>1023</span></div>
           <div class="game-hover">

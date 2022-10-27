@@ -52,6 +52,10 @@ header.main-nav .main-navbar .nav-menu .custom-select {
  }
 
 
+body.dark-only .pagination span, body.dark-only .pagination a {
+  background-color: var(--bgr-dark) !important;
+}
+
 
 .page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li a {
   color: var(--white);

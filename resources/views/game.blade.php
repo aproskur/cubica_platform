@@ -31,7 +31,7 @@
                                 <div><img class="img-fluid" src="../assets/images/pinguin.jpg" alt=""></div>
                               </div>
                             </div>
-                            <div class="col-md-2 product-thumbnail d-flex">
+                            <div class="col-md-2 product-thumbnail">
                               <div class="pro-slide-right d-flex justify-content-center">
                                 <div>
                                   <div class="slide-box"><img src="../assets/images/arctic.jpg" alt=""></div>

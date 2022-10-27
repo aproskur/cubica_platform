@@ -51,7 +51,12 @@
               </div>
               @endforeach
             </div>
+
           </div>
+
+
+            <div class="pagination"> {{ $games->links() }} </div>
+
         </div>
       </div>
       <!-- Games catalogue ends-->

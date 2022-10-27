@@ -249,16 +249,17 @@ function clickCreateLink(e) {
   event.currentTarget.closest('form').submit();
 }
 
-// Get the element, add a click listener...
+// Get the element, add a click listener...:ballot_box_with_check:
 document.getElementById("llc").addEventListener("click", function(e) {
+
 	// e.target is the clicked element!
 	if(e.target && e.target.matches(".link-activator")) {
     let datepicker = e.target.parentElement.parentElement.parentElement.nextSibling.nextSibling.querySelector('.form-control');
     let quantity_picker =   e.target.parentElement.parentElement.parentElement.nextSibling.nextSibling.querySelector('.form-select')
           datepicker.classList.toggle("active-link");
           quantity_picker.classList.toggle("active-link");
-          datepicker.toggleAttribute('disabled');
-          quantity_picker.toggleAttribute('disabled');
+          datepicker.toggleAttribute("readonly");
+          quantity_picker.toggleAttribute("readonly");
           e.target.toggleAttribute('checked');
 
            const hiddenInput =  e.target.parentElement.parentElement.nextSibling.nextSibling
@@ -277,18 +278,83 @@ document.getElementById("llc").addEventListener("click", function(e) {
 
 //найти все switch которые checked
 //если он checked, то добавить класс active-link дата пикеру и лаунч пикеру чтобы поменять их стиль
-const switcher = document.querySelectorAll("input[checked='checked']");
-for (let i = 0; i < switcher.length; i++) {
-  console.log(switcher[i])
-  let datepicker = switcher[i].parentElement.parentElement.parentElement.nextSibling.nextSibling.querySelector('.form-control');
-  datepicker.classList.add("active-link");
-  datepicker.setAttribute("disabled");
-  let quantity_picker =  switcher[i].parentElement.parentElement.parentElement.nextSibling.nextSibling.querySelector('.form-select');
-  quantity_picker.classList.add('active-link');
-  quantity_picker.setAttribute('disabled');
-}
+
+  const switcher = document.querySelectorAll("input[checked='checked']");
+  for (let i = 0; i < switcher.length; i++) {
+    console.log(switcher[i])
+    let datepicker = switcher[i].parentElement.parentElement.parentElement.nextSibling.nextSibling.querySelector('.form-control');
+    datepicker.classList.add("active-link");
+    datepicker.setAttribute("readonly");
+    let quantity_picker =  switcher[i].parentElement.parentElement.parentElement.nextSibling.nextSibling.querySelector('.form-select');
+    quantity_picker.classList.add('active-link');
+    quantity_picker.setAttribute("readonly");
+    let hiddenStatusField = switcher[i].parentElement.parentElement.nextSibling.nextSibling;
+    hiddenStatusField.value = "1";
+  }
+
+  const offSwitcher = document.querySelectorAll("input[value='0']");
+  for (let i = 0; i < offSwitcher.length; i++) {
+    let hiddenStatusField = offSwitcher[i].parentElement.parentElement.nextSibling.nextSibling;
+    hiddenStatusField.value = "0";
+  }
 
 
-function submitSwitchData() {
-  this.form.submit();
-}
+
+
+// jQuery(document).ready(function(){
+//    jQuery('#createLink').click(function(e){
+//      let gameId= $("#game_id").val();
+//      console.log(gameId);
+//      let url = "game/" + gameId + "/create-link";
+//      console.log("ajax");
+//       e.preventDefault();
+//
+//       $.ajaxSetup({
+//          headers: {
+//              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//          }
+//      });
+//       jQuery.ajax({
+//          url: url,
+//          method: 'post',
+//          data: {
+//          },
+//          success: function(data){
+//             //location.reload();
+//          }})
+//       });
+//    });
+
+
+   // jQuery(document).ready(function(){
+   //    jQuery("#static-container").on('change', '.trigger', function(e) {
+   //            $(e.target.form).submit(function(event){
+   //                let formData = {
+   //                      gameId: $(".game-id", this).val(),
+   //                      linkId: $(".link-id", this).val(),
+   //                      launches: $(".launch-quantity-selector",this).val(),
+   //                      date: $(".launch-date-selector", this).val()
+   //                      };
+   //                      console.log("formData");
+   //                      console.log(formData[gameId]);
+   //                var url = "game/" + formData[gameId] +"/update/link/" + formData[linkId];
+   //                console.log('url');
+   //                console.log("ajax");
+   //             e.preventDefault();
+   //             $.ajaxSetup({
+   //                headers: {
+   //                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+   //                }
+   //            });
+   //             jQuery.ajax({
+   //                url: url,
+   //                method: 'put',
+   //                data: formData,
+   //                dataType: "json",
+   //                encode: true,
+   //                success: function(data){
+   //                   console.log("PUT");
+   //                }});
+   //             });
+   //           });
+   //        });
