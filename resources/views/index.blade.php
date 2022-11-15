@@ -55,7 +55,7 @@
           </div>
 
 
-            <div class="pagination"> {{ $games->links() }} </div>
+          {{-- <div class="pagination"> {{ $games->links() }} </div> --}}  
 
         </div>
       </div>

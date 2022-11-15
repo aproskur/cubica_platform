@@ -3,7 +3,7 @@
   <div>
     <div class="card catalogue-card">
       <div class="product-box">
-        <div class="product-img"><img class="img-fluid" src="{{ asset('storage/app/public/'. $game->cover_photo_path) }}" alt="">
+        <div class="product-img"><img class="img-fluid" src="{{ $game->cover_photo_path ? asset('storage/database_images/'. $game->cover_photo_path) : asset('/images/pinguin.jpg') }}" alt="">
           <div class="ribbon ribbon-success ribbon-game-rating"><a href="#"> <i data-feather="star"></i></a><span>3.7</span></div>
           <div class="ribbon ribbon-success ribbon-right ribbon-downloads"><span>1023</span></div>
           <div class="game-hover">

@@ -2370,8 +2370,6 @@ input[type="checkbox"][name="activator"]:checked div.launch-link {
   color: rgba(255, 255, 255, 0.7);
 }
 
-
-
 /* Rounded sliders */
 
 .slider.round {
@@ -2456,11 +2454,66 @@ body.dark-only .launch-link-generator:hover {
   max-height: 36px
 }
 
+.link-alias {
+  display: none;
+  background-color: var(--theme-grey);
+  border:none;
+  border-radius: 3px;
+  height: 25px;
+  color: var(--dark-txt);
+}
+
 
 .launch-date-selector {
 
   max-height: 36px;
 
+}
+
+.gear-animate {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.nodisplay {
+  display: none;
+}
+
+.launch-controls {
+  animation-name: move-right;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.gear-animate:hover {
+  animation-name: move-right;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes move-right {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 500px;
+  }
+}
+
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+    transform-origin: center center;
+  }
+  to {
+    transform:rotate(360deg);
+    transform-origin: center center;
+  }
 }
 
 

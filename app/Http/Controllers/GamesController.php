@@ -9,6 +9,8 @@ use Illuminate\Support\Str;
 
 
 
+
+
 class GamesController extends Controller
 {
     /**
@@ -24,7 +26,8 @@ class GamesController extends Controller
 
     public function index()
     {
-      $games = Game::latest()->paginate(3);
+      //$games = Game::latest()->paginate(3);
+      $games = Game::all();
       return view('index', ['games' => $games]);
     }
 

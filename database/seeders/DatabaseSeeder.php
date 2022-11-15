@@ -55,16 +55,16 @@ class DatabaseSeeder extends Seeder
            'price' => 750,
            'excerpt' => 'Игра про пингвинов',
            'subscr_price' => 1650,
-           'cover_photo_path' => 'database_images/antarctica.png'
+           'cover_photo_path' => 'antarctica.png'
          ]);
 
 
          Game::create([
-           'name' => 'Приключения тома Сойера и его закадычного друга',
+           'name' => 'Приключения Тома Сойера и его закадычного друга',
            'price' => 650,
            'excerpt' => 'Увлекательная и очень интересная игра',
            'subscr_price' => 1650,
-           'cover_photo_path' => 'database_images/tom-soyer-za-granitsey-x-1024.jpg'
+           'cover_photo_path' => 'tomsoyer.webp'
          ]);
 
          Game::create([
@@ -72,7 +72,7 @@ class DatabaseSeeder extends Seeder
            'price' => 750,
            'excerpt' => 'Полезная игра',
            'subscr_price' => 1750,
-           'cover_photo_path' => 'database_images/pinguin_portrait.png'
+           'cover_photo_path' => 'pinguin_portrait.png'
          ]);
 
          Game::create([
@@ -80,7 +80,7 @@ class DatabaseSeeder extends Seeder
            'price' => 650,
            'excerpt' => 'Игра, в которой сложные задания',
            'subscr_price' => 1850,
-           'cover_photo_path' => 'database_images/mikhail-vasilyev-Qmox1MkYDnY-unsplash.jpg'
+           'cover_photo_path' => 'mikhail-vasilyev-Qmox1MkYDnY-unsplash.jpg'
          ]);
 
          Game::create([
@@ -88,7 +88,7 @@ class DatabaseSeeder extends Seeder
            'price' => 750,
            'excerpt' => 'Загадочная игра с загадочным сюжетом',
            'subscr_price' => 1650,
-           'cover_photo_path' => 'database_images/fatty-corgi-wHgkrmuMFOY-unsplash.jpg'
+           'cover_photo_path' => 'fatty-corgi-wHgkrmuMFOY-unsplash.jpg'
          ]);
 
 
