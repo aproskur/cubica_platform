@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
          Game::truncate();
          Launch_link::truncate();
          Launch_link::create([
+           'id' => uniqid(),
            'link' => 'https://cubica.ru/play='.Str::random(12),
            'link_alias' => 'Ссылка для рассылки',
            'launch_quantity' => 6,
@@ -30,6 +31,7 @@ class DatabaseSeeder extends Seeder
          ]);
 
          Launch_link::create([
+           'id' => uniqid(),
            'link' => 'https://cubica.ru/play='.Str::random(12),
            'launch_quantity' => 10,
            'expiry' => '2022-10-15',
@@ -37,12 +39,14 @@ class DatabaseSeeder extends Seeder
          ]);
 
          Launch_link::create([
+           'id' => uniqid(),
            'link' => 'https://cubica.ru/play='.Str::random(12),
            'launch_quantity' => 100,
            'expiry' => '2022-09-22'
          ]);
 
          Launch_link::create([
+           'id' => uniqid(),
            'link' => 'https://cubica.ru/play='.Str::random(12),
            'launch_quantity' => 5,
            'expiry' => '2022-09-10',

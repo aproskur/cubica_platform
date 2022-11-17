@@ -11,10 +11,13 @@ class CreateLaunchLinksTable extends Migration
      *
      * @return void
      */
+
+
+
     public function up()
     {
         Schema::create('launch_links', function (Blueprint $table) {
-            $table->id();
+            $table->string('id')->fillable();
             $table->string('link');
             $table->string('link_alias')->nullable();
             $table->integer('launch_quantity')->nullable();

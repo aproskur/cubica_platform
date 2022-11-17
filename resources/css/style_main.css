@@ -2472,7 +2472,7 @@ body.dark-only .launch-link-generator:hover {
 
 .gear-animate {
   animation-name: spin;
-  animation-duration: 500ms;
+  animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }
@@ -2481,20 +2481,23 @@ body.dark-only .launch-link-generator:hover {
   display: none;
 }
 
+/*
 .launch-controls {
   animation-name: move-right;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
-}
+} */
 
+/*
 .gear-animate:hover {
   animation-name: move-right;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
-}
+} */
 
+/*
 @keyframes move-right {
   from {
     left: 0px;
@@ -2502,7 +2505,7 @@ body.dark-only .launch-link-generator:hover {
   to {
     left: 500px;
   }
-}
+} */
 
 
 @keyframes spin {

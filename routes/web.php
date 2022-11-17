@@ -31,16 +31,15 @@ Route::get('/gamesupport', [PagesController::class, 'getGameSupportPage'])->name
 Route::get('/subscriptions', [PagesController::class, 'getSubscrPage'])->name('subscriptions');
 
 
+//url launch/{gameId}/fetch-link используется в ajax в launch.js
+Route::get('launch/{gameId}/fetch-link', [LinksController::class, 'fetchLink']);
 Route::put('launch/{id}/update-alias', [LinksController::class, 'updateAlias']);
 Route::post('launch/{id}/create-link', [LinksController::class, 'createLink']);
 Route::get('launch/{game_id}', [PagesController::class, 'renderLaunchGamePage'])->name('launch-game');
 //Route::post('launch/game/{id}/create-link', [LinksController::class, 'create'])->name('create-link');
-//Route::put('launch/game/{game_id}/update/link/{link_id}', [LinksController::class, 'updateLink'])->name('update-link');
 Route::put('launch/{id}/update-link', [LinksController::class, 'update']);
-Route::delete('launch/game/{game_id}/delete/link/{link_id}', [LinksController::class, 'deleteLink'])->name('delete-link');
-//Route::put('launch/game/{game_id}/archive/{link_id}', [LinksController::class, 'archiveLink'])->name('archive-link');
-Route::get('launch/game/link-list', [LinksController::class, 'link_list']);
-
+Route::delete('launch/{game_id}/delete/{link_id}', [LinksController::class, 'destroy']);
+Route::put('/launch/{game_id}/archive/{link_id}', [LinksController::class, 'archive']);
 Route::post('launch/store', [LinksController::class, 'store'])->name('store');
 
 Route::get('/signup', function() {

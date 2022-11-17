@@ -51,7 +51,7 @@
             @csrf
             @method('PUT')
               <div class="row launch-link-generator" style="margin:0px;">
-                  <div class="col-xl-6 col-lg-12 d-flex gap-2">
+                  <div class="col-xl-5 col-lg-12 d-flex gap-2">
                     <div class="switcher" style="align-self:center;">
                       <label class="switch">
                         <input class="trigger link-activator" value="{{ $link->active }}" {{ $link->active == 1 ? 'checked=checked' : '' }}  type="checkbox" name="activator"/>
@@ -107,54 +107,34 @@
                               <i data-feather="facebook"></i>
                             </div>
                           </div>
+                          <div class="theme-button theme-button-square archive-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line><svg>
+                          </div>
                           {{--
                           <button formaction="{{ route('archive-link', ['game_id'=>$game->id, 'link_id'=>$link->id]) }}"class="theme-button theme-button-square" name="button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line><svg>
                           </button> --}}
                           <a class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Перейти в админку" name="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tool"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
                           </a>
+                          {{--
+                            <div class="theme-button theme-button-square delete-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Удалить ссылку">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                            </div> --}}
                         </div>
                       </div>
 
                   </form>
-
-                      <form action="{{ route('delete-link', ['game_id'=>$game->id, 'link_id'=>$link->id]) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Удалить ссылку">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-                        </button>
-                      </form>
-
-
-
-
-
                       </div>
                     </div>
                       @else
                       <div class="row launch-link-generator" style="margin-left:3.5em;">
-                          <div class="col-xl-5 col-lg-12 d-flex gap-2">
-                            <div style="align-self:center;">
-                            </div>
+                          <div class="col-xl-12 d-flex gap-5">
                               <div class="launch-link">
-                              @if (!$link->link_alias)
                                 {{ $link->link }}
-                              @else
-                                {{ $link->link_alias}}
-                              @endif
                               </div>
-                            </div>
-                            <div class="col-xl-5 col-lg-12 d-flex gap-2 gap-md-3 gap-lg-3">
-
-                              {{--
-                              <form action="{{ route('delete-link', ['game_id'=>$game->id, 'link_id'=>$link->id]) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Удалить ссылку">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-                                </button>
-                              </form> --}}
+                              <div class="">
+                                  {{ $link->link_alias}}
+                              </div>
                             </div>
                           </div>
                           @endif
