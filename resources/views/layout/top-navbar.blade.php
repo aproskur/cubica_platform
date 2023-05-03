@@ -2,7 +2,6 @@
   <div class="main-header-right">
     <div class="main-header-left">
       <div><a href="/"><svg  class="main-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="6258.9 13891.05 8482.55 1917.95">
-        <metadata id="CorelCorpID_0Corel-Layer"/>
         <path class="fil0" d="M10820 14138c-306,-214 -745,-259 -1143,-226 1,2 -23,73 109,323l97 -3c694,-32 1467,364 -246,433l133 328c251,3 861,6 896,256 -37,223 -832,212 -905,231l-121 322c521,45 1453,-123 1363,-625 -34,-190 -231,-285 -304,-354 14,-14 614,-340 121,-685l0 0z"/>
         <path class="fil0" d="M12905 13948c-1170,-348 -2091,986 -1011,1656 265,164 813,242 1011,110l-120 -303c-325,15 -420,54 -701,-93 -409,-213 -460,-732 16,-974 278,-142 379,-94 686,-85l119 -311z"/>
         <path class="fil0" d="M7749 13970c-478,-206 -1479,116 -1490,872 -5,360 242,644 466,772 358,205 587,198 1038,134l-129 -320c-254,38 -514,17 -709,-90 -157,-87 -329,-259 -323,-496 7,-245 184,-395 343,-476 253,-130 393,-111 693,-85l111 -311 0 0z"/>
@@ -70,13 +69,13 @@
                       <ul class="dropdown-ul">
                           <li><a href="{{ url('/dashboard') }}">Личный кабинет</a></li>
                           <li>Мои подписки</li>
-                          <li>Мои игры</li>
-                          <form method="POST" action="{{ route('logout') }}" x-data>
-                              @csrf
-                          <li><a href="{{ route('logout') }}" @click.prevent="$root.submit();">
-                              {{ __('Выход') }}</a></li>
-                          </form>
+                          <li>Мои игры</li>   
                       </ul>
+                      <form method="POST" action="{{ route('logout') }}" x-data>
+                        @csrf
+                        <a class="dropdown-form" href="{{ route('logout') }}" @click.prevent="$root.submit()">
+                        {{ __('Выход') }}</a>
+                    </form>
                     </div>
                   </li>
 

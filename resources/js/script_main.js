@@ -167,7 +167,7 @@ $(document).ready(function() {
 });
 
 
-
+/*
 //Всплывающие подсказки
 
 $(document).ready(function() {
@@ -185,7 +185,7 @@ $(document).ready(function() {
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
-})
+}) */
 
 //Всплывающие подсказки END
 
@@ -309,3 +309,8 @@ $(".feather-share-2").click(function(event){
    //             });
    //           });
    //        });
+
+
+
+
+  

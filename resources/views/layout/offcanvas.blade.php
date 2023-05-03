@@ -22,9 +22,9 @@
       <div class="card-body offcanvas-card">
         <div class="row">
           <div class="col-12">
-
-            <ul class="icon-lists navs-icon default-according style-1" id="accordionoc">
-              <li>
+            <div class="menu-frame">
+              <ul class="icon-lists navs-icon default-according style-1" id="accordionoc">
+                <li>
             @if (Route::has('login'))
                 <ul class="collapse show" id="collapseicon" aria-labelledby="collapseicon" data-parent="#accordionoc">
                   <li><a href="javascript:void()"><span>Личный кабинет</span></a></li>
@@ -35,39 +35,26 @@
                   <li><a href="{{ route('support') }}"><span>Поддержка</span></a></li>
                 </ul>
               </li>
-
                 <li><a href="#">О платформе</a></li>
                 <li>
                   <div class="mode"><i class="fa fa-moon-o"></i></div>
-                </li>
-                <li>
-                <form method="POST" action="{{ route('logout') }}" x-data>
-                    @csrf
-                    @auth
-                <li>
-                  <a href="{{ route('logout') }}" @click.prevent="$root.submit();">
-                  <button class="theme-button theme-button-std theme-button-sidebar" type="button"><i data-feather="log-out"></i>
-                      {{ __('Выход') }}</button></a>
-                </li>
-                @else
-               <li>
-                 <a class="theme-button theme-button-std theme-button-sidebar" id="sidebar-login-btn" href="#"><i data-feather="log-in"></i>Вход</a>
-               </li>
-                @endauth
-                </form>
-              </li>
-                @if (Route::has('register'))
+                </li>               
                 <li>
                   <a class="theme-button theme-button-std theme-button-sidebar" href="{{ route('register') }}"><i data-feather="user-plus"></i>Регистрация</a>
                 </li>
-                @endif
-
-                <li>
-                  <div class="onhover-dropdown navs-dropdown">
-                </div>
-                </li>
               </ul>
+              <form class="offcanvas-form" method="POST" action="{{ route('logout') }}" x-data>
+                @csrf
+                @auth             
+              <a href="{{ route('logout') }}" @click.prevent="$root.submit()">
+              <div class="theme-button theme-button-std theme-button-sidebar"><i data-feather="log-out"></i>
+                  {{ __('Выход') }}</div></a>           
+            @else       
+             <a class="theme-button theme-button-std theme-button-sidebar" id="sidebar-login-btn" href="#"><i data-feather="log-in"></i>Вход</a>          
+            @endauth
+            </form>
       @endif
+            </div>
           </div>
         </div>
       </div>

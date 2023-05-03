@@ -44,9 +44,9 @@
       <!-- Games catalogue-->
       <div class="container-fluid product-wrapper">
           <div class="product-wrapper-grid">
-            <div class="row">
+            <div class="row catalogue-card-row">
               @foreach($games as $game)
-              <div class="col-xl-2 col-sm-6 xl-4">
+              <div class="col-auto">
                  <x-catalogue-card-component :game=$game/>
               </div>
               @endforeach
@@ -55,7 +55,7 @@
           </div>
 
 
-          {{-- <div class="pagination"> {{ $games->links() }} </div> --}}  
+          {{-- <div class="pagination"> {{ $games->links() }} </div> --}}
 
         </div>
       </div>

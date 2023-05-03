@@ -3,7 +3,7 @@
   <div>
     <div class="card catalogue-card">
       <div class="product-box">
-        <div class="product-img"><img class="img-fluid" src="{{ $game->cover_photo_path ? asset('storage/database_images/'. $game->cover_photo_path) : asset('/images/pinguin.jpg') }}" alt="">
+        <div class="product-img"><img class="card-img" src="{{ $game->cover_photo_path ? asset('storage/database_images/'. $game->cover_photo_path) : asset('/images/pinguin.jpg') }}" alt="">
           <div class="ribbon ribbon-success ribbon-game-rating"><a href="#"> <i data-feather="star"></i></a><span>3.7</span></div>
           <div class="ribbon ribbon-success ribbon-right ribbon-downloads"><span>1023</span></div>
           <div class="game-hover">
@@ -72,17 +72,17 @@
             <div class="price-wrapper">
               <div>
                 {{ number_format($gamePrice, 0, '.', ' ') }}
-                <span>&#8381;/запуск</span>
+                <span style="font-size:14px;">&#8381;/запуск</span>
               </div>
               <div>
                 {{ number_format($game->subscr_price, 0, '.', ' ') }}
-                <span>&#8381;/месяц</span>
+                <span style="font-size:14px;">&#8381;/месяц</span>
               </div>
             </div>
           </div>
           <div class="product-desc">
             <button class="theme-button theme-button-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Добавить в избранное"><i data-feather="heart"></i></button>
-            <a href="{{ url('games/'.$id) }}"><h4> {{ $gameName }}</h4></a>
+            <a href="{{ url('games/'.$id) }}"><h4 style="font-size:14px;"> {{ $gameName }}</h4></a>
 
 
           </div>

@@ -1,4 +1,11 @@
-@extends('app')
+ @extends('app')
+@prepend('css-styles')
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+@endprepend
+
 
 @section('content')
 
@@ -19,39 +26,47 @@
               <!-- Container-fluid starts-->
               <div class="container-fluid">
                   <div class="row product-page-main" style="padding-top:0;">
-                    <div class="col-lg-6 col-md-6 order-3 order-lg-1">
-                      <div class="card" style="margin-right:0;">
+                    <div class="col-xxl-6 col-lg-7 col-md-7 order-3 order-md-1">
+                      <div class="card">
                         <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-9 product-main">
-                              <div class="pro-slide-single">
-                                <div><img class="img-fluid" src="../assets/images/arctic.jpg" alt=""></div>
-                                <div><img class="img-fluid" src="../assets/images/pinguin_portrait.png" alt=""></div>
-                                <div><img class="img-fluid" src="../assets/images/antarctica.png" alt=""></div>
-                                <div><img class="img-fluid" src="../assets/images/pinguin.jpg" alt=""></div>
+                          <!-- Slider main container -->
+                              <div class="swiper col-12">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                  <!-- Slides -->
+                                  <div class="swiper-slide"><div class="swiper-slide__image"><img src="../assets/images/antarctica.png" alt=""></div></div>
+                                  <div class="swiper-slide"><div class="swiper-slide__image"><img src="../assets/images/pinguin_portrait.png" alt=""></div></div>
+                                  <div class="swiper-slide"><div class="swiper-slide__image"><img src="../assets/images/arctic.jpg" alt=""></div> </div>
+                                  <div class="swiper-slide"><div class="swiper-slide__image"><img src="../assets/images/database_images/tom-soyer-za-granitsey-x-768.jpg" alt=""></div></div>
+                                  <div class="swiper-slide"><div class="swiper-slide__image"><img src="../assets/images/database_images/mikhail-vasilyev-Qmox1MkYDnY-unsplash.jpg" alt=""></div></div>
+
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                                <!-- If we need scrollbar -->
+
                               </div>
-                            </div>
-                            <div class="col-md-2 product-thumbnail">
-                              <div class="pro-slide-right d-flex justify-content-center">
-                                <div>
-                                  <div class="slide-box"><img src="../assets/images/arctic.jpg" alt=""></div>
-                                </div>
-                                <div>
-                                  <div class="slide-box"><img src="../assets/images/pinguin_portrait.png" alt=""></div>
-                                </div>
-                                <div>
-                                  <div class="slide-box"><img src="../assets/images/antarctica.png" alt=""></div>
-                                </div>
-                                <div>
-                                  <div class="slide-box"><img src="../assets/images/pinguin.jpg" alt=""></div>
+                              <div class="thumbs-swiper col-12">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                  <!-- Slides -->
+                                  <div class="swiper-slide thumbs__swiper-slide"><img src="../assets/images/antarctica.png" alt=""></div>
+                                  <div class="swiper-slide thumbs__swiper-slide"><img src="../assets/images/pinguin_portrait.png" alt=""></div>
+                                  <div class="swiper-slide thumbs__swiper-slide"><img src="../assets/images/arctic.jpg" alt=""> </div>
+                                  <div class="swiper-slide thumbs__swiper-slide"><img src="../assets/images/database_images/tom-soyer-za-granitsey-x-768.jpg" alt=""></div>
+                                  <div class="swiper-slide thumbs__swiper-slide"><img src="../assets/images/database_images/mikhail-vasilyev-Qmox1MkYDnY-unsplash.jpg" alt=""></div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
+
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 order-lg-2 order-1 ">
+                    <div class="col-xxl-6 col-lg-5 col-md-5 order-lg-2 order-1 ">
                       <div class="card">
                         <div class="card-body">
                           <div class="pro-group pt-0 border-0">
@@ -147,6 +162,7 @@
                     </div>
                   </div>
                 </div>
+              </div>
                     <div class="col-xxl-12 col-xl-12 order-2 col-md-12  order-lg-3 col-lg-12 box-col-6">
                           <div class="card">
                             <div class="row product-page-main">
@@ -231,6 +247,7 @@
 @push('scripts')
   <script src="{{ asset('assets/js/rating/jquery.barrating.js') }}"></script>
   <script src="{{ asset('assets/js/rating/rating-script.js') }}"></script>
-  <script src="{{ asset('assets/js/slick-slider/slick.min.js') }}"></script>
-  <script src="{{ asset('assets/js/slick-slider/slick-theme.js') }}"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="{{ asset('js/swiper.js') }}"></script>
 @endpush

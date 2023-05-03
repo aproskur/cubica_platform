@@ -22,7 +22,7 @@ use Illuminate\Support\Str;
 
 @include_once('admin_web.php');
 
-Route::get('/', [GamesController::class, 'index']);
+Route::get('/', [GamesController::class, 'index'])->name('main');
 Route::get('games/{game}', [GamesController::class, 'show']);
 Route::get('/cart', [PagesController::class, 'getCartPage'])->name('cart');
 Route::get('/about', [PagesController::class, 'getAboutPage'])->name('about');
