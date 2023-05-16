@@ -9,7 +9,7 @@
           <div class="game-hover">
             <ul class="game-hover-bar-center">
               <span data-bs-toggle="tooltip" data-bs-placement="top" title="Информация"><li data-bs-toggle="modal"   data-bs-target="#catalogueModal{{$id}}"><a><i class="icofont icofont-document-search central-icon"></i></a></li></span>
-              <li data-bs-toggle="tooltip" data-bs-placement="top" title="Играть"><a href="{{ url('launch/'.$id ) }}"><i class="icon-game central-icon"></i></a></li>
+              <li data-bs-toggle="tooltip" data-bs-placement="top" title="Играть"><a href="{{ url('http://188.120.226.167:8082/play?game_id='.$id ) }}"><i class="icon-game central-icon"></i></a></li>
             </ul>
             <ul class="game-hover-bar-bottom">
                 <li data-bs-toggle="tooltip" data-bs-placement="top" title="Редактировать"><a href="#"><i data-feather="edit"></i></a></li>
